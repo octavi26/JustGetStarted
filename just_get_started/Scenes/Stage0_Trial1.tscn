@@ -480,14 +480,15 @@ sources/5 = SubResource("TileSetAtlasSource_bp7ox")
 
 [node name="Node2D" type="Node2D"]
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_mqk4n")]
+[node name="Player" parent="." instance=ExtResource("1_mqk4n")]
+unique_name_in_owner = true
 z_index = 13
 position = Vector2(0, -1)
 scale = Vector2(1, 1)
 SPEED = 200.0
 metadata/_edit_group_ = true
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+[node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(1, 0)
 zoom = Vector2(3.5, 3.5)
 limit_left = -486
@@ -496,7 +497,7 @@ limit_right = 486
 limit_bottom = 296
 limit_smoothed = true
 
-[node name="Narrator" parent="CharacterBody2D/Camera2D" instance=ExtResource("3_b4es4")]
+[node name="Narrator" parent="Player/Camera2D" instance=ExtResource("3_b4es4")]
 unique_name_in_owner = true
 visible = false
 position = Vector2(-1, 84)

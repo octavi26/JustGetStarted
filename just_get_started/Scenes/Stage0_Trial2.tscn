@@ -1,11 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://2xv8q2s06ygb"]
+[gd_scene load_steps=13 format=3 uid="uid://q2chhna0w7d6"]
 
 [ext_resource type="PackedScene" uid="uid://bd7gb8bd4pxgw" path="res://Scenes/Player.tscn" id="1_d7elq"]
 [ext_resource type="Texture2D" uid="uid://7vlf6sgtbgkv" path="res://Assets/TileSets/TX Tileset Grass.png" id="2_5ljry"]
 [ext_resource type="Texture2D" uid="uid://domqhxfcd3xmq" path="res://Assets/TileSets/TX Struct.png" id="3_b7cuf"]
 [ext_resource type="Texture2D" uid="uid://c54hxqc5lhb0s" path="res://Assets/TileSets/TX Tileset Stone Ground.png" id="4_k4eel"]
 [ext_resource type="Texture2D" uid="uid://g8tr2et668f8" path="res://Assets/TileSets/TX Tileset Wall.png" id="5_qr7mh"]
-[ext_resource type="PackedScene" uid="uid://b8deqcao3lufg" path="res://Scenes/Teleporter.tscn" id="6_s73lr"]
+[ext_resource type="PackedScene" path="res://Scenes/Teleporter.tscn" id="6_s73lr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qnptl"]
 texture = ExtResource("2_5ljry")
@@ -434,12 +434,13 @@ sources/5 = SubResource("TileSetAtlasSource_tkcb2")
 
 [node name="Node2D" type="Node2D"]
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_d7elq")]
+[node name="Player" parent="." instance=ExtResource("1_d7elq")]
+unique_name_in_owner = true
 z_index = 13
 scale = Vector2(1, 1)
 SPEED = 200.0
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+[node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(3.5, 3.5)
 
 [node name="Grass" type="TileMap" parent="."]
@@ -463,4 +464,4 @@ level = "res://Scenes/Stage0_Trial2.tscn"
 position = Vector2(-237, 3)
 spawn = true
 level = "res://Scenes/Test_Scene.tscn"
-player = NodePath("../CharacterBody2D")
+player = NodePath("../Player")

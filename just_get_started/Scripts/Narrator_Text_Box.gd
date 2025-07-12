@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var label = $Label
 @onready var node = $"."
+@onready var player = %Player
 var waitingInput = false
 var receivedInput = false
 
@@ -45,4 +46,4 @@ func StartDialogueById(lineID):
 			await get_tree().process_frame
 		waitingInput = false
 	node.visible = false
-	#aici il repornesti movement-ul
+	player.moveable = true
