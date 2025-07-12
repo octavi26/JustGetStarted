@@ -1,7 +1,7 @@
 [gd_scene load_steps=148 format=3 uid="uid://bd7gb8bd4pxgw"]
 
 [ext_resource type="Texture2D" uid="uid://xlum7u18v7vb" path="res://Assets/Sprites/Player/IDLE/idle_down.png" id="1_ivrb1"]
-[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_j76l8"]
+[ext_resource type="Script" uid="uid://t2mq6oiv3clc" path="res://Scripts/Player.gd" id="1_j76l8"]
 [ext_resource type="Texture2D" uid="uid://c7hkgffdiva08" path="res://Assets/Sprites/Player/ATTACK 1/attack1_down.png" id="2_r1o80"]
 [ext_resource type="Texture2D" uid="uid://bsnhdjha3kojm" path="res://Assets/Sprites/Player/IDLE/idle_left.png" id="2_v2ofg"]
 [ext_resource type="Texture2D" uid="uid://b2sxsua2q8dkg" path="res://Assets/Sprites/Player/ATTACK 1/attack1_left.png" id="3_uduul"]
