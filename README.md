@@ -2,10 +2,10 @@
 game for gamejam
 
 # Naming COnventions
-Generic name: nume prenume
-File Name: Nume_Prenume
-Function Name: NumePrenume
-Variable name: numePrenume
+Generic name: nume prenume  
+File Name: Nume_Prenume  
+Function Name: NumePrenume  
+Variable name: numePrenume  
 
 ## Stage 0
 
