@@ -1258,7 +1258,7 @@ autoplay = "Idle Down"
 frame_progress = 0.613633
 
 [node name="AlterantiveAttackTimer" type="Timer" parent="."]
-wait_time = 0.39
+wait_time = 0.6
 one_shot = true
 
 [node name="AttackTimer" type="Timer" parent="."]

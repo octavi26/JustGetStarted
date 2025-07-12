@@ -48,22 +48,24 @@ func _physics_process(delta: float) -> void:
 		
 	justAttacked = false
 	if attackDirection:
+		$AnimatedSprite2D.play("Idle Down")
+		Attack()
 		isAttacking = true
 		$AttackTimer.start()
 		if alternativeAttack == false:
 			alternativeAttack = true
 		else:
 			alternativeAttack = false
-		Attack()
-	if $AttackTimer.is_stopped():
-		if isAttacking == true:
-			justAttacked = true
+	if isAttacking and $AttackTimer.is_stopped():
 		isAttacking = false
+		justAttacked = true
+		$AnimatedSprite2D.play("Idle Down")
 	if justAttacked:
 		$AlterantiveAttackTimer.start()
 	if $AlterantiveAttackTimer.is_stopped():
 		alternativeAttack = false
-		
+	
+	print($AnimatedSprite2D.animation, isAttacking)
 	AnimationHandler()
 
 func Move():
@@ -100,54 +102,29 @@ func Orientation():
 			orientation = Vector2(sign(orientation.x), 0)
 
 func AnimationHandler():
-	if !isAttacking:
-		if direction:
-			if !isDashing:
-				if orientation.y == -1:
-					$AnimatedSprite2D.play("Run Up")
-				if orientation.y == 1:
-					$AnimatedSprite2D.play("Run Down")
-				if orientation.x == -1:
-					$AnimatedSprite2D.play("Run Left")
-				if orientation.x == 1:
-					$AnimatedSprite2D.play("Run Right")
-			else:
-				if orientation.y == -1:
-					$AnimatedSprite2D.play("Dash Up")
-				if orientation.y == 1:
-					$AnimatedSprite2D.play("Dash Down")
-				if orientation.x == -1:
-					$AnimatedSprite2D.play("Dash Left")
-				if orientation.x == 1:
-					$AnimatedSprite2D.play("Dash Right")
-		else:
-			if orientation.y == -1:
-				$AnimatedSprite2D.play("Idle Up")
-			if orientation.y == 1:
-				$AnimatedSprite2D.play("Idle Down")
-			if orientation.x == -1:
-				$AnimatedSprite2D.play("Idle Left")
-			if orientation.x == 1:
-				$AnimatedSprite2D.play("Idle Right")
+	var action: String
+	var dir: String
+	var usedOrientation = orientation
+	if isAttacking:
+		usedOrientation = attackDirection
+		if alternativeAttack: action = "Attack2"
+		else: action = "Attack1"
 	else:
-		if alternativeAttack:
-			if attackDirection.y == -1:
-				$AnimatedSprite2D.play("Attack2 Up")
-			if attackDirection.y == 1:
-				$AnimatedSprite2D.play("Attack2 Down")
-			if attackDirection.x == -1:
-				$AnimatedSprite2D.play("Attack2 Left")
-			if attackDirection.x == 1:
-				$AnimatedSprite2D.play("Attack2 Right")		
+		if !direction: action = "Idle"
 		else:
-			if attackDirection.y == -1:
-				$AnimatedSprite2D.play("Attack1 Up")
-			if attackDirection.y == 1:
-				$AnimatedSprite2D.play("Attack1 Down")
-			if attackDirection.x == -1:
-				$AnimatedSprite2D.play("Attack1 Left")
-			if attackDirection.x == 1:
-				$AnimatedSprite2D.play("Attack1 Right")
+			if isDashing: action = "Dash"
+			else: action = "Run"
+			
+	if usedOrientation.x > 0:
+		dir = "Right"
+	if usedOrientation.x < 0:
+		dir = "Left"
+	if usedOrientation.y < 0:
+		dir = "Up"
+	if usedOrientation.y > 0:
+		dir = "Down"
+		
+	$AnimatedSprite2D.play(action + " " + dir)
 		
 func Attack():
 	pass
