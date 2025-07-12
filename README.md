@@ -1,6 +1,11 @@
 # Just Get Started - GameJam
 game for gamejam
 
+# Naming COnventions
+Generic name: nume prenume
+File Name: Nume_Prenume
+Function Name: NumePrenume
+Variable name: numePrenume
 
 ## Stage 0
 
