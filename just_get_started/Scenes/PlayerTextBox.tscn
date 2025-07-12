@@ -82,7 +82,7 @@ font_color = Color(0, 0, 0, 1)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_1lvv6")
-lineID = 2
+lineID = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
 

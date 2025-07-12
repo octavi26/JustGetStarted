@@ -5,7 +5,7 @@ extends Node2D
 var dialogueTable = {
 	0: { "text": "Hello, traveler.", "frame": 1 },
 	1: { "text": "What brings you to this land?", "frame": 2 },
-	2: { "text": "Ah, I see. Be careful out there.", "frame": -1 },
+	2: { "text": "Ah, I see. Be careful out there.", "frame": 3 },
 }
 
 # Function to display text one character at a time
