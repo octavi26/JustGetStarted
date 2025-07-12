@@ -1,0 +1,132 @@
+[gd_scene load_steps=15 format=3 uid="uid://duuhv3ariy5q4"]
+
+[ext_resource type="Script" path="res://Scripts/Player_Text_Box.gd" id="1_1lvv6"]
+[ext_resource type="Texture2D" uid="uid://cea2cy7abb0w1" path="res://Assets/Sprites/Player/ChatGPT Image 12 iul. 2025, 14_24_19.png" id="1_qxyqd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_crp61"]
+atlas = ExtResource("1_qxyqd")
+region = Rect2(0, 0, 341, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kae6j"]
+atlas = ExtResource("1_qxyqd")
+region = Rect2(341, 0, 341, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iyh5i"]
+atlas = ExtResource("1_qxyqd")
+region = Rect2(682, 0, 341, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5xw2n"]
+atlas = ExtResource("1_qxyqd")
+region = Rect2(0, 512, 341, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f2qa0"]
+atlas = ExtResource("1_qxyqd")
+region = Rect2(341, 512, 341, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_np5nm"]
+atlas = ExtResource("1_qxyqd")
+region = Rect2(682, 512, 341, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0xdye"]
+atlas = ExtResource("1_qxyqd")
+region = Rect2(0, 1024, 341, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mrgor"]
+atlas = ExtResource("1_qxyqd")
+region = Rect2(341, 1024, 341, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h2nnm"]
+atlas = ExtResource("1_qxyqd")
+region = Rect2(682, 1024, 341, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0wnwl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_crp61")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kae6j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iyh5i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5xw2n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f2qa0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_np5nm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0xdye")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mrgor")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h2nnm")
+}],
+"loop": false,
+"name": &"default",
+"speed": 0.0
+}]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_450a4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ydv6m"]
+font_size = 36
+font_color = Color(0, 0, 0, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_1lvv6")
+lineID = 2
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Image" type="AnimatedSprite2D" parent="."]
+position = Vector2(-647, 244)
+scale = Vector2(1.17027, 1.17027)
+sprite_frames = SubResource("SpriteFrames_0wnwl")
+frame = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+z_index = -1
+position = Vector2(-647, 243.473)
+scale = Vector2(-436.688, 634.34)
+texture = SubResource("PlaceholderTexture2D_450a4")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+z_index = -2
+position = Vector2(0, 289)
+scale = Vector2(1592, 406)
+texture = SubResource("PlaceholderTexture2D_450a4")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -431.0
+offset_top = 105.0
+offset_right = 781.0
+offset_bottom = 477.0
+text = "Wait . . . I have been here before, have i not?"
+label_settings = SubResource("LabelSettings_ydv6m")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -2
+offset_left = -781.0
+offset_top = 104.0
+offset_right = 781.0
+offset_bottom = 476.0
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+z_index = -3
+offset_left = -948.0
+offset_top = -564.0
+offset_right = 988.0
+offset_bottom = 604.0
+color = Color(0, 0, 0, 0.188235)
