@@ -8,14 +8,18 @@ var waitingInput = false
 var receivedInput = false
 
 var dialogueTable = {
-	0: { "text": [
+	0: { "text" : [
+		"Where am I?",
+		"What is this weird place?"
+	], "frame": 0 },
+	1: { "text": [
 		"Hello, traveler.",
 		"Salut"
 	], "frame": 1 },
-	1: { "text": [
+	2: { "text": [
 		"What brings you to this land?"
 	], "frame": 2 },
-	2: { "text": [
+	3: { "text": [
 		"Ah, I see. Be careful out there."
 	], "frame": 3 },
 }
@@ -45,4 +49,5 @@ func StartDialogueById(lineID):
 			await get_tree().process_frame
 		waitingInput = false
 	node.visible = false
+	Global.playerTextBoxes.append(lineID)
 	player.moveable = true

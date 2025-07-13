@@ -8,8 +8,9 @@ var receivedInput = false
 
 var dialogueLines = {
 	0: [ 
-		"Welcome here, traveler!",
-		"You can move around using W, A, S, D keys."
+		"Welcome here, traveler! DO NOT be afraid.",
+		"You can move around by using the following keys: W, A, S, D.",
+		"Find the teleporter to advance."
 	],
 	1: [ 
 		"This is a teleporter.",
@@ -46,4 +47,5 @@ func StartDialogueById(lineID):
 			await get_tree().process_frame
 		waitingInput = false
 	node.visible = false
+	Global.narratorTextBoxes.append(lineID)
 	player.moveable = true
