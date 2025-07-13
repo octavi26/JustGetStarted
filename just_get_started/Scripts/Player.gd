@@ -60,10 +60,10 @@ func _physics_process(delta: float) -> void:
 		isAttacking = false
 		justAttacked = true
 		$AnimatedSprite2D.play("Idle Down")
-	if justAttacked:
-		$AlterantiveAttackTimer.start()
-	if $AlterantiveAttackTimer.is_stopped():
-		alternativeAttack = false
+		$AttackCollision/Area2DDown/CollisionShape2D.disabled = true
+		$AttackCollision/Area2DLeft/CollisionShape2D.disabled = true
+		$AttackCollision/Area2DRight/CollisionShape2D.disabled = true
+		$AttackCollision/Area2DUp/CollisionShape2D.disabled = true
 	
 	print($AnimatedSprite2D.animation, isAttacking)
 	AnimationHandler()
@@ -127,7 +127,26 @@ func AnimationHandler():
 	$AnimatedSprite2D.play(action + " " + dir)
 		
 func Attack():
-	pass
+	if attackDirection == Vector2(0, 1):
+		$AttackCollision/Area2DDown/CollisionShape2D.disabled = false
+		$AttackCollision/Area2DLeft/CollisionShape2D.disabled = true
+		$AttackCollision/Area2DRight/CollisionShape2D.disabled = true
+		$AttackCollision/Area2DUp/CollisionShape2D.disabled = true
+	if attackDirection == Vector2(0, -1):
+		$AttackCollision/Area2DDown/CollisionShape2D.disabled = true
+		$AttackCollision/Area2DLeft/CollisionShape2D.disabled = true
+		$AttackCollision/Area2DRight/CollisionShape2D.disabled = true
+		$AttackCollision/Area2DUp/CollisionShape2D.disabled = false
+	if attackDirection == Vector2(1, 0):
+		$AttackCollision/Area2DDown/CollisionShape2D.disabled = true
+		$AttackCollision/Area2DLeft/CollisionShape2D.disabled = true
+		$AttackCollision/Area2DRight/CollisionShape2D.disabled = false
+		$AttackCollision/Area2DUp/CollisionShape2D.disabled = true
+	if attackDirection == Vector2(-1, 0):
+		$AttackCollision/Area2DDown/CollisionShape2D.disabled = true
+		$AttackCollision/Area2DLeft/CollisionShape2D.disabled = false
+		$AttackCollision/Area2DRight/CollisionShape2D.disabled = true
+		$AttackCollision/Area2DUp/CollisionShape2D.disabled = true
 	
 func Dash():
 	isDashing = true
