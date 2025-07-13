@@ -8,7 +8,8 @@ var inside = false
 func _physics_process(delta: float) -> void:
 	if inside and Input.is_action_just_pressed("Interact"):
 		player.moveable = false
-		image.ShowImage(image_shown)
+		monitoring = false
+		image.ShowImage(image_shown, self)
 
 func _on_body_entered(body: Node2D) -> void:
 	body.get_node("ButtonAnimation").visible = true

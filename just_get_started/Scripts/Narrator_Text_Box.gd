@@ -1,7 +1,6 @@
 extends Node2D
 
 @onready var label = $Label
-@onready var node = $"."
 @onready var player = %Player
 var waitingInput = false
 var receivedInput = false
@@ -38,7 +37,7 @@ func TypeText(text: String, speed: float = 0.025) -> void:
 		
 
 func StartDialogueById(lineID):
-	node.visible = true
+	visible = true
 	for line in dialogueLines[lineID]:
 		await TypeText(line)
 		waitingInput = true
@@ -46,6 +45,6 @@ func StartDialogueById(lineID):
 		while not receivedInput:
 			await get_tree().process_frame
 		waitingInput = false
-	node.visible = false
+	visible = false
 	Global.narratorTextBoxes.append(lineID)
 	player.moveable = true
