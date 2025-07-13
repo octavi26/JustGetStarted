@@ -1,12 +1,15 @@
-[gd_scene load_steps=14 format=3 uid="uid://beevu125rqwea"]
+[gd_scene load_steps=17 format=3 uid="uid://beevu125rqwea"]
 
 [ext_resource type="PackedScene" uid="uid://bd7gb8bd4pxgw" path="res://Scenes/Player.tscn" id="1_mqk4n"]
 [ext_resource type="Texture2D" uid="uid://7vlf6sgtbgkv" path="res://Assets/TileSets/TX Tileset Grass.png" id="2_agriw"]
+[ext_resource type="Script" uid="uid://d1sqwwxagiokn" path="res://Scripts/Player_Text_Box.gd" id="2_j18mx"]
 [ext_resource type="Texture2D" uid="uid://domqhxfcd3xmq" path="res://Assets/TileSets/TX Struct.png" id="3_1lmhn"]
 [ext_resource type="PackedScene" uid="uid://dj68bjweojhfy" path="res://Scenes/NarratorTextBox.tscn" id="3_b4es4"]
 [ext_resource type="Texture2D" uid="uid://c54hxqc5lhb0s" path="res://Assets/TileSets/TX Tileset Stone Ground.png" id="4_b4es4"]
+[ext_resource type="PackedScene" uid="uid://duuhv3ariy5q4" path="res://Scenes/PlayerTextBox.tscn" id="4_jqeou"]
 [ext_resource type="Texture2D" uid="uid://g8tr2et668f8" path="res://Assets/TileSets/TX Tileset Wall.png" id="5_j18mx"]
 [ext_resource type="PackedScene" uid="uid://ks5skbsb7ao0" path="res://Scenes/TextBoxActivation.tscn" id="7_1lmhn"]
+[ext_resource type="Script" uid="uid://tt76ctq22j56" path="res://Scripts/TextBoxActivationPlayer.gd" id="10_jqeou"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jqeou"]
 texture = ExtResource("2_agriw")
@@ -496,11 +499,18 @@ limit_top = -296
 limit_right = 486
 limit_bottom = 296
 limit_smoothed = true
+script = ExtResource("2_j18mx")
 
 [node name="Narrator" parent="Player/Camera2D" instance=ExtResource("3_b4es4")]
 unique_name_in_owner = true
 visible = false
 position = Vector2(-1, 84)
+scale = Vector2(0.2, 0.2)
+
+[node name="PlayerTextBox" parent="Player/Camera2D" instance=ExtResource("4_jqeou")]
+unique_name_in_owner = true
+visible = false
+position = Vector2(-1, 71)
 scale = Vector2(0.2, 0.2)
 
 [node name="Grass" type="TileMap" parent="."]
@@ -515,8 +525,13 @@ tile_set = SubResource("TileSet_kwdty")
 format = 2
 layer_0/tile_data = PackedInt32Array(-524303, 327685, 1, -524302, 393221, 1, -524301, 393221, 1, -524300, 393221, 1, -524299, 393221, 1, -524298, 393221, 1, -524297, 393221, 1, -524296, 393221, 1, -524295, 393221, 1, -524294, 393221, 1, -524293, 393221, 1, -524292, 393221, 1, -524291, 393221, 1, -524290, 393221, 1, -524289, 393221, 1, -589824, 393221, 1, -589823, 393221, 1, -589822, 393221, 1, -589821, 393221, 1, -589820, 393221, 1, -589819, 393221, 1, -589818, 393221, 1, -589817, 393221, 1, -589816, 393221, 1, -589815, 393221, 1, -589814, 393221, 1, -589813, 393221, 1, -589812, 393221, 1, -589811, 393221, 1, -589810, 458757, 1, 655345, 393221, 4, 655346, 393221, 4, 655347, 393221, 4, 655348, 393221, 4, 655349, 393221, 4, 655350, 393221, 4, 655351, 393221, 4, 655352, 393221, 4, 655353, 393221, 4, 655354, 393221, 4, 655355, 393221, 4, 655356, 393221, 4, 655357, 393221, 4, 655358, 393221, 4, 655359, 393221, 4, 589824, 393221, 4, 589825, 393221, 4, 589826, 393221, 4, 589827, 393221, 4, -655346, 196613, 1, -589839, 524293, 2, -589840, 262149, 1, -524304, 262149, 2, -458768, 262149, 2, -393232, 262149, 2, -327696, 262149, 2, -262160, 262149, 2, -196624, 262149, 2, -131088, 196613, 2, -65552, 196613, 2, -16, 196613, 2, 65520, 196613, 2, 131056, 196613, 2, 196592, 196613, 2, 262128, 196613, 2, 327664, 196613, 2, 393200, 196613, 2, 458736, 196613, 2, 524272, 196613, 2, 589808, 262149, 3, 655344, 262149, 4, -655345, 524293, 1, -589809, 524293, 2, -524273, 524293, 2, -458737, 524293, 2, -393201, 524293, 2, -327665, 524293, 2, -262129, 524293, 2, -196593, 65541, 2, -131057, 65541, 2, -65521, 65541, 2, 15, 65541, 2, 65551, 65541, 2, 131087, 65541, 2, 196623, 65541, 2, 262159, 65541, 2, 327695, 65541, 2, 393231, 65541, 2, 458767, 65541, 2, 524303, 65541, 2, 589838, 458757, 4, 589839, 524293, 4, 589837, 393221, 4, 589836, 393221, 4, 589835, 393221, 4, 589834, 393221, 4, 589833, 393221, 4, 589832, 393221, 4, 589831, 393221, 4, 589830, 393221, 4, 589829, 393221, 4, 589828, 393221, 4)
 
-[node name="Area2D" parent="." instance=ExtResource("7_1lmhn")]
+[node name="AreaNarrator1" parent="." instance=ExtResource("7_1lmhn")]
 
-[node name="Area2D2" parent="." instance=ExtResource("7_1lmhn")]
+[node name="AreaNarrator2" parent="." instance=ExtResource("7_1lmhn")]
 position = Vector2(185, 0)
+lineID = 1
+
+[node name="AreaPlayer1" parent="." instance=ExtResource("7_1lmhn")]
+position = Vector2(-94, 0)
+script = ExtResource("10_jqeou")
 lineID = 1
