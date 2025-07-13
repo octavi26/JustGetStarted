@@ -2,6 +2,7 @@ extends Node
 
 var playerPos = 1
 
+#prevent text boxes from showing again when revisiting scenes
 var playerTextBoxes = []
 var narratorTextBoxes = []
 

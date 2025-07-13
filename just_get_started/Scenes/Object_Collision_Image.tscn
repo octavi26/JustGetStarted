@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://bunskihyq44kr"]
+
+[ext_resource type="Script" uid="uid://dxemdkf87hffv" path="res://Scripts/Object_Collision_Image.gd" id="1_km5oh"]
+[ext_resource type="Texture2D" uid="uid://cea2cy7abb0w1" path="res://Assets/Sprites/Player/ChatGPT Image 12 iul. 2025, 14_24_19.png" id="2_x6n3a"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_450a4"]
+
+[node name="Node2D2" type="Node2D"]
+script = ExtResource("1_km5oh")
+
+[node name="Image" type="TextureRect" parent="."]
+offset_left = -142.0
+offset_top = -108.0
+offset_right = 212.0
+offset_bottom = 403.0
+scale = Vector2(0.797654, 0.426932)
+texture = ExtResource("2_x6n3a")
+expand_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+z_index = -1
+position = Vector2(-0.815105, -0.189423)
+scale = Vector2(-299.776, 236.105)
+texture = SubResource("PlaceholderTexture2D_450a4")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -2
+offset_left = -912.0
+offset_top = -467.0
+offset_right = 921.0
+offset_bottom = 476.0
+color = Color(0, 0, 0, 0.235294)

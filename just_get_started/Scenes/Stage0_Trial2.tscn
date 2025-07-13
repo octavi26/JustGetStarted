@@ -1,14 +1,17 @@
-[gd_scene load_steps=16 format=3 uid="uid://q2chhna0w7d6"]
+[gd_scene load_steps=19 format=3 uid="uid://q2chhna0w7d6"]
 
 [ext_resource type="PackedScene" uid="uid://bd7gb8bd4pxgw" path="res://Scenes/Player.tscn" id="1_d7elq"]
 [ext_resource type="Texture2D" uid="uid://7vlf6sgtbgkv" path="res://Assets/TileSets/TX Tileset Grass.png" id="2_5ljry"]
 [ext_resource type="Script" uid="uid://dy7c1xpr6o01p" path="res://Scripts/Camera_Shake.gd" id="3_2jdi6"]
 [ext_resource type="Texture2D" uid="uid://domqhxfcd3xmq" path="res://Assets/TileSets/TX Struct.png" id="3_b7cuf"]
 [ext_resource type="Texture2D" uid="uid://c54hxqc5lhb0s" path="res://Assets/TileSets/TX Tileset Stone Ground.png" id="4_k4eel"]
+[ext_resource type="PackedScene" uid="uid://bunskihyq44kr" path="res://Scenes/Object_Collision_Image.tscn" id="4_lvl34"]
 [ext_resource type="Texture2D" uid="uid://g8tr2et668f8" path="res://Assets/TileSets/TX Tileset Wall.png" id="5_qr7mh"]
 [ext_resource type="PackedScene" uid="uid://b8deqcao3lufg" path="res://Scenes/Teleporter.tscn" id="6_s73lr"]
 [ext_resource type="Script" uid="uid://rlj8ti5e38q8" path="res://Scripts/Manager_Stage0_Trial2.gd" id="7_yhxen"]
 [ext_resource type="PackedScene" uid="uid://dd5i76isxitbg" path="res://Scenes/Puzzle.tscn" id="8_wv0eo"]
+[ext_resource type="PackedScene" uid="uid://df6pie5n7tpbk" path="res://Scenes/Object_Collision_Image_Activation.tscn" id="10_fldqx"]
+[ext_resource type="Texture2D" uid="uid://cea2cy7abb0w1" path="res://Assets/Sprites/Player/ChatGPT Image 12 iul. 2025, 14_24_19.png" id="12_nrcdr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qnptl"]
 texture = ExtResource("2_5ljry")
@@ -450,6 +453,10 @@ SPEED = 200.0
 zoom = Vector2(3.5, 3.5)
 script = ExtResource("3_2jdi6")
 
+[node name="Object_Image" parent="Player/Camera2D" instance=ExtResource("4_lvl34")]
+unique_name_in_owner = true
+visible = false
+
 [node name="Grass" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_dx4y3")
 format = 2
@@ -476,3 +483,11 @@ player = NodePath("../Player")
 
 [node name="Puzzle" parent="." instance=ExtResource("8_wv0eo")]
 position = Vector2(-32, -96)
+
+[node name="Object" parent="." instance=ExtResource("10_fldqx")]
+position = Vector2(-94, 0)
+collision_mask = 2
+image_shown = ExtResource("12_nrcdr")
+
+[connection signal="body_entered" from="Object" to="Object" method="_on_body_entered"]
+[connection signal="body_exited" from="Object" to="Object" method="_on_body_exited"]
