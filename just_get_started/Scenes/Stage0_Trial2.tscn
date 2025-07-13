@@ -2,13 +2,13 @@
 
 [ext_resource type="PackedScene" uid="uid://bd7gb8bd4pxgw" path="res://Scenes/Player.tscn" id="1_d7elq"]
 [ext_resource type="Texture2D" uid="uid://7vlf6sgtbgkv" path="res://Assets/TileSets/TX Tileset Grass.png" id="2_5ljry"]
-[ext_resource type="Script" uid="uid://dy7c1xpr6o01p" path="res://Scripts/Camera_Shake.gd" id="3_2jdi6"]
+[ext_resource type="Script" path="res://Scripts/Camera_Shake.gd" id="3_2jdi6"]
 [ext_resource type="Texture2D" uid="uid://domqhxfcd3xmq" path="res://Assets/TileSets/TX Struct.png" id="3_b7cuf"]
 [ext_resource type="Texture2D" uid="uid://c54hxqc5lhb0s" path="res://Assets/TileSets/TX Tileset Stone Ground.png" id="4_k4eel"]
 [ext_resource type="PackedScene" uid="uid://bunskihyq44kr" path="res://Scenes/Object_Collision_Image.tscn" id="4_lvl34"]
 [ext_resource type="Texture2D" uid="uid://g8tr2et668f8" path="res://Assets/TileSets/TX Tileset Wall.png" id="5_qr7mh"]
 [ext_resource type="PackedScene" uid="uid://b8deqcao3lufg" path="res://Scenes/Teleporter.tscn" id="6_s73lr"]
-[ext_resource type="Script" uid="uid://rlj8ti5e38q8" path="res://Scripts/Manager_Stage0_Trial2.gd" id="7_yhxen"]
+[ext_resource type="Script" path="res://Scripts/Manager_Stage0_Trial2.gd" id="7_yhxen"]
 [ext_resource type="PackedScene" uid="uid://dd5i76isxitbg" path="res://Scenes/Puzzle.tscn" id="8_wv0eo"]
 [ext_resource type="PackedScene" uid="uid://df6pie5n7tpbk" path="res://Scenes/Object_Collision_Image_Activation.tscn" id="10_fldqx"]
 [ext_resource type="Texture2D" uid="uid://cea2cy7abb0w1" path="res://Assets/Sprites/Player/ChatGPT Image 12 iul. 2025, 14_24_19.png" id="12_nrcdr"]
@@ -478,6 +478,7 @@ player = NodePath("../Player")
 [node name="Teleportor1" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_s73lr")]
 position = Vector2(-237, 3)
 spawn = true
+active = false
 level = "res://Scenes/Stage0_Trial1.tscn"
 player = NodePath("../Player")
 

@@ -8,7 +8,7 @@ func ReceiveArea(object: Area2D):
 	area = object
 
 func _input(event):
-	if event is InputEventKey and event.pressed:
+	if event is InputEventKey and event.pressed and area:
 		visible = false
 		player.moveable = true
 		if area:
