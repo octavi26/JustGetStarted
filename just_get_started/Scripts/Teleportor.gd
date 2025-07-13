@@ -23,7 +23,6 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	if inside and active and $SpawnProtectionTimer.is_stopped():
-		print("Flowers")
 		go_to_level()
 		
 	if readyToTeleport and $TeleportTimer.is_stopped() and $SpawnProtectionTimer.is_stopped():

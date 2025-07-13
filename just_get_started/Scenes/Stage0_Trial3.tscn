@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://g8tr2et668f8" path="res://Assets/TileSets/TX Tileset Wall.png" id="5_wufgn"]
 [ext_resource type="PackedScene" uid="uid://b8deqcao3lufg" path="res://Scenes/Teleporter.tscn" id="6_o6sys"]
 [ext_resource type="PackedScene" uid="uid://3fnrfu1w1our" path="res://Scenes/Dummy.tscn" id="7_kkmy3"]
-[ext_resource type="Script" path="res://Scenes/Manager_Stage0_Trial3.gd" id="8_cslxh"]
+[ext_resource type="Script" uid="uid://b3k2052cbv4xw" path="res://Scenes/Manager_Stage0_Trial3.gd" id="8_cslxh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qnptl"]
 texture = ExtResource("2_pvopl")

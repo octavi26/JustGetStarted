@@ -14,3 +14,7 @@ var stage0Trial2Finish = false
 
 var stage0Trial3Back = true
 var stage0Trial3Finish = false
+
+var stage0Trial5Back = true
+var stage0Trial5Finish = false
+var stage0Trial5Puzzle = false

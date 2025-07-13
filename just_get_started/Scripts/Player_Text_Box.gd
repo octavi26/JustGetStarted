@@ -10,7 +10,7 @@ var dialogueTable = {
 	0: { "text" : [
 		"Where am I?",
 		"What is this weird place?"
-	], "frame": 0 },
+	], "frame": 9 },
 	1: { "text": [
 		"Hello, traveler.",
 		"Salut"
