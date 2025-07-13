@@ -2,13 +2,14 @@ extends Node2D
 
 @export var spawn = false
 @export var active = false
-@export_file var level
+@export_file var level = "res://Scenes/Test_Scene.tscn"
 @export var player: Node2D
 var inside: bool = false
 
 var readyToTeleport: bool = false
 var readyForLight: bool = false
 var readyToEnd: bool = false
+var readyToStart: bool = false
 var start = false
 
 func _ready() -> void:
@@ -65,15 +66,15 @@ func Spawn():
 		tween.tween_property($LightPillar, "scale:x", 1, .25)
 		start = true
 	
-	if $LightPillar.scale.x >= .99 and !readyToEnd:
+	if $LightPillar.scale.x >= .99 and !readyToStart:
 		var tween2 = create_tween()
 		tween2.tween_property($LightPillar, "scale:x", 0, .25)
-		readyToEnd = true
+		readyToStart = true
 		player.visible = true
 		player.moveable = true
 		
 	if $SpawnProtectionTimer.is_stopped():
-		readyToEnd = false
+		readyToStart = false
 		spawn = false
 		
 		

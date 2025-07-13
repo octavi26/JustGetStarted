@@ -28,7 +28,7 @@
 [ext_resource type="Script" path="res://Scripts/Attack_Up.gd" id="26_pnqs0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fajsi"]
-size = Vector2(22, 36)
+size = Vector2(14, 4)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iocjx"]
 atlas = ExtResource("2_r1o80")
@@ -1255,13 +1255,13 @@ collision_layer = 2
 script = ExtResource("1_j76l8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 16)
 shape = SubResource("RectangleShape2D_fajsi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_0eia2")
-animation = &"Attack1 Up"
+animation = &"Idle Down"
 autoplay = "Idle Down"
-frame = 1
 
 [node name="AlterantiveAttackTimer" type="Timer" parent="."]
 wait_time = 0.6

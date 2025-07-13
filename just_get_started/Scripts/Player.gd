@@ -16,16 +16,20 @@ var attackDirection := Vector2()
 var isAttacking = false
 var justAttacked = false
 var alternativeAttack = false
+var firstFrameAttack = false
 
 func _physics_process(delta: float) -> void:
-	direction = Vector2(Input.get_axis("Left", "Right"), Input.get_axis("Up", "Down")).normalized()
+	if moveable:
+		direction = Vector2(Input.get_axis("Left", "Right"), Input.get_axis("Up", "Down")).normalized()
+	else:
+		direction = Vector2(0, 0)
 	
 	if !isAttacking and !isDashing:
 		Orientation()
 		if moveable: Move()
 		
 	justDashed = false
-	if Input.is_action_just_pressed("Dash") and canDash:
+	if Input.is_action_just_pressed("Dash") and canDash and moveable:
 		Dash()
 	if $DashTimer.is_stopped():
 		if isDashing == true:
@@ -47,7 +51,9 @@ func _physics_process(delta: float) -> void:
 		attackDirection = Vector2(1, 0)
 		
 	justAttacked = false
+	firstFrameAttack = false
 	if attackDirection:
+		firstFrameAttack = true
 		$AnimatedSprite2D.play("Idle Down")
 		Attack()
 		isAttacking = true
@@ -64,8 +70,12 @@ func _physics_process(delta: float) -> void:
 		$AttackCollision/Area2DLeft/CollisionShape2D.disabled = true
 		$AttackCollision/Area2DRight/CollisionShape2D.disabled = true
 		$AttackCollision/Area2DUp/CollisionShape2D.disabled = true
+	if !firstFrameAttack:
+		$AttackCollision/Area2DDown/CollisionShape2D.disabled = true
+		$AttackCollision/Area2DLeft/CollisionShape2D.disabled = true
+		$AttackCollision/Area2DRight/CollisionShape2D.disabled = true
+		$AttackCollision/Area2DUp/CollisionShape2D.disabled = true
 	
-	print($AnimatedSprite2D.animation, isAttacking)
 	AnimationHandler()
 
 func Move():

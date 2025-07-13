@@ -1,17 +1,16 @@
-[gd_scene load_steps=16 format=3 uid="uid://q2chhna0w7d6"]
+[gd_scene load_steps=15 format=3 uid="uid://cqqarym3vvbkh"]
 
-[ext_resource type="PackedScene" uid="uid://bd7gb8bd4pxgw" path="res://Scenes/Player.tscn" id="1_d7elq"]
-[ext_resource type="Texture2D" uid="uid://7vlf6sgtbgkv" path="res://Assets/TileSets/TX Tileset Grass.png" id="2_5ljry"]
-[ext_resource type="Script" path="res://Scripts/Camera_Shake.gd" id="3_2jdi6"]
-[ext_resource type="Texture2D" uid="uid://domqhxfcd3xmq" path="res://Assets/TileSets/TX Struct.png" id="3_b7cuf"]
-[ext_resource type="Texture2D" uid="uid://c54hxqc5lhb0s" path="res://Assets/TileSets/TX Tileset Stone Ground.png" id="4_k4eel"]
-[ext_resource type="Texture2D" uid="uid://g8tr2et668f8" path="res://Assets/TileSets/TX Tileset Wall.png" id="5_qr7mh"]
-[ext_resource type="PackedScene" uid="uid://b8deqcao3lufg" path="res://Scenes/Teleporter.tscn" id="6_s73lr"]
-[ext_resource type="Script" path="res://Scripts/Manager_Stage0_Trial2.gd" id="7_yhxen"]
-[ext_resource type="PackedScene" uid="uid://dd5i76isxitbg" path="res://Scenes/Puzzle.tscn" id="8_wv0eo"]
+[ext_resource type="PackedScene" uid="uid://bd7gb8bd4pxgw" path="res://Scenes/Player.tscn" id="1_v2je7"]
+[ext_resource type="Texture2D" uid="uid://7vlf6sgtbgkv" path="res://Assets/TileSets/TX Tileset Grass.png" id="2_pvopl"]
+[ext_resource type="Texture2D" uid="uid://domqhxfcd3xmq" path="res://Assets/TileSets/TX Struct.png" id="3_djyi3"]
+[ext_resource type="Texture2D" uid="uid://c54hxqc5lhb0s" path="res://Assets/TileSets/TX Tileset Stone Ground.png" id="4_7rwdb"]
+[ext_resource type="Texture2D" uid="uid://g8tr2et668f8" path="res://Assets/TileSets/TX Tileset Wall.png" id="5_wufgn"]
+[ext_resource type="PackedScene" uid="uid://b8deqcao3lufg" path="res://Scenes/Teleporter.tscn" id="6_o6sys"]
+[ext_resource type="PackedScene" uid="uid://3fnrfu1w1our" path="res://Scenes/Dummy.tscn" id="7_kkmy3"]
+[ext_resource type="Script" path="res://Scenes/Manager_Stage0_Trial3.gd" id="8_cslxh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qnptl"]
-texture = ExtResource("2_5ljry")
+texture = ExtResource("2_pvopl")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -275,7 +274,7 @@ tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetAtlasSource_qnptl")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kwjfa"]
-texture = ExtResource("3_b7cuf")
+texture = ExtResource("3_djyi3")
 texture_region_size = Vector2i(32, 32)
 1:5/size_in_atlas = Vector2i(2, 3)
 1:5/0 = 0
@@ -309,7 +308,7 @@ texture_region_size = Vector2i(32, 32)
 8:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mhw13"]
-texture = ExtResource("4_k4eel")
+texture = ExtResource("4_7rwdb")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -363,7 +362,7 @@ texture_region_size = Vector2i(32, 32)
 7:7/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tkcb2"]
-texture = ExtResource("5_qr7mh")
+texture = ExtResource("5_wufgn")
 texture_region_size = Vector2i(32, 32)
 1:1/0 = 0
 2:1/0 = 0
@@ -438,9 +437,9 @@ sources/5 = SubResource("TileSetAtlasSource_tkcb2")
 [node name="Node2D" type="Node2D"]
 
 [node name="Manager" type="Node" parent="."]
-script = ExtResource("7_yhxen")
+script = ExtResource("8_cslxh")
 
-[node name="Player" parent="." instance=ExtResource("1_d7elq")]
+[node name="Player" parent="." instance=ExtResource("1_v2je7")]
 unique_name_in_owner = true
 z_index = 13
 scale = Vector2(1, 1)
@@ -448,7 +447,6 @@ SPEED = 200.0
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(3.5, 3.5)
-script = ExtResource("3_2jdi6")
 
 [node name="Grass" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_dx4y3")
@@ -462,17 +460,21 @@ tile_set = SubResource("TileSet_5y7pu")
 format = 2
 layer_0/tile_data = PackedInt32Array(196604, 4, 3, 196605, 65540, 3, 196606, 65540, 3, 196607, 65540, 3, 131072, 131076, 3, -327685, 262149, 6, -327684, 131077, 6, -327683, 131077, 6, -327682, 262149, 6, -327681, 3, 1, -393216, 327685, 9, -393215, 262149, 6, -327689, 131077, 6, -327688, 327685, 9, -327687, 262149, 6, -327686, 196613, 6, -327690, 327685, 1, -393223, 65541, 1, -393214, 196613, 3, -524286, 196613, 2, -393227, 262149, 1, -327691, 262149, 2, -262155, 262149, 3, -131083, 196613, 3, -131084, 131077, 3, -131085, 262149, 6, -131086, 131077, 6, -131087, 131077, 6, -524283, 65541, 2, -524285, 851971, 0, -524284, 917507, 0, -393211, 65541, 3, -393210, 65541, 6, -393209, 196613, 6, -393208, 131077, 6, -393207, 65541, 6, -589822, 786435, 0, -589819, 983043, 0)
 
-[node name="Teleportor2" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_s73lr")]
+[node name="Teleportor2" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_o6sys")]
 position = Vector2(207, 6)
 active = false
-level = "res://Scenes/Stage0_Trial3.tscn"
+level = "res://Scenes/Stage0_Trial4.tscn"
 player = NodePath("../Player")
 
-[node name="Teleportor1" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_s73lr")]
+[node name="Teleportor1" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_o6sys")]
 position = Vector2(-237, 3)
 spawn = true
-level = "res://Scenes/Stage0_Trial1.tscn"
+level = "res://Scenes/Stage0_Trial2.tscn"
 player = NodePath("../Player")
 
-[node name="Puzzle" parent="." instance=ExtResource("8_wv0eo")]
-position = Vector2(-32, -96)
+[node name="Dummy2" parent="." instance=ExtResource("7_kkmy3")]
+position = Vector2(34, 46)
+armor = true
+
+[node name="Dummy1" parent="." instance=ExtResource("7_kkmy3")]
+position = Vector2(33, -20)
