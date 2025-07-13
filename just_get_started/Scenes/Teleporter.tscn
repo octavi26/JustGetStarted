@@ -305,7 +305,7 @@ region_enabled = true
 region_rect = Rect2(330, 273, 5, 5)
 
 [node name="Position" type="Node2D" parent="."]
-position = Vector2(16, -31)
+position = Vector2(16, -16)
 
 [node name="TeleportTimer" type="Timer" parent="."]
 wait_time = 2.5

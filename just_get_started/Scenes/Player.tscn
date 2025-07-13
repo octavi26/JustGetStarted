@@ -1255,10 +1255,11 @@ collision_layer = 2
 script = ExtResource("1_j76l8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 16)
+position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_fajsi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -18)
 sprite_frames = SubResource("SpriteFrames_0eia2")
 animation = &"Idle Down"
 autoplay = "Idle Down"
@@ -1289,6 +1290,7 @@ autoplay = "Press"
 frame_progress = 0.912391
 
 [node name="AttackCollision" type="Node2D" parent="."]
+position = Vector2(0, -18)
 
 [node name="Area2DDown" type="Area2D" parent="AttackCollision"]
 position = Vector2(0, 8)
