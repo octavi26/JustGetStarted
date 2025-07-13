@@ -1,17 +1,21 @@
-[gd_scene load_steps=19 format=3 uid="uid://q2chhna0w7d6"]
+[gd_scene load_steps=23 format=3 uid="uid://q2chhna0w7d6"]
 
 [ext_resource type="PackedScene" uid="uid://bd7gb8bd4pxgw" path="res://Scenes/Player.tscn" id="1_d7elq"]
 [ext_resource type="Texture2D" uid="uid://7vlf6sgtbgkv" path="res://Assets/TileSets/TX Tileset Grass.png" id="2_5ljry"]
-[ext_resource type="Script" path="res://Scripts/Camera_Shake.gd" id="3_2jdi6"]
+[ext_resource type="Script" uid="uid://dy7c1xpr6o01p" path="res://Scripts/Camera_Shake.gd" id="3_2jdi6"]
 [ext_resource type="Texture2D" uid="uid://domqhxfcd3xmq" path="res://Assets/TileSets/TX Struct.png" id="3_b7cuf"]
 [ext_resource type="Texture2D" uid="uid://c54hxqc5lhb0s" path="res://Assets/TileSets/TX Tileset Stone Ground.png" id="4_k4eel"]
 [ext_resource type="PackedScene" uid="uid://bunskihyq44kr" path="res://Scenes/Object_Collision_Image.tscn" id="4_lvl34"]
 [ext_resource type="Texture2D" uid="uid://g8tr2et668f8" path="res://Assets/TileSets/TX Tileset Wall.png" id="5_qr7mh"]
+[ext_resource type="PackedScene" uid="uid://dj68bjweojhfy" path="res://Scenes/Narrator_Text_Box.tscn" id="5_qu1ii"]
+[ext_resource type="PackedScene" uid="uid://duuhv3ariy5q4" path="res://Scenes/Player_Text_Box.tscn" id="6_awnp8"]
 [ext_resource type="PackedScene" uid="uid://b8deqcao3lufg" path="res://Scenes/Teleporter.tscn" id="6_s73lr"]
-[ext_resource type="Script" path="res://Scripts/Manager_Stage0_Trial2.gd" id="7_yhxen"]
+[ext_resource type="Script" uid="uid://rlj8ti5e38q8" path="res://Scripts/Manager_Stage0_Trial2.gd" id="7_yhxen"]
 [ext_resource type="PackedScene" uid="uid://dd5i76isxitbg" path="res://Scenes/Puzzle.tscn" id="8_wv0eo"]
 [ext_resource type="PackedScene" uid="uid://df6pie5n7tpbk" path="res://Scenes/Object_Collision_Image_Activation.tscn" id="10_fldqx"]
-[ext_resource type="Texture2D" uid="uid://cea2cy7abb0w1" path="res://Assets/Sprites/Player/ChatGPT Image 12 iul. 2025, 14_24_19.png" id="12_nrcdr"]
+[ext_resource type="PackedScene" uid="uid://ks5skbsb7ao0" path="res://Scenes/Text_Box_Activation.tscn" id="13_0csrn"]
+[ext_resource type="Texture2D" uid="uid://b6syjes4lixul" path="res://Assets/Sprites/Player/ChatGPT_Image_14_iul._2025_01_02_50.png" id="14_awnp8"]
+[ext_resource type="Script" uid="uid://tt76ctq22j56" path="res://Scripts/Text_Box_Activation_Player.gd" id="16_rh60f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qnptl"]
 texture = ExtResource("2_5ljry")
@@ -438,7 +442,7 @@ sources/3 = SubResource("TileSetAtlasSource_kwjfa")
 sources/4 = SubResource("TileSetAtlasSource_mhw13")
 sources/5 = SubResource("TileSetAtlasSource_tkcb2")
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="Manager" type="Node" parent="."]
 script = ExtResource("7_yhxen")
@@ -456,6 +460,18 @@ script = ExtResource("3_2jdi6")
 [node name="Object_Image" parent="Player/Camera2D" instance=ExtResource("4_lvl34")]
 unique_name_in_owner = true
 visible = false
+
+[node name="Narrator" parent="Player/Camera2D" instance=ExtResource("5_qu1ii")]
+unique_name_in_owner = true
+visible = false
+position = Vector2(-1, 84)
+scale = Vector2(0.2, 0.2)
+
+[node name="PlayerTextBox" parent="Player/Camera2D" instance=ExtResource("6_awnp8")]
+unique_name_in_owner = true
+visible = false
+position = Vector2(-1, 71)
+scale = Vector2(0.2, 0.2)
 
 [node name="Grass" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_dx4y3")
@@ -486,9 +502,25 @@ player = NodePath("../Player")
 position = Vector2(-32, -96)
 
 [node name="Object" parent="." instance=ExtResource("10_fldqx")]
-position = Vector2(-94, 0)
+position = Vector2(-103, -1)
 collision_mask = 2
-image_shown = ExtResource("12_nrcdr")
+image_shown = ExtResource("14_awnp8")
+
+[node name="AreaNarrator1" parent="." instance=ExtResource("13_0csrn")]
+position = Vector2(-167, 0)
+scale = Vector2(0.5, 1)
+lineID = 2
+
+[node name="AreaNarrator2" parent="." instance=ExtResource("13_0csrn")]
+position = Vector2(-146, 0)
+scale = Vector2(0.5, 1)
+lineID = 3
+
+[node name="AreaPlayer1" parent="." instance=ExtResource("13_0csrn")]
+position = Vector2(-156, 0)
+scale = Vector2(0.5, 1)
+script = ExtResource("16_rh60f")
+lineID = 1
 
 [connection signal="body_entered" from="Object" to="Object" method="_on_body_entered"]
 [connection signal="body_exited" from="Object" to="Object" method="_on_body_exited"]

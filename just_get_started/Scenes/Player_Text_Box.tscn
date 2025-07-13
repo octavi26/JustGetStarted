@@ -1,77 +1,77 @@
 [gd_scene load_steps=15 format=3 uid="uid://duuhv3ariy5q4"]
 
 [ext_resource type="Script" uid="uid://d1sqwwxagiokn" path="res://Scripts/Player_Text_Box.gd" id="1_1lvv6"]
-[ext_resource type="Texture2D" uid="uid://cea2cy7abb0w1" path="res://Assets/Sprites/Player/ChatGPT Image 12 iul. 2025, 14_24_19.png" id="1_qxyqd"]
+[ext_resource type="Texture2D" uid="uid://b6syjes4lixul" path="res://Assets/Sprites/Player/ChatGPT_Image_14_iul._2025_01_02_50.png" id="2_7t3fj"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_crp61"]
-atlas = ExtResource("1_qxyqd")
-region = Rect2(0, 0, 341, 512)
+[sub_resource type="AtlasTexture" id="AtlasTexture_c03je"]
+atlas = ExtResource("2_7t3fj")
+region = Rect2(0, 0, 341, 341)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kae6j"]
-atlas = ExtResource("1_qxyqd")
-region = Rect2(341, 0, 341, 512)
+[sub_resource type="AtlasTexture" id="AtlasTexture_nvkla"]
+atlas = ExtResource("2_7t3fj")
+region = Rect2(341, 0, 341, 341)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_iyh5i"]
-atlas = ExtResource("1_qxyqd")
-region = Rect2(682, 0, 341, 512)
+[sub_resource type="AtlasTexture" id="AtlasTexture_i3l2g"]
+atlas = ExtResource("2_7t3fj")
+region = Rect2(682, 0, 341, 341)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5xw2n"]
-atlas = ExtResource("1_qxyqd")
-region = Rect2(0, 512, 341, 512)
+[sub_resource type="AtlasTexture" id="AtlasTexture_e5ixn"]
+atlas = ExtResource("2_7t3fj")
+region = Rect2(0, 341, 341, 341)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_f2qa0"]
-atlas = ExtResource("1_qxyqd")
-region = Rect2(341, 512, 341, 512)
+[sub_resource type="AtlasTexture" id="AtlasTexture_d7ba7"]
+atlas = ExtResource("2_7t3fj")
+region = Rect2(341, 341, 341, 341)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_np5nm"]
-atlas = ExtResource("1_qxyqd")
-region = Rect2(682, 512, 341, 512)
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbyl8"]
+atlas = ExtResource("2_7t3fj")
+region = Rect2(682, 341, 341, 341)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0xdye"]
-atlas = ExtResource("1_qxyqd")
-region = Rect2(0, 1024, 341, 512)
+[sub_resource type="AtlasTexture" id="AtlasTexture_qm4bt"]
+atlas = ExtResource("2_7t3fj")
+region = Rect2(0, 682, 341, 341)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mrgor"]
-atlas = ExtResource("1_qxyqd")
-region = Rect2(341, 1024, 341, 512)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ltw51"]
+atlas = ExtResource("2_7t3fj")
+region = Rect2(341, 682, 341, 341)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_h2nnm"]
-atlas = ExtResource("1_qxyqd")
-region = Rect2(682, 1024, 341, 512)
+[sub_resource type="AtlasTexture" id="AtlasTexture_6hd82"]
+atlas = ExtResource("2_7t3fj")
+region = Rect2(682, 682, 341, 341)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0wnwl"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_crp61")
+"texture": SubResource("AtlasTexture_c03je")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_kae6j")
+"texture": SubResource("AtlasTexture_nvkla")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_iyh5i")
+"texture": SubResource("AtlasTexture_i3l2g")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5xw2n")
+"texture": SubResource("AtlasTexture_e5ixn")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_f2qa0")
+"texture": SubResource("AtlasTexture_d7ba7")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_np5nm")
+"texture": SubResource("AtlasTexture_lbyl8")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0xdye")
+"texture": SubResource("AtlasTexture_qm4bt")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_mrgor")
+"texture": SubResource("AtlasTexture_ltw51")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_h2nnm")
+"texture": SubResource("AtlasTexture_6hd82")
 }],
-"loop": false,
+"loop": true,
 "name": &"default",
-"speed": 0.0
+"speed": 5.0
 }]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_450a4"]
@@ -87,13 +87,12 @@ script = ExtResource("1_1lvv6")
 position = Vector2(-638, 3)
 scale = Vector2(1.17027, 1.17027)
 sprite_frames = SubResource("SpriteFrames_0wnwl")
-frame = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 1)
 z_index = -1
-position = Vector2(-638, 7.99997)
-scale = Vector2(-436.688, 634.34)
+position = Vector2(-638, -0.574409)
+scale = Vector2(-436.688, 432.843)
 texture = SubResource("PlaceholderTexture2D_450a4")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]

@@ -12,15 +12,19 @@ var dialogueTable = {
 		"What is this weird place?"
 	], "frame": 9 },
 	1: { "text": [
-		"Hello, traveler.",
-		"Salut"
-	], "frame": 1 },
+		"What kind of hint is that?",
+		"Are these guys dumb?"
+	], "frame": 4 },
 	2: { "text": [
-		"What brings you to this land?"
+		"These trees are indeed beautiful.",
+		"I wonder if they made this or just stole it off the internet"
 	], "frame": 2 },
 	3: { "text": [
-		"Ah, I see. Be careful out there."
-	], "frame": 3 },
+		"Nothing here..."
+	], "frame": 0 },
+	4: { "text": [
+		"Who does this narrator think he is?" #aluzie ca gen naratoru e zeul
+	], "frame": 3}
 }
 
 func _input(event):

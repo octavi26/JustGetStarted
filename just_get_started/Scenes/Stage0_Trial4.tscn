@@ -1,8 +1,8 @@
-[gd_scene load_steps=25 format=3 uid="uid://bjfngk4didbp0"]
+[gd_scene load_steps=27 format=3 uid="uid://bjfngk4didbp0"]
 
-[ext_resource type="Script" path="res://Scripts/Manager_Stage0_Trial4.gd" id="1_lo0au"]
+[ext_resource type="Script" uid="uid://q6yted82n83w" path="res://Scripts/Manager_Stage0_Trial4.gd" id="1_lo0au"]
 [ext_resource type="PackedScene" uid="uid://bd7gb8bd4pxgw" path="res://Scenes/Player.tscn" id="2_w7eiq"]
-[ext_resource type="Script" path="res://Scripts/Player_Text_Box.gd" id="3_8xw7y"]
+[ext_resource type="Script" uid="uid://d1sqwwxagiokn" path="res://Scripts/Player_Text_Box.gd" id="3_8xw7y"]
 [ext_resource type="PackedScene" uid="uid://dj68bjweojhfy" path="res://Scenes/Narrator_Text_Box.tscn" id="4_2ooyw"]
 [ext_resource type="PackedScene" uid="uid://duuhv3ariy5q4" path="res://Scenes/Player_Text_Box.tscn" id="5_sg8qn"]
 [ext_resource type="Texture2D" uid="uid://7vlf6sgtbgkv" path="res://Assets/TileSets/TX Tileset Grass.png" id="6_4an21"]
@@ -14,6 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://dxbq6nq0p1gy2" path="res://Assets/TileSets/TX Shadow.png" id="9_t4njs"]
 [ext_resource type="PackedScene" uid="uid://b8deqcao3lufg" path="res://Scenes/Teleporter.tscn" id="12_yiplw"]
 [ext_resource type="Texture2D" uid="uid://t83sa31l1ttx" path="res://Assets/TileSets/TX Shadow Plant.png" id="13_h2n5o"]
+[ext_resource type="PackedScene" uid="uid://ks5skbsb7ao0" path="res://Scenes/Text_Box_Activation.tscn" id="15_fyuaw"]
+[ext_resource type="Script" uid="uid://tt76ctq22j56" path="res://Scripts/Text_Box_Activation_Player.gd" id="16_j7uqr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jqeou"]
 texture = ExtResource("6_4an21")
@@ -1031,11 +1033,8 @@ SPEED = 200.0
 [node name="Camera2D" type="Camera2D" parent="WORLD/Player"]
 position = Vector2(1, 0)
 zoom = Vector2(3.5, 3.5)
-limit_left = -486
-limit_top = -296
-limit_right = 486
-limit_bottom = 296
 limit_smoothed = true
+editor_draw_limits = true
 script = ExtResource("3_8xw7y")
 
 [node name="Narrator" parent="WORLD/Player/Camera2D" instance=ExtResource("4_2ooyw")]
@@ -1047,6 +1046,7 @@ scale = Vector2(0.2, 0.2)
 [node name="PlayerTextBox" parent="WORLD/Player/Camera2D" instance=ExtResource("5_sg8qn")]
 unique_name_in_owner = true
 visible = false
+z_index = 26
 position = Vector2(-1, 71)
 scale = Vector2(0.2, 0.2)
 
@@ -1076,7 +1076,7 @@ layer_4/tile_data = PackedInt32Array(458749, 2, 0, 393208, 589826, 0, 458741, 32
 
 [node name="Teleportor2" parent="." node_paths=PackedStringArray("player") instance=ExtResource("12_yiplw")]
 position = Vector2(363, 17)
-level = "res://Scenes/Stage0_Trial3.tscn"
+level = "uid://bn2gwqa46ja0k"
 player = NodePath("../WORLD/Player")
 
 [node name="Teleportor1" parent="." node_paths=PackedStringArray("player") instance=ExtResource("12_yiplw")]
@@ -1084,3 +1084,61 @@ position = Vector2(-213, 17)
 spawn = true
 active = false
 player = NodePath("../WORLD/Player")
+
+[node name="AreaNarrator1" parent="." instance=ExtResource("15_fyuaw")]
+position = Vector2(-264, 6)
+scale = Vector2(0.5, 2)
+lineID = 6
+
+[node name="AreaNarrator2" parent="." instance=ExtResource("15_fyuaw")]
+position = Vector2(-197, -53)
+rotation = 1.5708
+scale = Vector2(0.5, 2)
+lineID = 6
+
+[node name="AreaNarrator3" parent="." instance=ExtResource("15_fyuaw")]
+position = Vector2(-133, 5)
+scale = Vector2(0.5, 2)
+lineID = 6
+
+[node name="AreaNarrator4" parent="." instance=ExtResource("15_fyuaw")]
+position = Vector2(-197, 54)
+rotation = 1.5708
+scale = Vector2(0.5, 2)
+lineID = 6
+
+[node name="AreaPlayer1" parent="." instance=ExtResource("15_fyuaw")]
+position = Vector2(-255, 145)
+scale = Vector2(3, 1)
+script = ExtResource("16_j7uqr")
+lineID = 2
+
+[node name="AreaPlayer2" parent="." instance=ExtResource("15_fyuaw")]
+position = Vector2(314, 195)
+scale = Vector2(3, 1)
+script = ExtResource("16_j7uqr")
+lineID = 2
+
+[node name="AreaPlayer3" parent="." instance=ExtResource("15_fyuaw")]
+position = Vector2(331, -160)
+scale = Vector2(3, 1)
+script = ExtResource("16_j7uqr")
+lineID = 2
+
+[node name="AreaPlayer4" parent="." instance=ExtResource("15_fyuaw")]
+position = Vector2(-224, -213)
+scale = Vector2(3, 1)
+script = ExtResource("16_j7uqr")
+lineID = 3
+
+[node name="AreaNarrator5" parent="." instance=ExtResource("15_fyuaw")]
+position = Vector2(-72, 64)
+rotation = 1.5708
+scale = Vector2(3, 1)
+lineID = 7
+
+[node name="AreaNarrator6" parent="." instance=ExtResource("15_fyuaw")]
+position = Vector2(-32, -108)
+rotation = 1.5708
+scale = Vector2(4, 1.5)
+lineID = 8
