@@ -1076,7 +1076,7 @@ layer_4/tile_data = PackedInt32Array(458749, 2, 0, 393208, 589826, 0, 458741, 32
 
 [node name="Teleportor2" parent="." node_paths=PackedStringArray("player") instance=ExtResource("12_yiplw")]
 position = Vector2(363, 17)
-level = "res://Scenes/Stage0_Trial3.tscn"
+level = "res://Scenes/Stage0_Trial5.tscn"
 player = NodePath("../WORLD/Player")
 
 [node name="Teleportor1" parent="." node_paths=PackedStringArray("player") instance=ExtResource("12_yiplw")]

@@ -1,8 +1,8 @@
 [gd_scene load_steps=21 format=3 uid="uid://bn2gwqa46ja0k"]
 
-[ext_resource type="Script" uid="uid://cmoj7gw66ijbg" path="res://Scripts/Manager_Stage0_Trial5.gd" id="1_ljxug"]
+[ext_resource type="Script" path="res://Scripts/Manager_Stage0_Trial5.gd" id="1_ljxug"]
 [ext_resource type="PackedScene" uid="uid://bd7gb8bd4pxgw" path="res://Scenes/Player.tscn" id="2_ljxug"]
-[ext_resource type="Script" uid="uid://dy7c1xpr6o01p" path="res://Scripts/Camera_Shake.gd" id="3_ljxug"]
+[ext_resource type="Script" path="res://Scripts/Camera_Shake.gd" id="3_ljxug"]
 [ext_resource type="PackedScene" uid="uid://dj68bjweojhfy" path="res://Scenes/Narrator_Text_Box.tscn" id="4_if5n4"]
 [ext_resource type="PackedScene" uid="uid://duuhv3ariy5q4" path="res://Scenes/Player_Text_Box.tscn" id="5_s8wxg"]
 [ext_resource type="Texture2D" uid="uid://7vlf6sgtbgkv" path="res://Assets/TileSets/TX Tileset Grass.png" id="6_co6d6"]
@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://3fnrfu1w1our" path="res://Scenes/Dummy.tscn" id="11_0ppk1"]
 [ext_resource type="PackedScene" uid="uid://bnksfh8ahkhl7" path="res://Scenes/Puzzle2.tscn" id="12_bgorf"]
 [ext_resource type="PackedScene" uid="uid://b8deqcao3lufg" path="res://Scenes/Teleporter.tscn" id="12_kfukk"]
-[ext_resource type="Script" uid="uid://d22yive2aayot" path="res://Scripts/Puzzle2.gd" id="13_ljxug"]
+[ext_resource type="Script" path="res://Scripts/Puzzle2.gd" id="13_ljxug"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jqeou"]
 texture = ExtResource("6_co6d6")
@@ -537,18 +537,18 @@ layer_0/tile_data = PackedInt32Array(-524303, 327685, 1, -524302, 393221, 1, -52
 [node name="AreaNarrator1" parent="." instance=ExtResource("10_shxwa")]
 position = Vector2(-48, -138)
 scale = Vector2(3, 1)
-lineID = 4
+lineID = 2
 
 [node name="Teleportor1" parent="." node_paths=PackedStringArray("player") instance=ExtResource("12_kfukk")]
 position = Vector2(-149, -127)
 spawn = true
-level = "uid://do5i48h8mui4d"
+level = "res://Scenes/Stage0_Trial4.tscn"
 player = NodePath("../Player")
 
 [node name="Teleportor2" parent="." node_paths=PackedStringArray("player") instance=ExtResource("12_kfukk")]
 position = Vector2(336, -124)
 active = false
-level = "uid://beevu125rqwea"
+level = "res://Scenes/Stage0_Trial6.tscn"
 player = NodePath("../Player")
 
 [node name="Dummy1" parent="." instance=ExtResource("11_0ppk1")]
