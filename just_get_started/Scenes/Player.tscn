@@ -1,7 +1,7 @@
-[gd_scene load_steps=184 format=3 uid="uid://bd7gb8bd4pxgw"]
+[gd_scene load_steps=189 format=3 uid="uid://bd7gb8bd4pxgw"]
 
 [ext_resource type="Texture2D" uid="uid://xlum7u18v7vb" path="res://Assets/Sprites/Player/IDLE/idle_down.png" id="1_ivrb1"]
-[ext_resource type="Script" uid="uid://t2mq6oiv3clc" path="res://Scripts/Player.gd" id="1_j76l8"]
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_j76l8"]
 [ext_resource type="Texture2D" uid="uid://c7hkgffdiva08" path="res://Assets/Sprites/Player/ATTACK 1/attack1_down.png" id="2_r1o80"]
 [ext_resource type="Texture2D" uid="uid://bsnhdjha3kojm" path="res://Assets/Sprites/Player/IDLE/idle_left.png" id="2_v2ofg"]
 [ext_resource type="Texture2D" uid="uid://b2sxsua2q8dkg" path="res://Assets/Sprites/Player/ATTACK 1/attack1_left.png" id="3_uduul"]
@@ -22,6 +22,10 @@
 [ext_resource type="Texture2D" uid="uid://c24uhqakljl4w" path="res://Assets/Sprites/Player/DASH/dash_right.png" id="12_flfsn"]
 [ext_resource type="Texture2D" uid="uid://b7418btwooyyr" path="res://Assets/Sprites/Player/DASH/dash_up.png" id="13_7byr0"]
 [ext_resource type="Texture2D" uid="uid://b8nqo735x3fwc" path="res://Assets/Sprites/UI/E_Press.png" id="22_fl1kk"]
+[ext_resource type="Script" path="res://Scripts/Attack_Down.gd" id="23_esnc4"]
+[ext_resource type="Script" path="res://Scripts/Attack_Left.gd" id="24_2dc2e"]
+[ext_resource type="Script" path="res://Scripts/Attack_Right.gd" id="25_ebrf7"]
+[ext_resource type="Script" path="res://Scripts/Attack_Up.gd" id="26_pnqs0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fajsi"]
 size = Vector2(22, 36)
@@ -1243,6 +1247,8 @@ animations = [{
 "speed": 2.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_b2na4"]
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
 scale = Vector2(2, 2)
 collision_layer = 2
@@ -1253,9 +1259,9 @@ shape = SubResource("RectangleShape2D_fajsi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_0eia2")
-animation = &"Idle Down"
+animation = &"Attack1 Up"
 autoplay = "Idle Down"
-frame_progress = 0.613633
+frame = 1
 
 [node name="AlterantiveAttackTimer" type="Timer" parent="."]
 wait_time = 0.6
@@ -1281,3 +1287,50 @@ sprite_frames = SubResource("SpriteFrames_h5k8p")
 animation = &"Press"
 autoplay = "Press"
 frame_progress = 0.912391
+
+[node name="AttackCollision" type="Node2D" parent="."]
+
+[node name="Area2DDown" type="Area2D" parent="AttackCollision"]
+position = Vector2(0, 8)
+scale = Vector2(2.32, 2.32)
+collision_mask = 4
+script = ExtResource("23_esnc4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackCollision/Area2DDown"]
+shape = SubResource("CircleShape2D_b2na4")
+disabled = true
+
+[node name="Area2DLeft" type="Area2D" parent="AttackCollision"]
+position = Vector2(-18, 0)
+scale = Vector2(2.32, 1.655)
+collision_mask = 4
+script = ExtResource("24_2dc2e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackCollision/Area2DLeft"]
+shape = SubResource("CircleShape2D_b2na4")
+disabled = true
+
+[node name="Area2DRight" type="Area2D" parent="AttackCollision"]
+position = Vector2(18, 0)
+scale = Vector2(2.32, 1.655)
+collision_mask = 4
+script = ExtResource("25_ebrf7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackCollision/Area2DRight"]
+shape = SubResource("CircleShape2D_b2na4")
+disabled = true
+
+[node name="Area2DUp" type="Area2D" parent="AttackCollision"]
+position = Vector2(0, -8)
+scale = Vector2(2.32, 2.32)
+collision_mask = 4
+script = ExtResource("26_pnqs0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackCollision/Area2DUp"]
+shape = SubResource("CircleShape2D_b2na4")
+disabled = true
+
+[connection signal="body_entered" from="AttackCollision/Area2DDown" to="AttackCollision/Area2DDown" method="_on_body_entered"]
+[connection signal="body_entered" from="AttackCollision/Area2DLeft" to="AttackCollision/Area2DLeft" method="_on_body_entered"]
+[connection signal="body_entered" from="AttackCollision/Area2DRight" to="AttackCollision/Area2DRight" method="_on_body_entered"]
+[connection signal="body_entered" from="AttackCollision/Area2DUp" to="AttackCollision/Area2DUp" method="_on_body_entered"]
