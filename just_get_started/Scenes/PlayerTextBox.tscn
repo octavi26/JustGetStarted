@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://duuhv3ariy5q4"]
 
-[ext_resource type="Script" path="res://Scripts/Player_Text_Box.gd" id="1_1lvv6"]
+[ext_resource type="Script" uid="uid://d1sqwwxagiokn" path="res://Scripts/Player_Text_Box.gd" id="1_1lvv6"]
 [ext_resource type="Texture2D" uid="uid://cea2cy7abb0w1" path="res://Assets/Sprites/Player/ChatGPT Image 12 iul. 2025, 14_24_19.png" id="1_qxyqd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_crp61"]
@@ -80,7 +80,7 @@ animations = [{
 font_size = 36
 font_color = Color(0, 0, 0, 1)
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 script = ExtResource("1_1lvv6")
 
 [node name="Image" type="AnimatedSprite2D" parent="."]

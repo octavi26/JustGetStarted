@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://duuhv3ariy5q4" path="res://Scenes/PlayerTextBox.tscn" id="4_jqeou"]
 [ext_resource type="Texture2D" uid="uid://g8tr2et668f8" path="res://Assets/TileSets/TX Tileset Wall.png" id="5_j18mx"]
 [ext_resource type="PackedScene" uid="uid://ks5skbsb7ao0" path="res://Scenes/TextBoxActivation.tscn" id="7_1lmhn"]
-[ext_resource type="Script" uid="uid://tt76ctq22j56" path="res://Scripts/TextBoxActivationPlayer.gd" id="10_jqeou"]
+[ext_resource type="Script" uid="uid://tt76ctq22j56" path="res://Scripts/Text_Box_Activation_Player.gd" id="10_jqeou"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jqeou"]
 texture = ExtResource("2_agriw")
