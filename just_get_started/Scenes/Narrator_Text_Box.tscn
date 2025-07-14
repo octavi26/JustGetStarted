@@ -9,7 +9,7 @@ font_size = 36
 font_color = Color(0, 0, 0, 1)
 
 [node name="Node2D" type="Node2D"]
-z_index = 26
+z_index = 100
 script = ExtResource("1_uu6rn")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]

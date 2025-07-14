@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://beevu125rqwea"]
+[gd_scene load_steps=26 format=3 uid="uid://beevu125rqwea"]
 
 [ext_resource type="PackedScene" uid="uid://bd7gb8bd4pxgw" path="res://Scenes/Player.tscn" id="1_mqk4n"]
 [ext_resource type="Texture2D" uid="uid://7vlf6sgtbgkv" path="res://Assets/TileSets/TX Tileset Grass.png" id="2_agriw"]
@@ -16,7 +16,7 @@
 [ext_resource type="Script" path="res://Scripts/Manager_Stage0_Trial1.gd" id="12_sdtce"]
 [ext_resource type="Texture2D" uid="uid://t83sa31l1ttx" path="res://Assets/TileSets/TX Shadow Plant.png" id="13_vanaa"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_41kns"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ncm4x"]
 texture = ExtResource("2_agriw")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
@@ -286,9 +286,9 @@ texture_region_size = Vector2i(32, 32)
 
 [sub_resource type="TileSet" id="TileSet_0atu1"]
 tile_size = Vector2i(32, 32)
-sources/0 = SubResource("TileSetAtlasSource_41kns")
+sources/0 = SubResource("TileSetAtlasSource_ncm4x")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oxi3q"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cjoos"]
 texture = ExtResource("7_4osa2")
 texture_region_size = Vector2i(32, 32)
 1:0/0 = 0
@@ -501,7 +501,7 @@ texture_region_size = Vector2i(32, 32)
 9:0/0/y_sort_origin = 16
 9:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-26.1434, 6.29961, 27.0883, 5.66964, 29.2932, 30.5531, -27.7183, 32.7579)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rexm3"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uhto3"]
 texture = ExtResource("8_btung")
 texture_region_size = Vector2i(32, 32)
 1:0/0 = 0
@@ -622,7 +622,7 @@ texture_region_size = Vector2i(32, 32)
 9:0/size_in_atlas = Vector2i(2, 2)
 9:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mspp1"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hg0rs"]
 texture = ExtResource("9_1voij")
 texture_region_size = Vector2i(32, 32)
 1:6/0 = 0
@@ -661,7 +661,7 @@ texture_region_size = Vector2i(32, 32)
 10:5/0 = 0
 10:5/0/y_sort_origin = 16
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vnrh2"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8ro6o"]
 texture = ExtResource("3_1lmhn")
 texture_region_size = Vector2i(32, 32)
 1:9/size_in_atlas = Vector2i(3, 3)
@@ -749,7 +749,7 @@ texture_region_size = Vector2i(32, 32)
 8:5/0/y_sort_origin = -48
 8:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(10.0794, -47.877, 16.694, -47.247, 16.064, 47.877, 10.7093, 47.877)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u2fh5"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bury4"]
 texture = ExtResource("4_b4es4")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
@@ -803,7 +803,7 @@ texture_region_size = Vector2i(32, 32)
 6:7/0 = 0
 7:7/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vriab"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qp7fr"]
 texture = ExtResource("5_j18mx")
 texture_region_size = Vector2i(32, 32)
 1:1/0 = 0
@@ -958,7 +958,7 @@ texture_region_size = Vector2i(32, 32)
 7:1/0/y_sort_origin = -48
 7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(16.416, -48.1256, 16, 16, -16, 16, -15.9951, -47.8449)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_17vu7"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bxb1w"]
 texture = ExtResource("13_vanaa")
 texture_region_size = Vector2i(32, 32)
 1:3/0 = 0
@@ -1001,13 +1001,13 @@ texture_region_size = Vector2i(32, 32)
 [sub_resource type="TileSet" id="TileSet_ejf2g"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
-sources/3 = SubResource("TileSetAtlasSource_vnrh2")
-sources/4 = SubResource("TileSetAtlasSource_u2fh5")
-sources/5 = SubResource("TileSetAtlasSource_vriab")
-sources/0 = SubResource("TileSetAtlasSource_oxi3q")
-sources/1 = SubResource("TileSetAtlasSource_rexm3")
-sources/2 = SubResource("TileSetAtlasSource_mspp1")
-sources/6 = SubResource("TileSetAtlasSource_17vu7")
+sources/3 = SubResource("TileSetAtlasSource_8ro6o")
+sources/4 = SubResource("TileSetAtlasSource_bury4")
+sources/5 = SubResource("TileSetAtlasSource_qp7fr")
+sources/0 = SubResource("TileSetAtlasSource_cjoos")
+sources/1 = SubResource("TileSetAtlasSource_uhto3")
+sources/2 = SubResource("TileSetAtlasSource_hg0rs")
+sources/6 = SubResource("TileSetAtlasSource_bxb1w")
 
 [node name="Node2D2" type="Node2D"]
 position = Vector2(-24, -1)
