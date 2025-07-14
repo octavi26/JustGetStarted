@@ -1,8 +1,8 @@
 [gd_scene load_steps=30 format=3 uid="uid://bn2gwqa46ja0k"]
 
-[ext_resource type="Script" path="res://Scripts/Manager_Stage0_Trial5.gd" id="1_ljxug"]
+[ext_resource type="Script" uid="uid://cmoj7gw66ijbg" path="res://Scripts/Manager_Stage0_Trial5.gd" id="1_ljxug"]
 [ext_resource type="PackedScene" uid="uid://bd7gb8bd4pxgw" path="res://Scenes/Player.tscn" id="2_ljxug"]
-[ext_resource type="Script" path="res://Scripts/Camera_Shake.gd" id="3_ljxug"]
+[ext_resource type="Script" uid="uid://dy7c1xpr6o01p" path="res://Scripts/Camera_Shake.gd" id="3_ljxug"]
 [ext_resource type="PackedScene" uid="uid://dj68bjweojhfy" path="res://Scenes/Narrator_Text_Box.tscn" id="4_if5n4"]
 [ext_resource type="PackedScene" uid="uid://duuhv3ariy5q4" path="res://Scenes/Player_Text_Box.tscn" id="5_s8wxg"]
 [ext_resource type="Texture2D" uid="uid://7vlf6sgtbgkv" path="res://Assets/TileSets/TX Tileset Grass.png" id="6_co6d6"]
@@ -14,11 +14,11 @@
 [ext_resource type="Texture2D" uid="uid://g8tr2et668f8" path="res://Assets/TileSets/TX Tileset Wall.png" id="9_wkmfm"]
 [ext_resource type="PackedScene" uid="uid://ks5skbsb7ao0" path="res://Scenes/Text_Box_Activation.tscn" id="10_shxwa"]
 [ext_resource type="PackedScene" uid="uid://3fnrfu1w1our" path="res://Scenes/Dummy.tscn" id="11_0ppk1"]
-[ext_resource type="Script" path="res://Scripts/Text_Box_Activation_Player.gd" id="11_cmrla"]
+[ext_resource type="Script" uid="uid://tt76ctq22j56" path="res://Scripts/Text_Box_Activation_Player.gd" id="11_cmrla"]
 [ext_resource type="PackedScene" uid="uid://bnksfh8ahkhl7" path="res://Scenes/Puzzle2.tscn" id="12_bgorf"]
 [ext_resource type="PackedScene" uid="uid://b8deqcao3lufg" path="res://Scenes/Teleporter.tscn" id="12_kfukk"]
 [ext_resource type="Texture2D" uid="uid://t83sa31l1ttx" path="res://Assets/TileSets/TX Shadow Plant.png" id="13_f1s8i"]
-[ext_resource type="Script" path="res://Scripts/Puzzle2.gd" id="13_ljxug"]
+[ext_resource type="Script" uid="uid://d22yive2aayot" path="res://Scripts/Puzzle2.gd" id="13_ljxug"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jrm8q"]
 texture = ExtResource("6_co6d6")
@@ -1076,6 +1076,11 @@ layer_3/tile_data = PackedInt32Array(458756, 327686, 3, 524292, 327686, 4, 45875
 layer_4/name = "Trees"
 layer_4/y_sort_enabled = true
 layer_4/tile_data = PackedInt32Array(-262158, 327682, 0, -262150, 327682, 0, -458750, 327682, 0, 196609, 327682, 0, 393221, 327682, 0, 458742, 327682, 0, 196593, 327682, 0, 65524, 327682, 0, -589838, 327682, 0, -589813, 327682, 0, 13, 327682, 0, 327689, 327682, 0, 458751, 589826, 0, -131072, 589826, 0, -65550, 589826, 0, -524298, 589826, 0, -524288, 589826, 0, 65542, 589826, 0, -393204, 589826, 0, -458738, 589826, 0, 458737, 589826, 0, -589828, 589826, 0)
+
+[node name="AreaNarrator1" parent="." instance=ExtResource("10_shxwa")]
+position = Vector2(-128, -141)
+scale = Vector2(2, 1)
+lineID = 9
 
 [node name="AreaNarrator2" parent="." instance=ExtResource("10_shxwa")]
 position = Vector2(-290, 39)
