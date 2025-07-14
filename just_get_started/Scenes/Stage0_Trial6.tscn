@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://Scripts/Trial6_Narrator2.gd" id="4_waq0n"]
 [ext_resource type="Script" path="res://Scripts/Trial6_Narrator3.gd" id="5_5ou74"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 script = ExtResource("1_02ve7")
 
 [node name="Camera2D" type="Camera2D" parent="."]

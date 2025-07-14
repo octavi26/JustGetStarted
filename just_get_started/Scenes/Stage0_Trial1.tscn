@@ -11,9 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://dl1fjay6hyf60" path="res://Assets/TileSets/TX Props.png" id="7_4osa2"]
 [ext_resource type="Texture2D" uid="uid://dxbq6nq0p1gy2" path="res://Assets/TileSets/TX Shadow.png" id="8_btung"]
 [ext_resource type="Texture2D" uid="uid://7ghl8bdb3rdm" path="res://Assets/TileSets/TX Plant.png" id="9_1voij"]
-[ext_resource type="Script" uid="uid://tt76ctq22j56" path="res://Scripts/Text_Box_Activation_Player.gd" id="10_jqeou"]
+[ext_resource type="Script" path="res://Scripts/Text_Box_Activation_Player.gd" id="10_jqeou"]
 [ext_resource type="PackedScene" uid="uid://b8deqcao3lufg" path="res://Scenes/Teleporter.tscn" id="11_b4xx5"]
-[ext_resource type="Script" uid="uid://cc53qh4o78ws2" path="res://Scripts/Manager_Stage0_Trial1.gd" id="12_sdtce"]
+[ext_resource type="Script" path="res://Scripts/Manager_Stage0_Trial1.gd" id="12_sdtce"]
 [ext_resource type="Texture2D" uid="uid://t83sa31l1ttx" path="res://Assets/TileSets/TX Shadow Plant.png" id="13_vanaa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ncm4x"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=25 format=3 uid="uid://cqqarym3vvbkh"]
 
-[ext_resource type="Script" uid="uid://drxppa06xqw6p" path="res://Scripts/Manager_Stage0_Trial3.gd" id="1_cktmc"]
+[ext_resource type="Script" path="res://Scripts/Manager_Stage0_Trial3.gd" id="1_cktmc"]
 [ext_resource type="PackedScene" uid="uid://bd7gb8bd4pxgw" path="res://Scenes/Player.tscn" id="1_v2je7"]
 [ext_resource type="Texture2D" uid="uid://7vlf6sgtbgkv" path="res://Assets/TileSets/TX Tileset Grass.png" id="2_pvopl"]
 [ext_resource type="Texture2D" uid="uid://domqhxfcd3xmq" path="res://Assets/TileSets/TX Struct.png" id="3_djyi3"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://b8deqcao3lufg" path="res://Scenes/Teleporter.tscn" id="6_o6sys"]
 [ext_resource type="Texture2D" uid="uid://dxbq6nq0p1gy2" path="res://Assets/TileSets/TX Shadow.png" id="6_oufub"]
 [ext_resource type="PackedScene" uid="uid://3fnrfu1w1our" path="res://Scenes/Dummy.tscn" id="7_kkmy3"]
+[ext_resource type="Texture2D" uid="uid://7ghl8bdb3rdm" path="res://Assets/TileSets/TX Plant.png" id="7_kwtj1"]
 [ext_resource type="PackedScene" uid="uid://ks5skbsb7ao0" path="res://Scenes/Text_Box_Activation.tscn" id="10_v0qpc"]
 [ext_resource type="Texture2D" uid="uid://t83sa31l1ttx" path="res://Assets/TileSets/TX Shadow Plant.png" id="11_ikshg"]
 
@@ -1007,7 +1008,7 @@ sources/1 = SubResource("TileSetAtlasSource_67bmb")
 sources/2 = SubResource("TileSetAtlasSource_fb0b5")
 sources/6 = SubResource("TileSetAtlasSource_uu6eu")
 
-[node name="Node2D3" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="Manager" type="Node" parent="."]
 script = ExtResource("1_cktmc")

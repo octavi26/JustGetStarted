@@ -1010,7 +1010,7 @@ sources/1 = SubResource("TileSetAtlasSource_ccgqk")
 sources/2 = SubResource("TileSetAtlasSource_an6ts")
 sources/6 = SubResource("TileSetAtlasSource_qn2pn")
 
-[node name="Node2D3" type="Node2D"]
+[node name="Node2D" type="Node2D"]
 
 [node name="Manager" type="Node" parent="."]
 script = ExtResource("1_lo0au")
