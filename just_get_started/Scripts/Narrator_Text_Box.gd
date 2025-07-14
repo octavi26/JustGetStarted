@@ -4,6 +4,7 @@ extends Node2D
 @onready var player = %Player
 var waitingInput = false
 var receivedInput = false
+var skipText = false
 
 var dialogueLines = {
 	0: [ 
@@ -70,12 +71,17 @@ func _input(event):
 	if event is InputEventKey and event.pressed:
 		if waitingInput:
 			receivedInput = true
+		elif !skipText:
+			skipText = true
 
 # Function to display text one character at a time
 func TypeText(text: String, speed: float = 0.025) -> void:
 	label.text = ""
 	for i in text.length():
 		label.text += text[i]
+		if skipText:
+			label.text = text
+			break
 		await get_tree().create_timer(speed).timeout
 		
 
@@ -88,6 +94,7 @@ func StartDialogueById(lineID):
 		while not receivedInput:
 			await get_tree().process_frame
 		waitingInput = false
+		skipText = false
 	visible = false
 	Global.narratorTextBoxes.append(lineID)
 	player.moveable = true
