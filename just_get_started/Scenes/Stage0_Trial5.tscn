@@ -1030,7 +1030,7 @@ layer_0/tile_data = PackedInt32Array(-524303, 393216, 3, -458767, 196608, 3, -39
 [node name="Player" parent="WORLD" instance=ExtResource("2_ljxug")]
 unique_name_in_owner = true
 z_index = 13
-position = Vector2(-58, -142)
+position = Vector2(-33, -141)
 scale = Vector2(1, 1)
 SPEED = 200.0
 metadata/_edit_group_ = true
@@ -1078,7 +1078,7 @@ layer_4/y_sort_enabled = true
 layer_4/tile_data = PackedInt32Array(-262158, 327682, 0, -262150, 327682, 0, -458750, 327682, 0, 196609, 327682, 0, 393221, 327682, 0, 458742, 327682, 0, 196593, 327682, 0, 65524, 327682, 0, -589838, 327682, 0, -589813, 327682, 0, 13, 327682, 0, 327689, 327682, 0, 458751, 589826, 0, -131072, 589826, 0, -65550, 589826, 0, -524298, 589826, 0, -524288, 589826, 0, 65542, 589826, 0, -393204, 589826, 0, -458738, 589826, 0, 458737, 589826, 0, -589828, 589826, 0)
 
 [node name="AreaNarrator1" parent="." instance=ExtResource("10_shxwa")]
-position = Vector2(-128, -141)
+position = Vector2(-118, -141)
 scale = Vector2(2, 1)
 lineID = 9
 
@@ -1093,7 +1093,7 @@ scale = Vector2(5, 0.6)
 lineID = 11
 
 [node name="Teleportor1" parent="." node_paths=PackedStringArray("player") instance=ExtResource("12_kfukk")]
-position = Vector2(-75, -128)
+position = Vector2(-49, -128)
 spawn = true
 level = "res://Scenes/Stage0_Trial4.tscn"
 player = NodePath("../WORLD/Player")

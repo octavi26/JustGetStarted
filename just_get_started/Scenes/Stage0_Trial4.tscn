@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bjfngk4didbp0"]
+[gd_scene load_steps=28 format=3 uid="uid://bjfngk4didbp0"]
 
 [ext_resource type="Script" uid="uid://q6yted82n83w" path="res://Scripts/Manager_Stage0_Trial4.gd" id="1_lo0au"]
 [ext_resource type="PackedScene" uid="uid://bd7gb8bd4pxgw" path="res://Scenes/Player.tscn" id="2_w7eiq"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://t83sa31l1ttx" path="res://Assets/TileSets/TX Shadow Plant.png" id="13_h2n5o"]
 [ext_resource type="PackedScene" uid="uid://ks5skbsb7ao0" path="res://Scenes/Text_Box_Activation.tscn" id="15_fyuaw"]
 [ext_resource type="Script" uid="uid://tt76ctq22j56" path="res://Scripts/Text_Box_Activation_Player.gd" id="16_j7uqr"]
+[ext_resource type="PackedScene" uid="uid://c2hkogttmj7md" path="res://Scenes/Dash_Area.tscn" id="17_j7uqr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bg0b0"]
 texture = ExtResource("6_4an21")
@@ -1142,3 +1143,19 @@ position = Vector2(-32, -108)
 rotation = 1.5708
 scale = Vector2(4, 1.5)
 lineID = 8
+
+[node name="AreaNarrator7" parent="." instance=ExtResource("15_fyuaw")]
+position = Vector2(191, 0)
+rotation = 1.5708
+scale = Vector2(3, 0.5)
+lineID = 9
+
+[node name="DashArea1" parent="." instance=ExtResource("17_j7uqr")]
+position = Vector2(2, 1)
+scale = Vector2(2, 10)
+collision_mask = 2
+
+[node name="DashArea2" parent="." instance=ExtResource("17_j7uqr")]
+position = Vector2(125, 0)
+scale = Vector2(2, 10)
+collision_mask = 2

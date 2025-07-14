@@ -14,7 +14,6 @@ var dialogueTable1 = {
 	], "frame": 9 },
 	1: { "text": [
 		"What kind of hint is that?",
-		"Are these guys dumb?",
 		"Is this guy dumb?"
 	], "frame": 4 },
 	2: { "text": [

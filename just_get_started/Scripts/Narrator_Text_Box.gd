@@ -50,17 +50,21 @@ var dialogueLines = {
 		"THE DASH!",
 		"Press space to dash to the other side."
 	],
-	9: [ 
+	9: [
+		"Note: You can't use the dash everywhere.",
+		"You only have specified areas where you can do that."
+	],
+	10: [ 
 		"Welcome to another destination!",
 		"The first challenges were pretty simple, weren't they?",
 		"Things will get more complicated now."
 	],
-	10: [
+	11: [
 		"Now you need to use all the things you've learned.",
 		"Can you do that?",
 		"Hint: activate all pillars."
 	],
-	11: [
+	12: [
 		"Now the fighting part.",
 		"The normal dummies have 3HP, the armoured ones 4HP.",
 		"Kill all of them. NOW!"
