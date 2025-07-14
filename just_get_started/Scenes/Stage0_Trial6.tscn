@@ -1,14 +1,15 @@
 [gd_scene load_steps=7 format=3 uid="uid://nhav6lmxhmdh"]
 
-[ext_resource type="Script" path="res://Scripts/Manager_Stage0_Trial6.gd" id="1_02ve7"]
-[ext_resource type="Script" path="res://Scripts/Camera_Shake.gd" id="1_c2os1"]
+[ext_resource type="Script" uid="uid://bymdc587n1q56" path="res://Scripts/Manager_Stage0_Trial6.gd" id="1_02ve7"]
+[ext_resource type="Script" uid="uid://dy7c1xpr6o01p" path="res://Scripts/Camera_Shake.gd" id="1_c2os1"]
 [ext_resource type="PackedScene" uid="uid://dj68bjweojhfy" path="res://Scenes/Narrator_Text_Box.tscn" id="2_6tduc"]
-[ext_resource type="Script" path="res://Scripts/Trial6_Narrator.gd" id="3_avfsm"]
-[ext_resource type="Script" path="res://Scripts/Trial6_Narrator2.gd" id="4_waq0n"]
-[ext_resource type="Script" path="res://Scripts/Trial6_Narrator3.gd" id="5_5ou74"]
+[ext_resource type="Script" uid="uid://dtsmdhfullq7o" path="res://Scripts/Trial6_Narrator.gd" id="3_avfsm"]
+[ext_resource type="Script" uid="uid://bha00qiy066n8" path="res://Scripts/Trial6_Narrator2.gd" id="4_waq0n"]
+[ext_resource type="Script" uid="uid://b3l6b2tqnyu7k" path="res://Scripts/Trial6_Narrator3.gd" id="5_5ou74"]
 
 [node name="Node2D2" type="Node2D"]
 script = ExtResource("1_02ve7")
+level = "uid://0o028gbv4n2l"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1, 0)

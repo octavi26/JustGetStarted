@@ -1,7 +1,8 @@
 extends Node
 
 var playerPos = 1
-var playerVisitCount = 0
+#am schimbat visitcount doar pt teste
+var playerVisitCount = 1
 #prevent text boxes from showing again when revisiting scenes
 var playerTextBoxes = []
 var narratorTextBoxes = []
@@ -18,3 +19,9 @@ var stage0Trial3Finish = false
 var stage0Trial5Back = true
 var stage0Trial5Finish = false
 var stage0Trial5Puzzle = false
+
+var stage1Trial1Finish = true
+
+var stage1Trial2Back = true
+var stage1Trial2Finish = true
+var stage1Trial2Puzzle = false

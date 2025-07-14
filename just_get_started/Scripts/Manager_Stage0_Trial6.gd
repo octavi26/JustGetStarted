@@ -4,6 +4,8 @@ extends Node2D
 
 func _ready() -> void:
 	Global.playerVisitCount += 1
+	Global.narratorTextBoxes.clear()
+	Global.playerTextBoxes.clear()
 
 func _physics_process(delta: float) -> void:
 	if $Timer.is_stopped():

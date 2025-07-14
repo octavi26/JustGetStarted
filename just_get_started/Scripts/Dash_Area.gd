@@ -1,19 +1,18 @@
 extends Area2D
 
-@export var dashDirectionsFlags = []
+@export_flags("Left", "Right", "Up", "Down") var dash = 0
 
 func _on_body_entered(body: Node2D) -> void:
 	body.canDash = true
-	for flag in dashDirectionsFlags:
-		match flag:
-			"Left":
-				body.dashDirections.append(Vector2.LEFT)
-			"Right":
-				body.dashDirections.append(Vector2.RIGHT)
-			"Up":
-				body.dashDirections.append(Vector2.UP)
-			"Down":
-				body.dashDirections.append(Vector2.DOWN)
+	if dash & (1 << 0): # Left
+		body.dashDirections.append(Vector2.LEFT)
+	if dash & (1 << 1): # Right
+		body.dashDirections.append(Vector2.RIGHT)
+	if dash & (1 << 2): # Up
+		body.dashDirections.append(Vector2.UP)
+	if dash & (1 << 3): # Down
+		body.dashDirections.append(Vector2.DOWN)
+
 
 func _on_body_exited(body: Node2D) -> void:
 	body.canDash = false

@@ -29,13 +29,13 @@ var dialogueTable1 = {
 }
 var dialogueTable2 = {
 	0: { "text" : [
-		"Where am I2222?",
-		"What is this weird place?"
-	], "frame": 9 },
+		"Wait...",
+		"Haven't I been here before?"
+	], "frame": 6 },
 	1: { "text": [
-		"What kind of hint is that?",
-		"Is this guy dumb?"
-	], "frame": 4 },
+		"I remember doing this puzzle already...",
+		"But now it seems more complicated."
+	], "frame": 0 },
 	2: { "text": [
 		"These trees are indeed beautiful.",
 		"I wonder if they made this or just stole it off the internet"
