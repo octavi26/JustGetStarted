@@ -68,6 +68,10 @@ var dialogueLines = {
 		"Now the fighting part.",
 		"The normal dummies have 3HP, the armoured ones 4HP.",
 		"Kill all of them. NOW!"
+	],
+	13: [
+		"This door is locked.",
+		"MAYBE find the key to unlock it?"
 	]
 }
 

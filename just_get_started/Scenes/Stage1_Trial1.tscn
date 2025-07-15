@@ -1086,5 +1086,5 @@ player = NodePath("../WORLD/Player")
 
 [node name="Teleportor2" parent="." node_paths=PackedStringArray("player") instance=ExtResource("15_36vk1")]
 position = Vector2(365, 10)
-level = "res://Scenes/Stage0_Trial2.tscn"
+level = "uid://c7ljbjmuu88fn"
 player = NodePath("../WORLD/Player")

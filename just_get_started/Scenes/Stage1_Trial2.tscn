@@ -1149,7 +1149,7 @@ layer_4/y_sort_enabled = true
 
 [node name="Teleportor2" parent="." node_paths=PackedStringArray("player") instance=ExtResource("15_a5gdv")]
 position = Vector2(96, -68)
-level = "res://Scenes/Stage0_Trial3.tscn"
+level = "uid://b0itxn1e4mkse"
 player = NodePath("../WORLD/Player")
 
 [node name="Teleportor1" parent="." node_paths=PackedStringArray("player") instance=ExtResource("15_a5gdv")]

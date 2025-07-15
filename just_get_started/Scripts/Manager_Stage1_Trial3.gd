@@ -21,15 +21,12 @@ func _ready() -> void:
 	if !Global.stage1Trial3Dummies:
 		dummy1.visible = false
 		dummy2.visible = false
-	if Global.stage1Key:
+	if Global.stage1Trial3Key:
 		key.queue_free()
 	if Global.dashUnlocked:
 		dashArea.monitoring = true
 	
 func _physics_process(delta: float) -> void:
-	if Global.stage0Trial3Finish:
-		teleportor2.active = true
-		
 	if !dummy1.visible and !dummy2.visible:
 		Global.stage1Trial3Finish = true
 		Global.stage1Trial3Dummies = false

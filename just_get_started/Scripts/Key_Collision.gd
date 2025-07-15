@@ -4,7 +4,7 @@ extends Area2D
 @onready var node = $".."
 
 func _on_body_entered(body: Node2D) -> void:
-	Global.stage1Key = true
+	Global.stage1Trial3Key = true
 	Pickup()
 
 func Pickup():

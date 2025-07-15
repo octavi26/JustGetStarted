@@ -11,8 +11,7 @@ func _input(event):
 	if event is InputEventKey and event.pressed and area:
 		visible = false
 		player.moveable = true
-		if area:
-			area.monitoring = true
+		area.monitoring = true
 
 func ShowImage(img: Texture2D, obj: Area2D):
 	image.texture = img
