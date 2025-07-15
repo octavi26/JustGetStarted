@@ -1,6 +1,6 @@
 [gd_scene load_steps=28 format=3 uid="uid://cr7dji1ccsx7n"]
 
-[ext_resource type="Script" uid="uid://q6yted82n83w" path="res://Scripts/Manager_Stage0_Trial4.gd" id="1_8kkjc"]
+[ext_resource type="Script" uid="uid://dj3aapu872cbm" path="res://Scripts/Manager_Stage1_Trial4.gd" id="1_8kkjc"]
 [ext_resource type="Texture2D" uid="uid://7vlf6sgtbgkv" path="res://Assets/TileSets/TX Tileset Grass.png" id="2_nol47"]
 [ext_resource type="PackedScene" uid="uid://bd7gb8bd4pxgw" path="res://Scenes/Player.tscn" id="3_vx6ep"]
 [ext_resource type="Script" uid="uid://d1sqwwxagiokn" path="res://Scripts/Player_Text_Box.gd" id="4_c7tqe"]
@@ -451,28 +451,42 @@ texture_region_size = Vector2i(32, 32)
 3:1/0/y_sort_origin = -16
 0:5/0 = 0
 0:5/0/y_sort_origin = 16
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(13.0968, 0.761442, 14.112, 0.659916, 13.909, -4.11178, 14.9243, -4.21331, 15.0258, -7.05602, 16, -7.46213, 16, 16, 13.0968, 16)
 0:6/0 = 0
 0:6/0/y_sort_origin = 16
+0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(12.9953, -16, 16, -16, 16, 11.0155, 13.0968, 11.0155)
 1:5/0 = 0
 1:5/0/y_sort_origin = 16
+1:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -9.08654, -14.8227, -10.1018, -11.1678, -9.89874, -11.0663, 13.8582, -10.051, 13.9598, -10.1526, 16, -16, 16)
+1:5/0/physics_layer_0/polygon_1/points = PackedVector2Array(9.84798, -9.89874, 13.8075, -9.69569, 14.8227, -8.78196, 16, -6.64992, 16, 16, 9.03577, 16, 9.03577, 13.9598, 10.051, 13.7567)
 1:6/0 = 0
 1:6/0/y_sort_origin = 16
+1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -10.1526, -16, -9.9495, -13.1476, -10.9648, -12.843, -10.9648, 4.11179, -12.0815, 4.41636, -11.98, 6.44687, -12.8937, 6.9545, -12.9953, 9.49264, -14.0105, 9.59417, -13.8075, 10.914, -16, 11.0155)
+1:6/0/physics_layer_0/polygon_1/points = PackedVector2Array(8.93425, -16, 16, -16, 16, 11.117, 13.1983, 11.2186, 12.6907, 10.1018, 11.8785, 9.69569, 11.8785, 6.9545, 11.0663, 7.05603, 10.8632, 4.11179, 10.051, 4.11179, 9.84798, -12.9445, 9.1373, -12.9445)
 2:5/0 = 0
 2:5/0/y_sort_origin = 16
+2:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -4.31483, -15.0258, -3.80721, -15.1273, 0.862968, -14.0105, 1.16754, -13.8075, 16, -16, 16)
 2:6/0 = 0
 2:6/0/y_sort_origin = 16
+2:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -14.0105, -16, -14.0105, 11.0155, -16, 11.3114)
 0:4/0 = 0
 0:4/0/y_sort_origin = 16
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(13.0968, -16, 16, -16, 16, 9.08654, 12.8937, 8.88348)
 2:3/0 = 0
 2:3/0/y_sort_origin = 16
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -1.37059, -14.8227, -1.06602, -14.8227, 0.964493, -14.0105, 0.964493, -13.8075, 16, -16, 16)
 0:3/0 = 0
 0:3/0/y_sort_origin = 16
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(13.0968, 0.659916, 13.909, 0.761442, 14.4166, -1.16754, 15.0258, -1.16754, 15.0258, -2.995, 16, -3.40111, 16, 16, 13.1983, 16)
 1:3/0 = 0
 1:3/0/y_sort_origin = 16
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 1:4/0 = 0
 1:4/0/y_sort_origin = 16
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 2:4/0 = 0
 2:4/0/y_sort_origin = 16
+2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -14.2136, -16, -14.0105, 9.08654, -16, 8.88348)
 0:12/size_in_atlas = Vector2i(3, 3)
 0:12/0 = 0
 0:12/0/y_sort_origin = 16
@@ -1105,7 +1119,7 @@ script = ExtResource("16_3bymi")
 lineID = 4
 
 [node name="AreaPlayer4" parent="." instance=ExtResource("15_pjsfb")]
-position = Vector2(-224, -213)
+position = Vector2(-327, -225)
 scale = Vector2(3, 1)
 script = ExtResource("16_3bymi")
 lineID = 3
@@ -1121,6 +1135,7 @@ position = Vector2(2, 1)
 scale = Vector2(2, 10)
 collision_mask = 2
 dash = 2
+UnlocksDash = true
 
 [node name="DashArea2" parent="." instance=ExtResource("17_ka4y3")]
 position = Vector2(125, 0)

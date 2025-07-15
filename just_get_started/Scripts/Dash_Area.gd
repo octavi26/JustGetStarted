@@ -1,9 +1,10 @@
 extends Area2D
 
 @export_flags("Left", "Right", "Up", "Down") var dash = 0
+@export var UnlocksDash = false
 
 func _on_body_entered(body: Node2D) -> void:
-	if !Global.dashUnlocked:
+	if !Global.dashUnlocked and UnlocksDash:
 		Global.dashUnlocked = true
 	body.canDash = true
 	if dash & (1 << 0): # Left

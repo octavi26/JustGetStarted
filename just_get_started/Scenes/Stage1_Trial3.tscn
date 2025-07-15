@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://b0itxn1e4mkse"]
+[gd_scene load_steps=29 format=3 uid="uid://b0itxn1e4mkse"]
 
 [ext_resource type="Script" uid="uid://dyot4tvym1fhs" path="res://Scripts/Manager_Stage1_Trial3.gd" id="1_fphl5"]
 [ext_resource type="Texture2D" uid="uid://7vlf6sgtbgkv" path="res://Assets/TileSets/TX Tileset Grass.png" id="2_1pfu8"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://ks5skbsb7ao0" path="res://Scenes/Text_Box_Activation.tscn" id="14_7y861"]
 [ext_resource type="PackedScene" uid="uid://cyu47afst43hd" path="res://Scenes/Key.tscn" id="15_1pfu8"]
 [ext_resource type="Script" uid="uid://tt76ctq22j56" path="res://Scripts/Text_Box_Activation_Player.gd" id="17_l7dqi"]
+[ext_resource type="PackedScene" uid="uid://c2hkogttmj7md" path="res://Scenes/Dash_Area.tscn" id="18_l7dqi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i3il7"]
 texture = ExtResource("2_1pfu8")
@@ -1091,10 +1092,24 @@ position = Vector2(33, -20)
 canDie = true
 
 [node name="Key" parent="." instance=ExtResource("15_1pfu8")]
-position = Vector2(-190, 162)
+position = Vector2(329, 2)
 
 [node name="AreaPlayer1" parent="." instance=ExtResource("14_7y861")]
 position = Vector2(-99, 22)
 scale = Vector2(5.06126, 1.10015)
 script = ExtResource("17_l7dqi")
 lineID = 2
+
+[node name="DashArea1" parent="." instance=ExtResource("18_l7dqi")]
+position = Vector2(226, -1)
+scale = Vector2(2, 2)
+collision_mask = 2
+monitoring = false
+dash = 2
+
+[node name="DashArea2" parent="." instance=ExtResource("18_l7dqi")]
+position = Vector2(318, 1)
+scale = Vector2(2, 2)
+collision_mask = 2
+monitoring = false
+dash = 1

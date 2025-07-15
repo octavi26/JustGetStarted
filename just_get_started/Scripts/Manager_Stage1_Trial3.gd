@@ -5,6 +5,8 @@ extends Node
 
 @onready var key = $"../Key"
 
+@onready var dashArea = $"../DashArea1"
+
 @onready var teleportor1 = $"../Teleportor1"
 @onready var teleportor2 = $"../Teleportor2"
 
@@ -21,6 +23,8 @@ func _ready() -> void:
 		dummy2.visible = false
 	if Global.stage1Key:
 		key.queue_free()
+	if Global.dashUnlocked:
+		dashArea.monitoring = true
 	
 func _physics_process(delta: float) -> void:
 	if Global.stage0Trial3Finish:
