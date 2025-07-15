@@ -18,8 +18,8 @@
 [ext_resource type="PackedScene" uid="uid://df6pie5n7tpbk" path="res://Scenes/Object_Collision_Image_Activation.tscn" id="10_fldqx"]
 [ext_resource type="PackedScene" uid="uid://ks5skbsb7ao0" path="res://Scenes/Text_Box_Activation.tscn" id="13_0csrn"]
 [ext_resource type="Texture2D" uid="uid://t83sa31l1ttx" path="res://Assets/TileSets/TX Shadow Plant.png" id="14_3wg7e"]
-[ext_resource type="Texture2D" uid="uid://b6syjes4lixul" path="res://Assets/Sprites/Player/ChatGPT_Image_14_iul._2025_01_02_50.png" id="14_awnp8"]
 [ext_resource type="Script" uid="uid://tt76ctq22j56" path="res://Scripts/Text_Box_Activation_Player.gd" id="16_rh60f"]
+[ext_resource type="Texture2D" uid="uid://ryckba03fygp" path="res://Assets/Sprites/Player/puzzle1.png" id="18_762gv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_atc76"]
 texture = ExtResource("2_5ljry")
@@ -1168,7 +1168,7 @@ position = Vector2(-144, -112)
 [node name="Object" parent="." instance=ExtResource("10_fldqx")]
 position = Vector2(-145, -2)
 collision_mask = 2
-image_shown = ExtResource("14_awnp8")
+image_shown = ExtResource("18_762gv")
 
 [node name="AreaNarrator1" parent="." instance=ExtResource("13_0csrn")]
 position = Vector2(-276, 30)

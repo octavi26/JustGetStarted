@@ -29,7 +29,7 @@ var dialogueLines = {
 		"The teleporter will activate after you solve the puzzle."
 	],
 	4: [
-		"You know how to solve puzzles but do you know how to fight?",
+		"You know how to solve puzzles, but do you know how to fight?",
 		"Don't worry, we'll teach you that."
 	],
 	5: [

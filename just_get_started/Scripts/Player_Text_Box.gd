@@ -48,7 +48,10 @@ var dialogueTable2 = {
 	], "frame": 1},
 	5: { "text": [
 		"I hope I won't fall this time."
-	], "frame": 4}
+	], "frame": 4},
+	6: { "text": [
+		"Weird, at least the portal is now open.."
+	], "frame": 0}
 }
 var dialogueTable3 = {
 	0: { "text" : [

@@ -6,6 +6,7 @@ extends Node
 @onready var camera = %Player.get_node("Camera2D")
 @onready var doorLocked = $"../WORLD/DoorLocked"
 @onready var doorUnlocked = $"../WORLD/DoorUnlocked"
+@onready var completionText = $"../AreaPlayer6"
 
 func _ready() -> void:
 	if Global.playerPos == 5:
@@ -21,9 +22,17 @@ func _ready() -> void:
 	
 func _physics_process(delta: float) -> void:
 	if puzzle.Code:
-		if Global.stage1Trial4Finish == false:
-			camera.start_shake(0.5, 4.5)
+		if !Global.stage1Trial4Finish:
+			CameraShake()
 		Global.stage1Trial4Finish = true
-		
+
 	if Global.stage1Trial4Finish:
 		teleportor2.active = true
+
+
+func CameraShake():
+	camera.start_shake(0.5, 4.5)
+	await get_tree().create_timer(0.8).timeout
+	completionText.monitoring = true
+
+	
