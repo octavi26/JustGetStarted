@@ -1,6 +1,6 @@
 extends Node
 
-@export var Code = [false, false, true, false, false]
+@export var Code = [true, false, true, true, false]
 
 @onready var teleportor1 = $"../Teleportor1"
 @onready var teleportor2 = $"../Teleportor2"

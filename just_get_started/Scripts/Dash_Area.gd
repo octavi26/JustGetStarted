@@ -3,6 +3,8 @@ extends Area2D
 @export_flags("Left", "Right", "Up", "Down") var dash = 0
 
 func _on_body_entered(body: Node2D) -> void:
+	if !Global.dashUnlocked:
+		Global.dashUnlocked = true
 	body.canDash = true
 	if dash & (1 << 0): # Left
 		body.dashDirections.append(Vector2.LEFT)

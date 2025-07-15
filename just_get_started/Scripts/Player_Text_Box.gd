@@ -18,7 +18,7 @@ var dialogueTable1 = {
 	], "frame": 4 },
 	2: { "text": [
 		"These trees are indeed beautiful.",
-		"I wonder if they made this or just stole it off the internet"
+		"I wonder if they made this or just stole it off the internet."
 	], "frame": 2 },
 	3: { "text": [
 		"Nothing here..."
@@ -37,15 +37,18 @@ var dialogueTable2 = {
 		"But now it seems more complicated."
 	], "frame": 0 },
 	2: { "text": [
-		"These trees are indeed beautiful.",
-		"I wonder if they made this or just stole it off the internet"
-	], "frame": 2 },
+		"Didn't I beat these guys already?"
+	], "frame": 4 },
 	3: { "text": [
-		"Nothing here..."
+		"Still nothing here..."
 	], "frame": 0 },
 	4: { "text": [
-		"Who does this narrator think he is?" 
-	], "frame": 3}
+		"These rocks are indeed beautiful.",
+		"I wonder if they made this or just stole it off the internet." 
+	], "frame": 1},
+	5: { "text": [
+		"I hope I won't fall this time."
+	], "frame": 4}
 }
 var dialogueTable3 = {
 	0: { "text" : [
@@ -102,7 +105,8 @@ func _ready() -> void:
 	randomize()
 	
 func _input(event):
-	if event is InputEventKey and event.pressed and not event.echo:
+	if event is InputEventKey and event.pressed and not event.echo and \
+	event.keycode == KEY_ENTER:
 		if waitingInput:
 			receivedInput = true
 		elif !skipText:

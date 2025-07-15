@@ -72,7 +72,8 @@ var dialogueLines = {
 }
 
 func _input(event):
-	if event is InputEventKey and event.pressed and not event.echo:
+	if event is InputEventKey and event.pressed and not event.echo and \
+	event.keycode == KEY_ENTER:
 		if waitingInput:
 			receivedInput = true
 		elif !skipText:
