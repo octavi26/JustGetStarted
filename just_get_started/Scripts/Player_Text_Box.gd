@@ -40,8 +40,8 @@ var dialogueTable2 = {
 		"Didn't I beat these guys already?"
 	], "frame": 4 },
 	3: { "text": [
-		"Still nothing here..."
-	], "frame": 0 },
+		"Why are these things repeating?"
+	], "frame": 5 },
 	4: { "text": [
 		"These rocks are indeed beautiful.",
 		"I wonder if they made this or just stole it off the internet." 

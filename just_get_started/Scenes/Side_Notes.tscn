@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://byc5rsjf6xcx3"]
+
+[ext_resource type="Script" uid="uid://bvcqgo61r5tlk" path="res://Scripts/Side_Notes.gd" id="1_ypxix"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_450a4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ydv6m"]
+font_size = 36
+font_color = Color(0, 0, 0, 1)
+
+[node name="Node2D" type="Node2D"]
+z_index = 100
+script = ExtResource("1_ypxix")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+z_index = -2
+position = Vector2(-1.99998, 7.99999)
+scale = Vector2(750, 140)
+texture = SubResource("PlaceholderTexture2D_450a4")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -361.0
+offset_top = -48.0
+offset_right = 358.0
+offset_bottom = 55.0
+text = "Ceva ceva ceve"
+label_settings = SubResource("LabelSettings_ydv6m")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -2
+offset_left = -365.0
+offset_top = -47.0
+offset_right = 353.0
+offset_bottom = 66.0
+color = Color(1, 1, 0, 1)

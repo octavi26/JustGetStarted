@@ -1166,7 +1166,7 @@ player = NodePath("../WORLD/Player")
 position = Vector2(-144, -112)
 
 [node name="Object" parent="." instance=ExtResource("10_fldqx")]
-position = Vector2(-145, -2)
+position = Vector2(-146, -3)
 collision_mask = 2
 image_shown = ExtResource("18_762gv")
 

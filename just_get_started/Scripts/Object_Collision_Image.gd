@@ -2,7 +2,8 @@ extends Node2D
 
 @onready var player = %Player
 @onready var image = $Image
-@onready var area
+
+var area
 
 func ReceiveArea(object: Area2D):
 	area = object
@@ -12,6 +13,7 @@ func _input(event):
 		visible = false
 		player.moveable = true
 		area.monitoring = true
+		area = null
 
 func ShowImage(img: Texture2D, obj: Area2D):
 	image.texture = img

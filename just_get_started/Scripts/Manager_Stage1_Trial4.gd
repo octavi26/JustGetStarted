@@ -7,6 +7,8 @@ extends Node
 @onready var doorLocked = $"../WORLD/DoorLocked"
 @onready var doorUnlocked = $"../WORLD/DoorUnlocked"
 @onready var completionText = $"../AreaPlayer6"
+@onready var textBox = %PlayerTextBox
+@onready var player = %Player
 
 func _ready() -> void:
 	if Global.playerPos == 5:
@@ -33,6 +35,7 @@ func _physics_process(delta: float) -> void:
 func CameraShake():
 	camera.start_shake(0.5, 4.5)
 	await get_tree().create_timer(0.8).timeout
-	completionText.monitoring = true
+	player.moveable = false
+	textBox.StartDialogueById(6)
 
 	

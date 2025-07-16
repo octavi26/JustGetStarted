@@ -30,8 +30,13 @@ var stage1Trial2Puzzle = false
 var stage1Trial3Back = true
 var stage1Trial3Finish = false
 var stage1Trial3Dummies = true
-var stage1Trial3Key = true
+var stage1Trial3Key = false
 
 var stage1Trial4Back = true
 var stage1Trial4Finish = false
 var stage1Trial4Door = false
+
+var stage1Trial5Back = true
+var stage1Trial5Finish = false
+var stage1Trial5Puzzle = false
+var stage1Trial5Dummies = true

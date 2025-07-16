@@ -11,7 +11,6 @@ func _physics_process(delta: float) -> void:
 		if light.modulate.a >= 0.99 and Code[i] == false or\
 		   light.modulate.a <= 0.01 and Code[i] == true:
 			Activate(light, int(Code[i]))
-	print(Code)
 			
 
 func Activate(light, value):
