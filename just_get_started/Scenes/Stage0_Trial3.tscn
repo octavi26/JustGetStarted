@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://cqqarym3vvbkh"]
+[gd_scene load_steps=26 format=3 uid="uid://cqqarym3vvbkh"]
 
 [ext_resource type="Script" uid="uid://drxppa06xqw6p" path="res://Scripts/Manager_Stage0_Trial3.gd" id="1_cktmc"]
 [ext_resource type="PackedScene" uid="uid://bd7gb8bd4pxgw" path="res://Scenes/Player.tscn" id="1_v2je7"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://domqhxfcd3xmq" path="res://Assets/TileSets/TX Struct.png" id="3_djyi3"]
 [ext_resource type="PackedScene" uid="uid://dj68bjweojhfy" path="res://Scenes/Narrator_Text_Box.tscn" id="3_htm7f"]
 [ext_resource type="Texture2D" uid="uid://c54hxqc5lhb0s" path="res://Assets/TileSets/TX Tileset Stone Ground.png" id="4_7rwdb"]
+[ext_resource type="PackedScene" uid="uid://byc5rsjf6xcx3" path="res://Scenes/Side_Notes.tscn" id="5_joqre"]
 [ext_resource type="Texture2D" uid="uid://dl1fjay6hyf60" path="res://Assets/TileSets/TX Props.png" id="5_sxg7b"]
 [ext_resource type="Texture2D" uid="uid://g8tr2et668f8" path="res://Assets/TileSets/TX Tileset Wall.png" id="5_wufgn"]
 [ext_resource type="PackedScene" uid="uid://b8deqcao3lufg" path="res://Scenes/Teleporter.tscn" id="6_o6sys"]
@@ -1036,6 +1037,12 @@ unique_name_in_owner = true
 visible = false
 position = Vector2(-1, 84)
 scale = Vector2(0.2, 0.2)
+
+[node name="Notes" parent="WORLD/Player/Camera2D" instance=ExtResource("5_joqre")]
+unique_name_in_owner = true
+visible = false
+position = Vector2(145, -113)
+scale = Vector2(0.3, 0.3)
 
 [node name="Stone_Structure" type="TileMap" parent="WORLD"]
 z_index = 13

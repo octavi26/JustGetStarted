@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @export var SPEED := 100.0
 @export var moveable := true
+@onready var note = %Notes
 var direction := Vector2()
 var lastDirection := Vector2()
 var orientation := Vector2(0, 1)
@@ -11,6 +12,7 @@ var justDashed = false
 var canDash = false
 #modified things
 var dashDirections: Array[Vector2] = []
+var dashZone = false
 
 var attackDirection := Vector2()
 
@@ -31,14 +33,24 @@ func _physics_process(delta: float) -> void:
 		
 	justDashed = false
 	#modified things
+	print(dashZone)
+	if Input.is_action_just_pressed("Dash") and !dashZone and \
+	Global.dashUnlocked:
+		note.ShowNoteById(2)
+	if Input.is_action_just_pressed("Dash") and dashZone and \
+	!Global.dashUnlocked:
+		note.ShowNoteById(1)
 	var dash_input = Vector2(
 	Input.get_action_strength("Right") - Input.get_action_strength("Left"),
 	Input.get_action_strength("Down") - Input.get_action_strength("Up")).normalized()
 	if Input.is_action_just_pressed("Dash") and canDash and \
-	   moveable and !dashDirections.is_empty():
+	   moveable and !dashDirections.is_empty() and \
+	dashZone and Global.dashUnlocked:
 		if dash_input in dashDirections:
 			direction = dash_input
 			Dash()
+		else:
+			note.ShowNoteById(3)
 	if $DashTimer.is_stopped():
 		if isDashing == true:
 			justDashed = true

@@ -8,7 +8,7 @@ func _on_body_entered(body: Node2D) -> void:
 	if !Global.dashUnlocked and UnlocksDash:
 		Global.dashUnlocked = true
 		note.ShowNoteById(0)
-	body.canDash = true
+	body.dashZone = true
 	if dash & (1 << 0): # Left
 		body.dashDirections.append(Vector2.LEFT)
 	if dash & (1 << 1): # Right
@@ -20,5 +20,5 @@ func _on_body_entered(body: Node2D) -> void:
 
 
 func _on_body_exited(body: Node2D) -> void:
-	body.canDash = false
+	body.dashZone = false
 	body.dashDirections.clear()

@@ -1,10 +1,11 @@
-[gd_scene load_steps=26 format=3 uid="uid://0o028gbv4n2l"]
+[gd_scene load_steps=27 format=3 uid="uid://0o028gbv4n2l"]
 
 [ext_resource type="Script" uid="uid://dbnpk48qicaqb" path="res://Scripts/Manager_Stage1_Trial1.gd" id="1_3bwx6"]
 [ext_resource type="Texture2D" uid="uid://7vlf6sgtbgkv" path="res://Assets/TileSets/TX Tileset Grass.png" id="2_ce510"]
 [ext_resource type="PackedScene" uid="uid://bd7gb8bd4pxgw" path="res://Scenes/Player.tscn" id="3_c3mlu"]
 [ext_resource type="PackedScene" uid="uid://dj68bjweojhfy" path="res://Scenes/Narrator_Text_Box.tscn" id="4_w0mnu"]
 [ext_resource type="PackedScene" uid="uid://duuhv3ariy5q4" path="res://Scenes/Player_Text_Box.tscn" id="5_aqpdu"]
+[ext_resource type="PackedScene" uid="uid://byc5rsjf6xcx3" path="res://Scenes/Side_Notes.tscn" id="6_ce510"]
 [ext_resource type="Texture2D" uid="uid://dl1fjay6hyf60" path="res://Assets/TileSets/TX Props.png" id="6_jc8rp"]
 [ext_resource type="Texture2D" uid="uid://dxbq6nq0p1gy2" path="res://Assets/TileSets/TX Shadow.png" id="7_dcx3s"]
 [ext_resource type="Texture2D" uid="uid://7ghl8bdb3rdm" path="res://Assets/TileSets/TX Plant.png" id="8_ine0x"]
@@ -1048,6 +1049,12 @@ unique_name_in_owner = true
 visible = false
 position = Vector2(-1, 71)
 scale = Vector2(0.2, 0.2)
+
+[node name="Notes" parent="WORLD/Player/Camera2D" instance=ExtResource("6_ce510")]
+unique_name_in_owner = true
+visible = false
+position = Vector2(145, -113)
+scale = Vector2(0.3, 0.3)
 
 [node name="Stone_Structure" type="TileMap" parent="WORLD"]
 z_index = 13

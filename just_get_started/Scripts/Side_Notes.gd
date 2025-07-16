@@ -2,9 +2,6 @@ extends Node2D
 
 @onready var label = $Label
 @onready var player = %Player
-var waitingInput = false
-var receivedInput = false
-var skipText = false
 
 var notesLines = {
 	0: [ 
@@ -12,6 +9,12 @@ var notesLines = {
 	],
 	1: [
 		"You haven't unlocked the dash yet."
+	],
+	2: [
+		"No dashing allowed here, buddy."
+	],
+	3: [
+		"You can dash but not in that direction."
 	]
 }
 
