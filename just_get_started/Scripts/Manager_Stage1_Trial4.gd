@@ -6,7 +6,6 @@ extends Node
 @onready var camera = %Player.get_node("Camera2D")
 @onready var doorLocked = $"../WORLD/DoorLocked"
 @onready var doorUnlocked = $"../WORLD/DoorUnlocked"
-@onready var completionText = $"../AreaPlayer6"
 @onready var textBox = %PlayerTextBox
 @onready var player = %Player
 
@@ -37,5 +36,3 @@ func CameraShake():
 	await get_tree().create_timer(0.8).timeout
 	player.moveable = false
 	textBox.StartDialogueById(6)
-
-	

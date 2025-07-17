@@ -72,6 +72,9 @@ var dialogueLines = {
 	13: [
 		"This door is locked.",
 		"MAYBE find the key to unlock it?"
+	],
+	14: [
+		"Statuia spune ceva."
 	]
 }
 

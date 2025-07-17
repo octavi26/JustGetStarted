@@ -6,6 +6,5 @@ extends Area2D
 
 func _on_body_entered(body: Node2D) -> void:
 	if lineID not in Global.playerTextBoxes:
-		print(lineID)
 		player.moveable = false
 		await playerTextBox.StartDialogueById(lineID)

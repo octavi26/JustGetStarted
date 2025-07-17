@@ -33,7 +33,6 @@ func _physics_process(delta: float) -> void:
 		
 	justDashed = false
 	#modified things
-	print(dashZone)
 	if Input.is_action_just_pressed("Dash") and !dashZone and \
 	Global.dashUnlocked:
 		note.ShowNoteById(2)

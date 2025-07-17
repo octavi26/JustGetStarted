@@ -1159,13 +1159,13 @@ scale = Vector2(3, 0.5)
 lineID = 9
 
 [node name="DashArea1" parent="." instance=ExtResource("17_j7uqr")]
-position = Vector2(2, 1)
-scale = Vector2(2, 10)
+position = Vector2(8, 8)
+scale = Vector2(1.5, 14)
 collision_mask = 2
 dash = 2
 
 [node name="DashArea2" parent="." instance=ExtResource("17_j7uqr")]
-position = Vector2(125, 0)
-scale = Vector2(2, 10)
+position = Vector2(120, 12)
+scale = Vector2(1.5, 14)
 collision_mask = 2
 dash = 1

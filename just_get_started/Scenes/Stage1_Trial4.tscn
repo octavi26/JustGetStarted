@@ -1879,15 +1879,15 @@ script = ExtResource("16_3bymi")
 lineID = 5
 
 [node name="DashArea1" parent="." instance=ExtResource("17_ka4y3")]
-position = Vector2(2, 1)
-scale = Vector2(2, 10)
+position = Vector2(11, 7)
+scale = Vector2(1.5, 14)
 collision_mask = 2
 dash = 2
 UnlocksDash = true
 
 [node name="DashArea2" parent="." instance=ExtResource("17_ka4y3")]
-position = Vector2(125, 0)
-scale = Vector2(2, 10)
+position = Vector2(120, 9)
+scale = Vector2(1.5, 14)
 collision_mask = 2
 dash = 1
 

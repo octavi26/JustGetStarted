@@ -14,7 +14,7 @@ var notesLines = {
 		"No dashing allowed here, buddy."
 	],
 	3: [
-		"You can dash but not in that direction."
+		"You can't dash in that direction."
 	]
 }
 
