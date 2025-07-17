@@ -1,7 +1,7 @@
 extends Node
 
-@export var Code = [false, true, false, false, true, false, true, true, false, true]
-
+@export var Code = [true, true, false, true, false, false, true, true, false, false]
+@export var codeFinish = [false, true, false, false, true, false, true, true, false, true]
 @onready var teleportor1 = $"../Teleportor1"
 @onready var teleportor2 = $"../Teleportor2"
 @onready var puzzle = $"../Puzzle"
@@ -18,9 +18,17 @@ func _ready() -> void:
 	
 func _physics_process(delta: float) -> void:
 	
-	if Code == puzzle.Code:
-		if Global.stage1Trial2Puzzle == false:
+	if codeFinish == puzzle.Code:
+		if !Global.stage1Trial2FinishPuzzle:
 			camera.start_shake(0.5, 4.5)
-		Global.stage1Trial2Puzzle = true
+		Global.stage1Trial2FinishPuzzle = true
+		
+	if Code == puzzle.Code:
+		if !Global.stage1Trial2Finish:
+			camera.start_shake(0.5, 4.5)
+		Global.stage1Trial2Finish = true
+		
+	if Global.stage1Trial2Finish:
+		teleportor2.active = true
 		
 	

@@ -7,6 +7,7 @@ func _ready() -> void:
 	Global.narratorTextBoxes.clear()
 	Global.playerTextBoxes.clear()
 	Global.dashUnlocked = false
+	Global.stage1Trial3Dummies = true
 
 func _physics_process(delta: float) -> void:
 	if $Timer.is_stopped() or Input.is_action_just_pressed("ui_accept"):

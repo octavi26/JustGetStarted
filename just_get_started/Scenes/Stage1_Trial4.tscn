@@ -1845,6 +1845,7 @@ layer_0/tile_data = PackedInt32Array(-458767, 131072, 12, -393231, 131072, 13, -
 [node name="Teleportor1" parent="." node_paths=PackedStringArray("player") instance=ExtResource("14_hfr0w")]
 position = Vector2(-213, 17)
 spawn = true
+active = false
 level = "uid://b0itxn1e4mkse"
 player = NodePath("../WORLD/Player")
 
