@@ -20,6 +20,9 @@ func _ready() -> void:
 	if Global.stage1Trial4Door:
 		doorLocked.queue_free()
 		doorUnlocked.visible = true
+	if Global.stage1Trial2FinishPuzzle:
+		Global.stage1Trial4Back = true
+		teleportor1.active = true
 	
 func _physics_process(delta: float) -> void:
 	if puzzle.Code:
@@ -28,7 +31,7 @@ func _physics_process(delta: float) -> void:
 		Global.stage1Trial4Finish = true
 
 	if Global.stage1Trial4Finish:
-		teleportor2.active = true
+		teleportor2.level = "Stage2_Trial1"
 
 
 func CameraShake():

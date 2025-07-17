@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://dyrdkdf74mfob"]
+[gd_scene load_steps=35 format=3 uid="uid://dyrdkdf74mfob"]
 
 [ext_resource type="Script" uid="uid://b153fo5vlbikr" path="res://Scripts/Manager_Stage1_Trial5.gd" id="1_el5s1"]
 [ext_resource type="Texture2D" uid="uid://7vlf6sgtbgkv" path="res://Assets/TileSets/TX Tileset Grass.png" id="2_5hx3x"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://duuhv3ariy5q4" path="res://Scenes/Player_Text_Box.tscn" id="6_g7mdc"]
 [ext_resource type="Texture2D" uid="uid://dl1fjay6hyf60" path="res://Assets/TileSets/TX Props.png" id="7_1pucy"]
 [ext_resource type="PackedScene" uid="uid://bunskihyq44kr" path="res://Scenes/Object_Collision_Image.tscn" id="7_7whk1"]
+[ext_resource type="PackedScene" uid="uid://byc5rsjf6xcx3" path="res://Scenes/Side_Notes.tscn" id="8_syttf"]
 [ext_resource type="Texture2D" uid="uid://dxbq6nq0p1gy2" path="res://Assets/TileSets/TX Shadow.png" id="8_x6fhj"]
 [ext_resource type="Texture2D" uid="uid://7ghl8bdb3rdm" path="res://Assets/TileSets/TX Plant.png" id="9_tclds"]
 [ext_resource type="Texture2D" uid="uid://domqhxfcd3xmq" path="res://Assets/TileSets/TX Struct.png" id="10_hkqj1"]
@@ -1062,6 +1063,12 @@ scale = Vector2(0.2, 0.2)
 unique_name_in_owner = true
 visible = false
 
+[node name="Notes" parent="WORLD/Player/Camera2D" instance=ExtResource("8_syttf")]
+unique_name_in_owner = true
+visible = false
+position = Vector2(145, -113)
+scale = Vector2(0.3, 0.3)
+
 [node name="Stone_Structure" type="TileMap" parent="WORLD"]
 z_index = 13
 y_sort_enabled = true
@@ -1088,13 +1095,14 @@ layer_4/tile_data = PackedInt32Array(-262158, 327682, 0, -262150, 327682, 0, -45
 [node name="Teleportor1" parent="." node_paths=PackedStringArray("player") instance=ExtResource("15_75r7f")]
 position = Vector2(-49, -128)
 spawn = true
+active = false
 level = "uid://cr7dji1ccsx7n"
 player = NodePath("../WORLD/Player")
 
 [node name="Teleportor2" parent="." node_paths=PackedStringArray("player") instance=ExtResource("15_75r7f")]
 position = Vector2(311, -127)
 active = false
-level = "uid://do5i48h8mui4d"
+level = "uid://nhav6lmxhmdh"
 player = NodePath("../WORLD/Player")
 
 [node name="Dummy1" parent="." instance=ExtResource("16_fgh3q")]

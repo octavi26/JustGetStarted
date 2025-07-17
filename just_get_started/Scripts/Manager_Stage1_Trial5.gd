@@ -19,6 +19,9 @@ func _ready() -> void:
 		dummy1.visible = false
 		dummy2.visible = false
 		dummy3.visible = false
+	if Global.stage1Trial2Puzzle:
+		Global.stage1Trial4Back = true
+		teleportor1.active = true
 	
 func _physics_process(delta: float) -> void:
 	
@@ -34,7 +37,7 @@ func _physics_process(delta: float) -> void:
 		if !Global.stage1Trial5Dummies:
 			Global.stage1Trial5Finish = true
 	
-	if Global.stage1Trial5Finish and Global.stage1Trial2Puzzle:
+	if Global.stage1Trial5Finish:
 		teleportor2.active = true
 		
 	

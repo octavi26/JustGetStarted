@@ -24,19 +24,20 @@ var stage0Trial5Puzzle = false
 var stage1Trial1Finish = true
 
 var stage1Trial2Back = true
-var stage1Trial2Finish = true
+var stage1Trial2Finish = false
 var stage1Trial2Puzzle = false
+var stage1Trial2FinishPuzzle = false
 
-var stage1Trial3Back = true
+var stage1Trial3Back = false
 var stage1Trial3Finish = false
 var stage1Trial3Dummies = true
 var stage1Trial3Key = false
 
-var stage1Trial4Back = true
+var stage1Trial4Back = false
 var stage1Trial4Finish = false
 var stage1Trial4Door = false
 
-var stage1Trial5Back = true
+var stage1Trial5Back = false
 var stage1Trial5Finish = false
 var stage1Trial5Puzzle = false
 var stage1Trial5Dummies = true
