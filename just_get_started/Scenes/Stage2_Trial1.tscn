@@ -1092,7 +1092,7 @@ script = ExtResource("15_jqqlo")
 position = Vector2(8, 16)
 spawn = true
 active = false
-level = "res://Scenes/Stage0_Trial2.tscn"
+level = "uid://q2chhna0w7d6"
 player = NodePath("../WORLD/Player")
 
 [node name="Teleportor2" parent="." node_paths=PackedStringArray("player") instance=ExtResource("16_tlpu7")]

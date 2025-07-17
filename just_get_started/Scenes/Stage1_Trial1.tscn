@@ -1,6 +1,6 @@
 [gd_scene load_steps=27 format=3 uid="uid://0o028gbv4n2l"]
 
-[ext_resource type="Script" path="res://Scripts/Manager_Stage1_Trial1.gd" id="1_3bwx6"]
+[ext_resource type="Script" uid="uid://dbnpk48qicaqb" path="res://Scripts/Manager_Stage1_Trial1.gd" id="1_3bwx6"]
 [ext_resource type="Texture2D" uid="uid://7vlf6sgtbgkv" path="res://Assets/TileSets/TX Tileset Grass.png" id="2_ce510"]
 [ext_resource type="PackedScene" uid="uid://bd7gb8bd4pxgw" path="res://Scenes/Player.tscn" id="3_c3mlu"]
 [ext_resource type="PackedScene" uid="uid://dj68bjweojhfy" path="res://Scenes/Narrator_Text_Box.tscn" id="4_w0mnu"]
@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://g8tr2et668f8" path="res://Assets/TileSets/TX Tileset Wall.png" id="11_k5swl"]
 [ext_resource type="Texture2D" uid="uid://t83sa31l1ttx" path="res://Assets/TileSets/TX Shadow Plant.png" id="12_m2h0w"]
 [ext_resource type="PackedScene" uid="uid://ks5skbsb7ao0" path="res://Scenes/Text_Box_Activation.tscn" id="13_vr8qn"]
-[ext_resource type="Script" path="res://Scripts/Text_Box_Activation_Player.gd" id="14_4itfq"]
+[ext_resource type="Script" uid="uid://tt76ctq22j56" path="res://Scripts/Text_Box_Activation_Player.gd" id="14_4itfq"]
 [ext_resource type="PackedScene" uid="uid://b8deqcao3lufg" path="res://Scenes/Teleporter.tscn" id="15_36vk1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ncm4x"]
@@ -1088,7 +1088,7 @@ script = ExtResource("14_4itfq")
 position = Vector2(8, 16)
 spawn = true
 active = false
-level = "res://Scenes/Stage0_Trial2.tscn"
+level = "uid://q2chhna0w7d6"
 player = NodePath("../WORLD/Player")
 
 [node name="Teleportor2" parent="." node_paths=PackedStringArray("player") instance=ExtResource("15_36vk1")]

@@ -27,7 +27,6 @@ func _physics_process(delta: float) -> void:
 		
 	if readyToTeleport and $TeleportTimer.is_stopped() and $SpawnProtectionTimer.is_stopped():
 		get_tree().change_scene_to_file(level)
-		
 	if spawn:
 		Spawn()
 		
