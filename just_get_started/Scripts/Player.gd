@@ -5,7 +5,7 @@ extends CharacterBody2D
 @onready var note = %Notes
 var direction := Vector2()
 var lastDirection := Vector2()
-var orientation := Vector2(0, 1)
+var orientation := Vector2(0, -1)
 
 var isDashing = false
 var justDashed = false
@@ -27,9 +27,9 @@ func _physics_process(delta: float) -> void:
 	else:
 		direction = Vector2(0, 0)
 	
-	if !isAttacking and !isDashing:
+	if !isAttacking and !isDashing and moveable:
 		Orientation()
-		if moveable: Move()
+		Move()
 		
 	justDashed = false
 	#modified things
@@ -73,7 +73,7 @@ func _physics_process(delta: float) -> void:
 	firstFrameAttack = false
 	if attackDirection:
 		firstFrameAttack = true
-		$AnimatedSprite2D.play("Idle Down")
+		$AnimatedSprite2D.play("Idle Up")
 		Attack()
 		isAttacking = true
 		$AttackTimer.start()
@@ -84,7 +84,7 @@ func _physics_process(delta: float) -> void:
 	if isAttacking and $AttackTimer.is_stopped():
 		isAttacking = false
 		justAttacked = true
-		$AnimatedSprite2D.play("Idle Down")
+		$AnimatedSprite2D.play("Idle Up")
 		$AttackCollision/Area2DDown/CollisionShape2D.disabled = true
 		$AttackCollision/Area2DLeft/CollisionShape2D.disabled = true
 		$AttackCollision/Area2DRight/CollisionShape2D.disabled = true
@@ -131,8 +131,8 @@ func Orientation():
 			orientation = Vector2(sign(orientation.x), 0)
 
 func AnimationHandler():
-	var action: String
-	var dir: String
+	var action := "Idle"
+	var dir := "Up"
 	var usedOrientation = orientation
 	if isAttacking:
 		usedOrientation = attackDirection
@@ -148,10 +148,10 @@ func AnimationHandler():
 		dir = "Right"
 	if usedOrientation.x < 0:
 		dir = "Left"
-	if usedOrientation.y < 0:
-		dir = "Up"
 	if usedOrientation.y > 0:
 		dir = "Down"
+	if usedOrientation.y < 0:
+		dir = "Up"
 		
 	$AnimatedSprite2D.play(action + " " + dir)
 		

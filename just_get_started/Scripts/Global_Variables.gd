@@ -44,4 +44,6 @@ var stage1Trial5Dummies = true
 var stage2Trial1Finish = true
 var stage2Trial1Puzzle = false
 
+var stage3Trial5Finish = false
+
 var stage2Trial3Shard = "yellow"

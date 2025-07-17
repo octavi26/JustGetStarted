@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bd7gb8bd4pxgw" path="res://Scenes/Player.tscn" id="1_d7elq"]
 [ext_resource type="Texture2D" uid="uid://7vlf6sgtbgkv" path="res://Assets/TileSets/TX Tileset Grass.png" id="2_5ljry"]
-[ext_resource type="Script" uid="uid://dy7c1xpr6o01p" path="res://Scripts/Camera_Shake.gd" id="3_2jdi6"]
+[ext_resource type="Script" path="res://Scripts/Camera_Shake.gd" id="3_2jdi6"]
 [ext_resource type="Texture2D" uid="uid://domqhxfcd3xmq" path="res://Assets/TileSets/TX Struct.png" id="3_b7cuf"]
 [ext_resource type="Texture2D" uid="uid://c54hxqc5lhb0s" path="res://Assets/TileSets/TX Tileset Stone Ground.png" id="4_k4eel"]
 [ext_resource type="PackedScene" uid="uid://bunskihyq44kr" path="res://Scenes/Object_Collision_Image.tscn" id="4_lvl34"]
@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dj68bjweojhfy" path="res://Scenes/Narrator_Text_Box.tscn" id="5_qu1ii"]
 [ext_resource type="PackedScene" uid="uid://duuhv3ariy5q4" path="res://Scenes/Player_Text_Box.tscn" id="6_awnp8"]
 [ext_resource type="PackedScene" uid="uid://b8deqcao3lufg" path="res://Scenes/Teleporter.tscn" id="6_s73lr"]
-[ext_resource type="Script" uid="uid://rlj8ti5e38q8" path="res://Scripts/Manager_Stage0_Trial2.gd" id="7_yhxen"]
+[ext_resource type="Script" path="res://Scripts/Manager_Stage0_Trial2.gd" id="7_yhxen"]
 [ext_resource type="Texture2D" uid="uid://dl1fjay6hyf60" path="res://Assets/TileSets/TX Props.png" id="8_bdf6f"]
 [ext_resource type="PackedScene" uid="uid://byc5rsjf6xcx3" path="res://Scenes/Side_Notes.tscn" id="8_q2urn"]
 [ext_resource type="PackedScene" uid="uid://dd5i76isxitbg" path="res://Scenes/Puzzle.tscn" id="8_wv0eo"]
@@ -19,7 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://df6pie5n7tpbk" path="res://Scenes/Object_Collision_Image_Activation.tscn" id="10_fldqx"]
 [ext_resource type="PackedScene" uid="uid://ks5skbsb7ao0" path="res://Scenes/Text_Box_Activation.tscn" id="13_0csrn"]
 [ext_resource type="Texture2D" uid="uid://t83sa31l1ttx" path="res://Assets/TileSets/TX Shadow Plant.png" id="14_3wg7e"]
-[ext_resource type="Script" uid="uid://tt76ctq22j56" path="res://Scripts/Text_Box_Activation_Player.gd" id="16_rh60f"]
+[ext_resource type="Script" path="res://Scripts/Text_Box_Activation_Player.gd" id="16_rh60f"]
 [ext_resource type="Texture2D" uid="uid://ryckba03fygp" path="res://Assets/Sprites/Player/puzzle1.png" id="18_762gv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_atc76"]

@@ -1,0 +1,158 @@
+[gd_scene load_steps=7 format=3 uid="uid://bovwi7hl80lym"]
+
+[ext_resource type="Script" path="res://Scripts/Manager_Stage0_Trial6.gd" id="1_kq33u"]
+[ext_resource type="Script" path="res://Scripts/Camera_Shake.gd" id="2_aytnb"]
+[ext_resource type="PackedScene" uid="uid://dj68bjweojhfy" path="res://Scenes/Narrator_Text_Box.tscn" id="3_35a6h"]
+[ext_resource type="Script" path="res://Scripts/Trial6_Narrator.gd" id="4_6tnt8"]
+[ext_resource type="Script" path="res://Scripts/Trial6_Narrator2.gd" id="5_4m372"]
+[ext_resource type="Script" path="res://Scripts/Trial6_Narrator3.gd" id="6_li6x6"]
+
+[node name="Node2D2" type="Node2D"]
+script = ExtResource("1_kq33u")
+level = "res://Scenes/Stage3_Trial1.tscn"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1, 0)
+zoom = Vector2(3.5, 3.5)
+limit_left = -486
+limit_top = -296
+limit_right = 486
+limit_bottom = 296
+limit_smoothed = true
+editor_draw_limits = true
+script = ExtResource("2_aytnb")
+
+[node name="Narrator" parent="." instance=ExtResource("3_35a6h")]
+visible = false
+position = Vector2(0, 84)
+scale = Vector2(0.2, 0.2)
+script = ExtResource("4_6tnt8")
+text1 = "Now that you finished the Tutorial, it's time for you to . . ."
+text2 = "Just Get Started!"
+
+[node name="Timer1" type="Timer" parent="Narrator"]
+one_shot = true
+autostart = true
+
+[node name="Timer2" type="Timer" parent="Narrator"]
+wait_time = 4.5
+one_shot = true
+autostart = true
+
+[node name="Timer3" type="Timer" parent="Narrator"]
+wait_time = 6.0
+one_shot = true
+autostart = true
+
+[node name="Timer4" type="Timer" parent="Narrator"]
+wait_time = 7.0
+one_shot = true
+autostart = true
+
+[node name="Timer5" type="Timer" parent="Narrator"]
+wait_time = 8.5
+one_shot = true
+autostart = true
+
+[node name="Timer6" type="Timer" parent="Narrator"]
+wait_time = 9.5
+one_shot = true
+autostart = true
+
+[node name="Timer7" type="Timer" parent="Narrator"]
+wait_time = 10.5
+one_shot = true
+autostart = true
+
+[node name="Timer8" type="Timer" parent="Narrator"]
+wait_time = 11.5
+one_shot = true
+autostart = true
+
+[node name="Timer9" type="Timer" parent="Narrator"]
+wait_time = 12.5
+one_shot = true
+autostart = true
+
+[node name="Timer10" type="Timer" parent="Narrator"]
+wait_time = 13.5
+one_shot = true
+autostart = true
+
+[node name="Timer11" type="Timer" parent="Narrator"]
+wait_time = 14.5
+one_shot = true
+autostart = true
+
+[node name="Timer12" type="Timer" parent="Narrator"]
+wait_time = 17.0
+one_shot = true
+autostart = true
+
+[node name="Narrator2" parent="." instance=ExtResource("3_35a6h")]
+visible = false
+position = Vector2(0, -10)
+scale = Vector2(0.2, 0.2)
+script = ExtResource("5_4m372")
+text1 = "Now that you finished the Tutorial, it's time for you to . . ."
+text2 = "Just Get Started!"
+
+[node name="Timer1" type="Timer" parent="Narrator2"]
+wait_time = 11.5
+one_shot = true
+autostart = true
+
+[node name="Timer2" type="Timer" parent="Narrator2"]
+wait_time = 12.5
+one_shot = true
+autostart = true
+
+[node name="Timer3" type="Timer" parent="Narrator2"]
+wait_time = 13.5
+one_shot = true
+autostart = true
+
+[node name="Timer4" type="Timer" parent="Narrator2"]
+wait_time = 14.5
+one_shot = true
+autostart = true
+
+[node name="Timer5" type="Timer" parent="Narrator2"]
+wait_time = 17.0
+one_shot = true
+autostart = true
+
+[node name="Narrator3" parent="." instance=ExtResource("3_35a6h")]
+visible = false
+position = Vector2(0, -101)
+scale = Vector2(0.2, 0.2)
+script = ExtResource("6_li6x6")
+text1 = "Now that you finished the Tutorial, it's time for you to . . ."
+text2 = "Just Get Started!"
+
+[node name="Timer1" type="Timer" parent="Narrator3"]
+wait_time = 13.5
+one_shot = true
+autostart = true
+
+[node name="Timer2" type="Timer" parent="Narrator3"]
+wait_time = 14.5
+one_shot = true
+autostart = true
+
+[node name="Timer3" type="Timer" parent="Narrator3"]
+wait_time = 17.0
+one_shot = true
+autostart = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -438.0
+offset_top = -245.0
+offset_right = 398.0
+offset_bottom = 248.0
+color = Color(0, 0, 0, 1)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 18.0
+one_shot = true
+autostart = true

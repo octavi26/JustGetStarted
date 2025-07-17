@@ -1,0 +1,88 @@
+[gd_scene load_steps=12 format=3 uid="uid://k75tw7vn66kd"]
+
+[ext_resource type="Script" path="res://Scripts/Mirror.gd" id="1_fk60r"]
+[ext_resource type="Texture2D" uid="uid://cvatpdg1l4n3j" path="res://Assets/Mirror.png" id="1_tx23o"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h3kw4"]
+atlas = ExtResource("1_tx23o")
+region = Rect2(0, 0, 224, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5g1j4"]
+atlas = ExtResource("1_tx23o")
+region = Rect2(224, 0, 224, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_71o83"]
+atlas = ExtResource("1_tx23o")
+region = Rect2(224, 0, 224, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ip1lc"]
+atlas = ExtResource("1_tx23o")
+region = Rect2(448, 0, 224, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_32cim"]
+atlas = ExtResource("1_tx23o")
+region = Rect2(448, 0, 224, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_357cf"]
+atlas = ExtResource("1_tx23o")
+region = Rect2(672, 0, 224, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjtmg"]
+atlas = ExtResource("1_tx23o")
+region = Rect2(672, 0, 224, 160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4hlw0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h3kw4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5g1j4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_71o83")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ip1lc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_32cim")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_357cf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjtmg")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xnese"]
+size = Vector2(226.087, 143.304)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+collision_layer = 4
+script = ExtResource("1_fk60r")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -24)
+sprite_frames = SubResource("SpriteFrames_4hlw0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -16)
+shape = SubResource("RectangleShape2D_xnese")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+z_index = 208
+offset_left = -365.0
+offset_top = -293.0
+offset_right = 445.0
+offset_bottom = 317.0
