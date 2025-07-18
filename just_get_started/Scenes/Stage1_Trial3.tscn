@@ -1,6 +1,6 @@
 [gd_scene load_steps=30 format=3 uid="uid://b0itxn1e4mkse"]
 
-[ext_resource type="Script" uid="uid://dyot4tvym1fhs" path="res://Scripts/Manager_Stage1_Trial3.gd" id="1_fphl5"]
+[ext_resource type="Script" path="res://Scripts/Manager_Stage1_Trial3.gd" id="1_fphl5"]
 [ext_resource type="Texture2D" uid="uid://7vlf6sgtbgkv" path="res://Assets/TileSets/TX Tileset Grass.png" id="2_1pfu8"]
 [ext_resource type="PackedScene" uid="uid://bd7gb8bd4pxgw" path="res://Scenes/Player.tscn" id="3_34iu2"]
 [ext_resource type="PackedScene" uid="uid://dj68bjweojhfy" path="res://Scenes/Narrator_Text_Box.tscn" id="4_fphl5"]
@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://3fnrfu1w1our" path="res://Scenes/Dummy.tscn" id="13_2vi2u"]
 [ext_resource type="PackedScene" uid="uid://ks5skbsb7ao0" path="res://Scenes/Text_Box_Activation.tscn" id="14_7y861"]
 [ext_resource type="PackedScene" uid="uid://cyu47afst43hd" path="res://Scenes/Key.tscn" id="15_1pfu8"]
-[ext_resource type="Script" uid="uid://tt76ctq22j56" path="res://Scripts/Text_Box_Activation_Player.gd" id="17_l7dqi"]
+[ext_resource type="Script" path="res://Scripts/Text_Box_Activation_Player.gd" id="17_l7dqi"]
 [ext_resource type="PackedScene" uid="uid://c2hkogttmj7md" path="res://Scenes/Dash_Area.tscn" id="18_l7dqi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i3il7"]

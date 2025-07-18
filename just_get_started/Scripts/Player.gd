@@ -131,8 +131,8 @@ func Orientation():
 			orientation = Vector2(sign(orientation.x), 0)
 
 func AnimationHandler():
-	var action := "Idle"
-	var dir := "Up"
+	var action := String()
+	var dir := String()
 	var usedOrientation = orientation
 	if isAttacking:
 		usedOrientation = attackDirection
@@ -153,6 +153,7 @@ func AnimationHandler():
 	if usedOrientation.y < 0:
 		dir = "Up"
 		
+	print(action + " " + dir)
 	$AnimatedSprite2D.play(action + " " + dir)
 		
 func Attack():

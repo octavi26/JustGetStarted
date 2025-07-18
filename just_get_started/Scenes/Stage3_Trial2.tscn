@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://rmmdio3466ln"]
+[gd_scene load_steps=36 format=3 uid="uid://rmmdio3466ln"]
 
 [ext_resource type="Script" path="res://Scripts/Void_Controll.gd" id="2_xqiix"]
 [ext_resource type="Texture2D" uid="uid://bdm6ufy13rfk3" path="res://Assets/TileSets/Void_Tile_Set.png" id="3_tt1vf"]
@@ -18,6 +18,9 @@
 [ext_resource type="Texture2D" uid="uid://g8tr2et668f8" path="res://Assets/TileSets/TX Tileset Wall.png" id="15_34c87"]
 [ext_resource type="Texture2D" uid="uid://t83sa31l1ttx" path="res://Assets/TileSets/TX Shadow Plant.png" id="16_s6kfw"]
 [ext_resource type="PackedScene" uid="uid://b8deqcao3lufg" path="res://Scenes/Teleporter.tscn" id="17_xy8k5"]
+[ext_resource type="PackedScene" uid="uid://e5e771leohkg" path="res://Scenes/Mouth.tscn" id="18_c8g73"]
+[ext_resource type="PackedScene" uid="uid://dbwdv4dvnyh5j" path="res://Scenes/Eye.tscn" id="19_uyibe"]
+[ext_resource type="PackedScene" uid="uid://1nckhgw8ijma" path="res://Scenes/Tentacle.tscn" id="20_m10cs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8mffm"]
 texture = ExtResource("3_tt1vf")
@@ -1223,6 +1226,54 @@ spawn = true
 active = false
 level = "res://Scenes/Stage3_Trial1.tscn"
 player = NodePath("../WORLD/Player")
+
+[node name="Extras" type="Node2D" parent="."]
+
+[node name="Node2D" parent="Extras" instance=ExtResource("18_c8g73")]
+position = Vector2(-118, 19)
+rotation = -0.298104
+
+[node name="Node2D2" parent="Extras" instance=ExtResource("18_c8g73")]
+position = Vector2(-335, -152)
+rotation = -0.298104
+
+[node name="Node2D3" parent="Extras" instance=ExtResource("18_c8g73")]
+position = Vector2(-434, 296)
+rotation = 2.44206
+
+[node name="Node2D4" parent="Extras" instance=ExtResource("19_uyibe")]
+position = Vector2(-403, 154)
+rotation = -1.39822
+
+[node name="Node2D5" parent="Extras" instance=ExtResource("19_uyibe")]
+position = Vector2(249, 41)
+rotation = -1.39822
+
+[node name="Node2D6" parent="Extras" instance=ExtResource("19_uyibe")]
+position = Vector2(219, 52)
+rotation = -1.39822
+
+[node name="Node2D7" parent="Extras" instance=ExtResource("19_uyibe")]
+position = Vector2(221, 21)
+rotation = -1.39822
+
+[node name="Node2D8" parent="Extras" instance=ExtResource("19_uyibe")]
+position = Vector2(261, 7)
+rotation = -1.39822
+
+[node name="Node2D9" parent="Extras" instance=ExtResource("19_uyibe")]
+position = Vector2(-233, -171)
+rotation = -0.765139
+
+[node name="Node2D10" parent="Extras" instance=ExtResource("19_uyibe")]
+position = Vector2(-463, -2.00003)
+rotation = -0.933769
+
+[node name="Node2D11" parent="Extras" instance=ExtResource("20_m10cs")]
+position = Vector2(-22, -169)
+
+[node name="Node2D12" parent="Extras" instance=ExtResource("20_m10cs")]
+position = Vector2(-419, 114)
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = 99

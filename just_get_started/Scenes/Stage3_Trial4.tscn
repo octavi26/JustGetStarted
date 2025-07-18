@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://dhm5aesh33opr"]
+[gd_scene load_steps=37 format=3 uid="uid://dhm5aesh33opr"]
 
 [ext_resource type="Script" path="res://Scripts/Manager_Stage0_Trial4.gd" id="1_qjyy5"]
 [ext_resource type="Texture2D" uid="uid://7vlf6sgtbgkv" path="res://Assets/TileSets/TX Tileset Grass.png" id="2_2ba8i"]
@@ -19,6 +19,9 @@
 [ext_resource type="PackedScene" uid="uid://b8deqcao3lufg" path="res://Scenes/Teleporter.tscn" id="15_eid0e"]
 [ext_resource type="PackedScene" uid="uid://c2hkogttmj7md" path="res://Scenes/Dash_Area.tscn" id="18_nntit"]
 [ext_resource type="Shader" path="res://Shaders/Stage3_Shader.gdshader" id="19_vfvo0"]
+[ext_resource type="PackedScene" uid="uid://e5e771leohkg" path="res://Scenes/Mouth.tscn" id="20_6umji"]
+[ext_resource type="PackedScene" uid="uid://dbwdv4dvnyh5j" path="res://Scenes/Eye.tscn" id="21_04b53"]
+[ext_resource type="PackedScene" uid="uid://1nckhgw8ijma" path="res://Scenes/Tentacle.tscn" id="22_pp73j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cvtje"]
 texture = ExtResource("3_gfm4t")
@@ -1186,8 +1189,8 @@ dash = 2
 UnlocksDash = true
 
 [node name="DashArea2" parent="." instance=ExtResource("18_nntit")]
-position = Vector2(120, 12)
-scale = Vector2(1.5, 14)
+position = Vector2(120, -125)
+scale = Vector2(1.5, 4.28)
 collision_mask = 2
 dash = 1
 UnlocksDash = true
@@ -1199,3 +1202,51 @@ offset_left = -990.0
 offset_top = -837.0
 offset_right = 1012.0
 offset_bottom = 534.0
+
+[node name="Extras" type="Node2D" parent="."]
+
+[node name="Node2D" parent="Extras" instance=ExtResource("20_6umji")]
+position = Vector2(-374, 117)
+rotation = -0.298104
+
+[node name="Node2D2" parent="Extras" instance=ExtResource("20_6umji")]
+position = Vector2(201, 120)
+rotation = -0.298104
+
+[node name="Node2D3" parent="Extras" instance=ExtResource("20_6umji")]
+position = Vector2(-128, -176)
+rotation = 2.44206
+
+[node name="Node2D4" parent="Extras" instance=ExtResource("21_04b53")]
+position = Vector2(-296, -73)
+rotation = -1.39822
+
+[node name="Node2D5" parent="Extras" instance=ExtResource("21_04b53")]
+position = Vector2(143, -170)
+rotation = -1.39822
+
+[node name="Node2D6" parent="Extras" instance=ExtResource("21_04b53")]
+position = Vector2(318, -72)
+rotation = -1.39822
+
+[node name="Node2D7" parent="Extras" instance=ExtResource("21_04b53")]
+position = Vector2(145, -144)
+rotation = -1.39822
+
+[node name="Node2D8" parent="Extras" instance=ExtResource("21_04b53")]
+position = Vector2(175, -171)
+rotation = -1.39822
+
+[node name="Node2D9" parent="Extras" instance=ExtResource("21_04b53")]
+position = Vector2(200, 84)
+rotation = -0.765139
+
+[node name="Node2D10" parent="Extras" instance=ExtResource("21_04b53")]
+position = Vector2(-153, 88)
+rotation = -0.933769
+
+[node name="Node2D11" parent="Extras" instance=ExtResource("22_pp73j")]
+position = Vector2(49, -62)
+
+[node name="Node2D12" parent="Extras" instance=ExtResource("22_pp73j")]
+position = Vector2(79, -43)

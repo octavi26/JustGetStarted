@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=3 uid="uid://1nckhgw8ijma"]
+
+[ext_resource type="Texture2D" uid="uid://dxmrsvdiiplai" path="res://Assets/CRAWLING DEPTHS/Creatures/Tentacle 1 Sheet.png" id="1_etbic"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5s2fm"]
+atlas = ExtResource("1_etbic")
+region = Rect2(0, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7hid6"]
+atlas = ExtResource("1_etbic")
+region = Rect2(48, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wrcv0"]
+atlas = ExtResource("1_etbic")
+region = Rect2(96, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v54ns"]
+atlas = ExtResource("1_etbic")
+region = Rect2(144, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvi7j"]
+atlas = ExtResource("1_etbic")
+region = Rect2(192, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fowq7"]
+atlas = ExtResource("1_etbic")
+region = Rect2(240, 0, 48, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k8ubo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5s2fm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7hid6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wrcv0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v54ns")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lvi7j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fowq7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_k8ubo")
+autoplay = "default"
+frame_progress = 0.151063

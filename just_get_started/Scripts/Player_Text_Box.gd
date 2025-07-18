@@ -191,6 +191,8 @@ func StartDialogueById(lineID):
 				if dict.has(lineID):
 					candidates.append(dict)
 			dialogueTable = candidates[randi() % candidates.size()]
+	if lineID not in dialogueTable:
+		return
 	visible = true
 	var cnt = dialogueTable[lineID]["text"].size()
 	var last = dialogueTable[lineID]["frame"].size() - 1

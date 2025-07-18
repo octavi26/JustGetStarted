@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://cnhlopvg7k234"]
+[gd_scene load_steps=37 format=3 uid="uid://cnhlopvg7k234"]
 
 [ext_resource type="Texture2D" uid="uid://7vlf6sgtbgkv" path="res://Assets/TileSets/TX Tileset Grass.png" id="2_22xgf"]
 [ext_resource type="Script" path="res://Scripts/Void_Controll.gd" id="2_qvwh8"]
@@ -18,6 +18,10 @@
 [ext_resource type="PackedScene" uid="uid://b8deqcao3lufg" path="res://Scenes/Teleporter.tscn" id="16_f4fir"]
 [ext_resource type="Shader" path="res://Shaders/Stage3_Shader.gdshader" id="17_rqavp"]
 [ext_resource type="PackedScene" uid="uid://df6pie5n7tpbk" path="res://Scenes/Object_Collision_Image_Activation.tscn" id="18_7f3pw"]
+[ext_resource type="PackedScene" uid="uid://e5e771leohkg" path="res://Scenes/Mouth.tscn" id="19_iek6y"]
+[ext_resource type="Texture2D" uid="uid://cd35ovxquk4ho" path="res://Assets/Overlays/JGS_Tomb.png" id="19_ixqly"]
+[ext_resource type="PackedScene" uid="uid://dbwdv4dvnyh5j" path="res://Scenes/Eye.tscn" id="20_3wsvv"]
+[ext_resource type="PackedScene" uid="uid://1nckhgw8ijma" path="res://Scenes/Tentacle.tscn" id="21_sah2j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ag075"]
 texture = ExtResource("3_6ur23")
@@ -1183,7 +1187,55 @@ player = NodePath("../WORLD/Player")
 position = Vector2(-382, -115)
 scale = Vector2(1.05, 2.3)
 collision_mask = 2
-image_shown = ExtResource("3_6ur23")
+image_shown = ExtResource("19_ixqly")
+
+[node name="Extras" type="Node2D" parent="."]
+
+[node name="Node2D" parent="Extras" instance=ExtResource("19_iek6y")]
+position = Vector2(107, -81)
+rotation = -0.298104
+
+[node name="Node2D2" parent="Extras" instance=ExtResource("19_iek6y")]
+position = Vector2(-597, 191)
+rotation = -0.298104
+
+[node name="Node2D3" parent="Extras" instance=ExtResource("19_iek6y")]
+position = Vector2(521, 90)
+rotation = 2.44206
+
+[node name="Node2D4" parent="Extras" instance=ExtResource("20_3wsvv")]
+position = Vector2(-58, 121)
+rotation = -1.39822
+
+[node name="Node2D5" parent="Extras" instance=ExtResource("20_3wsvv")]
+position = Vector2(-506, -116)
+rotation = -1.39822
+
+[node name="Node2D6" parent="Extras" instance=ExtResource("20_3wsvv")]
+position = Vector2(-536, -105)
+rotation = -1.39822
+
+[node name="Node2D7" parent="Extras" instance=ExtResource("20_3wsvv")]
+position = Vector2(-534, -136)
+rotation = -1.39822
+
+[node name="Node2D8" parent="Extras" instance=ExtResource("20_3wsvv")]
+position = Vector2(-494, -150)
+rotation = -1.39822
+
+[node name="Node2D9" parent="Extras" instance=ExtResource("20_3wsvv")]
+position = Vector2(355, -122)
+rotation = -0.765139
+
+[node name="Node2D10" parent="Extras" instance=ExtResource("20_3wsvv")]
+position = Vector2(507, -83)
+rotation = -0.933769
+
+[node name="Node2D11" parent="Extras" instance=ExtResource("21_sah2j")]
+position = Vector2(-57, -163)
+
+[node name="Node2D12" parent="Extras" instance=ExtResource("21_sah2j")]
+position = Vector2(-595, 21)
 
 [connection signal="body_entered" from="Object" to="Object" method="_on_body_entered"]
 [connection signal="body_exited" from="Object" to="Object" method="_on_body_exited"]

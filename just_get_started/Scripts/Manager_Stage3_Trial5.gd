@@ -7,5 +7,6 @@ func _ready() -> void:
 		$"../Object".queue_free()
 		$"../WORLD/Stone_Structure".queue_free()
 		$"../WORLD/Grass2".visible = true
+		$"../Teleportor2".active = false
 		
 	Global.stage3Trial5Finish = true

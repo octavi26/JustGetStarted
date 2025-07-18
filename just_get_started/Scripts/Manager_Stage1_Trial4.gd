@@ -31,7 +31,7 @@ func _physics_process(delta: float) -> void:
 		Global.stage1Trial4Finish = true
 
 	if Global.stage1Trial4Finish:
-		teleportor2.level = "res://Scenes/Stage2_Trial1.tscn"
+		teleportor2.level = puzzle.level
 
 
 func CameraShake():
