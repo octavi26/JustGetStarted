@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://duuhv3ariy5q4"]
 
-[ext_resource type="Script" uid="uid://d1sqwwxagiokn" path="res://Scripts/Player_Text_Box.gd" id="1_1lvv6"]
+[ext_resource type="Script" path="res://Scripts/Player_Text_Box.gd" id="1_1lvv6"]
 [ext_resource type="Texture2D" uid="uid://bsntdwls8exqb" path="res://Assets/Sprites/Player/HeroSpriteSheet.png" id="2_o7y65"]
 [ext_resource type="Texture2D" uid="uid://cvbba1rykit4i" path="res://Assets/Text_Box_Hero.png" id="3_eg6hr"]
 
@@ -103,11 +103,12 @@ scale = Vector2(1.3, 1.3)
 texture = ExtResource("3_eg6hr")
 
 [node name="Label" type="Label" parent="."]
-offset_left = -411.0
-offset_top = -86.0
-offset_right = 420.0
-offset_bottom = 180.0
-text = "Wait . . . I have been here before, have i not?"
+offset_left = -394.0
+offset_top = -94.6667
+offset_right = 391.0
+offset_bottom = 190.333
+text = "wait"
 label_settings = SubResource("LabelSettings_ydv6m")
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 2

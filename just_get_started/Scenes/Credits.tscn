@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwabb6dxjl6gh"]
+
+[ext_resource type="Script" path="res://Scripts/Credits.gd" id="1_7ge4p"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vdk1s"]
+line_spacing = 52.0
+font_size = 52
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -1004.0
+offset_top = -558.0
+offset_right = 1033.0
+offset_bottom = 574.0
+color = Color(0, 0, 0, 1)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(0, -1211)
+script = ExtResource("1_7ge4p")
+
+[node name="Label" type="Label" parent="Node2D"]
+offset_left = -632.0
+offset_top = -584.0
+offset_right = 611.0
+offset_bottom = 604.0
+text = "Game Engine: GODOT
+Creators: Danciu Cosmin & Radu Octavian
+Art Design: Radu Octavian & itch.io
+Sound Design: Danciu Cosmin
+Level Design: Dancoi Cosmin & Radu Octavian
+Mechanics: Danciu Cosmin & Radu Octavian
+Playtesters: TBD
+Time Worked: 200.000 hours or so
+GameJam Theme: \"Just Get Started\"
+Special Thanks to the familyand to the loved ones"
+label_settings = SubResource("LabelSettings_vdk1s")
+horizontal_alignment = 1
+vertical_alignment = 1

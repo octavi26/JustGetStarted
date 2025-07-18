@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bunskihyq44kr"]
+[gd_scene load_steps=4 format=3 uid="uid://bunskihyq44kr"]
 
 [ext_resource type="Script" path="res://Scripts/Object_Collision_Image.gd" id="1_km5oh"]
+[ext_resource type="Texture2D" uid="uid://w0mrdxhcytmq" path="res://Assets/Text_Box_Narrator.png" id="2_ah682"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_450a4"]
 
@@ -8,15 +9,8 @@
 z_index = 100
 script = ExtResource("1_km5oh")
 
-[node name="Image" type="TextureRect" parent="."]
-offset_left = -142.0
-offset_top = -108.0
-offset_right = 212.0
-offset_bottom = 403.0
-scale = Vector2(0.797654, 0.426932)
-expand_mode = 1
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 modulate = Color(0, 0, 0, 1)
 z_index = -1
 position = Vector2(-0.815105, -0.189423)
@@ -24,9 +18,33 @@ scale = Vector2(-299.776, 236.105)
 texture = SubResource("PlaceholderTexture2D_450a4")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-z_index = -2
-offset_left = -912.0
-offset_top = -467.0
-offset_right = 921.0
-offset_bottom = 476.0
-color = Color(0, 0, 0, 0.313726)
+z_index = 100
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -500.0
+offset_right = 500.0
+offset_bottom = 500.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.156863)
+
+[node name="Image" type="TextureRect" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -238.0
+offset_top = -162.0
+offset_right = 238.0
+offset_bottom = 162.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ah682")
+expand_mode = 5
+stretch_mode = 5

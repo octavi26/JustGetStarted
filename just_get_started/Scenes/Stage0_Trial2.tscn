@@ -20,7 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://ks5skbsb7ao0" path="res://Scenes/Text_Box_Activation.tscn" id="13_0csrn"]
 [ext_resource type="Texture2D" uid="uid://t83sa31l1ttx" path="res://Assets/TileSets/TX Shadow Plant.png" id="14_3wg7e"]
 [ext_resource type="Script" path="res://Scripts/Text_Box_Activation_Player.gd" id="16_rh60f"]
-[ext_resource type="Texture2D" uid="uid://ryckba03fygp" path="res://Assets/Sprites/Player/puzzle1.png" id="18_762gv"]
+[ext_resource type="Texture2D" uid="uid://bdm6ufy13rfk3" path="res://Assets/TileSets/Void_Tile_Set.png" id="19_7gdjj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_atc76"]
 texture = ExtResource("2_5ljry")
@@ -1175,7 +1175,7 @@ position = Vector2(-144, -112)
 [node name="Object" parent="." instance=ExtResource("10_fldqx")]
 position = Vector2(-146, -3)
 collision_mask = 2
-image_shown = ExtResource("18_762gv")
+image_shown = ExtResource("19_7gdjj")
 
 [node name="AreaNarrator1" parent="." instance=ExtResource("13_0csrn")]
 position = Vector2(-276, 30)

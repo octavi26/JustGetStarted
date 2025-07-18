@@ -29,7 +29,25 @@ var dialogueTable1 = {
 	#nu schimba 6, e pt scrisul de dupa deblocarea usii
 	6: { "text": [
 		"Weird, at least the portal is now open.."
-	], "frame": [0] }
+	], "frame": [0] },
+	100: { "text": [
+		"Where am I?...",
+		"Wait",
+		"You're...",
+		"I AM.",
+		"YOU HAVE BROKEN MY SPELL. YOU HAVE ESCAPED MY TRAP.",
+		"This was never a tutorial. It was you all along.",
+		"It's you who I was tasked to slay!",
+		"I AM THE GOD OF MISCHIEF. YOU...",
+		"YOU SAW THROUGH MY LIES",
+		"YOU HAVE BROKEN THE ILLUSION.",
+		"All that nonsesne about getting started. How long have I been here?",
+		"DECADES. YOU HAVE BEEN TRYING DECADES.",
+		"YOU NEVER GAVE UP...",
+		"YOUR WILL... IT HAS BEATEN ME",
+		"It's time to put an end to this then.",
+		"DO IT. SLAY ME. YOU HAVE EARNED IT."
+	], "frame": [6,0,3,9,9,0,1,9,9,9,6,9,9,9,0,9] }
 }
 var dialogueTable2 = {
 	0: { "text" : [

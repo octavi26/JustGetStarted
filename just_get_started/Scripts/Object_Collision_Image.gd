@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var player = %Player
-@onready var image = $Image
+@onready var image = $"ColorRect/Image"
 
 var area
 
