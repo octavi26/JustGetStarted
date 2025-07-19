@@ -6,9 +6,9 @@ extends Node
 @onready var teleportor2 = $"../Teleportor2"
 @onready var puzzle = $"../Puzzle"
 @onready var camera = %Player.get_node("Camera2D")
-@onready var dummy1 = $"../Dummy1"
-@onready var dummy2 = $"../Dummy2"
-@onready var dummy3 = $"../Dummy3"
+@onready var dummy1 = $"../WORLD/Dummy1"
+@onready var dummy2 = $"../WORLD/Dummy2"
+@onready var dummy3 = $"../WORLD/Dummy3"
 
 func _ready() -> void:
 	if Global.playerPos == 4:

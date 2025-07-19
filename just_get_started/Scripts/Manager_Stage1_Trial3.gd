@@ -1,7 +1,7 @@
 extends Node
 
-@onready var dummy1 = $"../Dummy1"
-@onready var dummy2 = $"../Dummy2"
+@onready var dummy1 = $"../WORLD/Dummy1"
+@onready var dummy2 = $"../WORLD/Dummy2"
 
 @onready var key = $"../Key"
 
