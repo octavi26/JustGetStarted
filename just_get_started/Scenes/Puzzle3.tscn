@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://1inmrqim6wfe"]
 
-[ext_resource type="Script" uid="uid://dip03ybg3j461" path="res://Scripts/Puzzle3.gd" id="1_g1kfu"]
+[ext_resource type="Script" path="res://Scripts/Puzzle3.gd" id="1_g1kfu"]
 [ext_resource type="Texture2D" uid="uid://dl1fjay6hyf60" path="res://Assets/TileSets/TX Props.png" id="2_62g44"]
 [ext_resource type="PackedScene" uid="uid://bmhahwnwxgakd" path="res://Scenes/Puzzle_Collision.tscn" id="3_aq5vs"]
 

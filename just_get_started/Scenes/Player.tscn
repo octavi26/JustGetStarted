@@ -1,4 +1,4 @@
-[gd_scene load_steps=189 format=3 uid="uid://bd7gb8bd4pxgw"]
+[gd_scene load_steps=192 format=3 uid="uid://bd7gb8bd4pxgw"]
 
 [ext_resource type="Texture2D" uid="uid://xlum7u18v7vb" path="res://Assets/Sprites/Player/IDLE/idle_down.png" id="1_ivrb1"]
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_j76l8"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://c24uhqakljl4w" path="res://Assets/Sprites/Player/DASH/dash_right.png" id="12_flfsn"]
 [ext_resource type="Texture2D" uid="uid://b7418btwooyyr" path="res://Assets/Sprites/Player/DASH/dash_up.png" id="13_7byr0"]
 [ext_resource type="Texture2D" uid="uid://b8nqo735x3fwc" path="res://Assets/Sprites/UI/E_Press.png" id="22_fl1kk"]
+[ext_resource type="Texture2D" uid="uid://ch4ohh4ygkteb" path="res://Assets/Overlays/Keyboard Letters and Symbols.png" id="23_0guyd"]
 [ext_resource type="Script" path="res://Scripts/Attack_Down.gd" id="23_esnc4"]
 [ext_resource type="Script" path="res://Scripts/Attack_Left.gd" id="24_2dc2e"]
 [ext_resource type="Script" path="res://Scripts/Attack_Right.gd" id="25_ebrf7"]
@@ -1233,6 +1234,14 @@ region = Rect2(0, 0, 32, 32)
 atlas = ExtResource("22_fl1kk")
 region = Rect2(32, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_7s4wt"]
+atlas = ExtResource("23_0guyd")
+region = Rect2(64, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8y3tt"]
+atlas = ExtResource("23_0guyd")
+region = Rect2(64, 144, 16, 16)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_h5k8p"]
 animations = [{
 "frames": [{
@@ -1245,6 +1254,17 @@ animations = [{
 "loop": true,
 "name": &"Press",
 "speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7s4wt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8y3tt")
+}],
+"loop": true,
+"name": &"Press2",
+"speed": 1.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b2na4"]
@@ -1283,11 +1303,10 @@ one_shot = true
 [node name="ButtonAnimation" type="AnimatedSprite2D" parent="."]
 visible = false
 position = Vector2(0, -42.84)
-scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_h5k8p")
-animation = &"Press"
-autoplay = "Press"
-frame_progress = 0.912391
+animation = &"Press2"
+autoplay = "Press2"
+frame_progress = 0.0624696
 
 [node name="AttackCollision" type="Node2D" parent="."]
 position = Vector2(0, -18)

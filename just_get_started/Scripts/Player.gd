@@ -27,9 +27,9 @@ func _physics_process(delta: float) -> void:
 	else:
 		direction = Vector2(0, 0)
 	
-	if !isAttacking and !isDashing and moveable:
+	if !isAttacking and !isDashing:
 		Orientation()
-		Move()
+		if moveable: Move()
 		
 	justDashed = false
 	#modified things
