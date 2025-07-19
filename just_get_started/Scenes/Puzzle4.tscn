@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://cd1oic6rhbhmt"]
+[gd_scene load_steps=7 format=3 uid="uid://cd1oic6rhbhmt"]
 
-[ext_resource type="Script" path="res://Scripts/Puzzle4.gd" id="1_2lvg4"]
+[ext_resource type="Script" uid="uid://by8jw4uvfs720" path="res://Scripts/Puzzle4.gd" id="1_2lvg4"]
 [ext_resource type="Texture2D" uid="uid://dl1fjay6hyf60" path="res://Assets/TileSets/TX Props.png" id="2_dpdkl"]
 [ext_resource type="PackedScene" uid="uid://bmhahwnwxgakd" path="res://Scenes/Puzzle_Collision.tscn" id="3_3g8wq"]
 [ext_resource type="AudioStream" uid="uid://c0ravfrkdx6jk" path="res://Assets/Sounds/puzzle.mp3" id="4_dpdkl"]
-[ext_resource type="Texture2D" uid="uid://vi374bv8fxb" path="res://Assets/CRAWLING DEPTHS/Tileset.png" id="3_x2llw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3653f"]
 texture = ExtResource("2_dpdkl")
@@ -115,112 +114,9 @@ texture_region_size = Vector2i(32, 32)
 8:15/0 = 0
 9:15/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hkfhv"]
-texture = ExtResource("3_x2llw")
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-3:4/0 = 0
-0:5/0 = 0
-1:5/0 = 0
-2:5/0 = 0
-3:5/0 = 0
-0:6/0 = 0
-1:6/0 = 0
-2:6/0 = 0
-3:6/0 = 0
-0:7/0 = 0
-1:7/0 = 0
-2:7/0 = 0
-3:7/0 = 0
-0:8/0 = 0
-1:8/0 = 0
-2:8/0 = 0
-3:8/0 = 0
-0:9/0 = 0
-1:9/0 = 0
-2:9/0 = 0
-3:9/0 = 0
-0:10/0 = 0
-1:10/0 = 0
-2:10/0 = 0
-3:10/0 = 0
-0:11/0 = 0
-1:11/0 = 0
-2:11/0 = 0
-3:11/0 = 0
-0:12/0 = 0
-1:12/0 = 0
-2:12/0 = 0
-3:12/0 = 0
-1:13/0 = 0
-2:13/0 = 0
-3:13/0 = 0
-1:14/0 = 0
-2:14/0 = 0
-3:14/0 = 0
-1:15/0 = 0
-2:15/0 = 0
-3:15/0 = 0
-1:16/0 = 0
-2:16/0 = 0
-3:16/0 = 0
-0:17/0 = 0
-1:17/0 = 0
-2:17/0 = 0
-3:17/0 = 0
-0:18/0 = 0
-1:18/0 = 0
-2:18/0 = 0
-3:18/0 = 0
-0:19/0 = 0
-1:19/0 = 0
-2:19/0 = 0
-3:19/0 = 0
-0:20/0 = 0
-1:20/0 = 0
-2:20/0 = 0
-3:20/0 = 0
-1:21/0 = 0
-2:21/0 = 0
-3:21/0 = 0
-1:22/0 = 0
-2:22/0 = 0
-3:22/0 = 0
-1:23/0 = 0
-2:23/0 = 0
-3:23/0 = 0
-1:24/0 = 0
-2:24/0 = 0
-3:24/0 = 0
-0:25/0 = 0
-1:25/0 = 0
-2:25/0 = 0
-3:25/0 = 0
-0:26/0 = 0
-1:26/0 = 0
-2:26/0 = 0
-3:26/0 = 0
-
 [sub_resource type="TileSet" id="TileSet_obbn5"]
+tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetAtlasSource_3653f")
-sources/1 = SubResource("TileSetAtlasSource_hkfhv")
 
 [node name="Puzzle" type="Node2D"]
 script = ExtResource("1_2lvg4")
@@ -228,11 +124,17 @@ script = ExtResource("1_2lvg4")
 [node name="Pillars" type="Node2D" parent="."]
 
 [node name="Pillar1" type="TileMap" parent="Pillars"]
-position = Vector2(-23, -19)
-scale = Vector2(1.7, 1.7)
 tile_set = SubResource("TileSet_obbn5")
 format = 2
-layer_0/tile_data = PackedInt32Array(1, 1, 3, 65537, 1, 4)
+layer_0/tile_data = PackedInt32Array(-65536, 458752, 0, 0, 458752, 1)
+
+[node name="Lights" type="Node2D" parent="."]
+
+[node name="Light1" type="TileMap" parent="Lights"]
+modulate = Color(1, 1, 1, 0)
+tile_set = SubResource("TileSet_obbn5")
+format = 2
+layer_0/tile_data = PackedInt32Array(-65536, 524288, 0, 0, 524288, 1)
 
 [node name="Collisons" type="Node2D" parent="."]
 

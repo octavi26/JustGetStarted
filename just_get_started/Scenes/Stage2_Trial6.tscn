@@ -156,11 +156,3 @@ color = Color(0, 0, 0, 1)
 wait_time = 18.0
 one_shot = true
 autostart = true
-
-[node name="ColorRect2" type="ColorRect" parent="."]
-z_index = 200
-offset_left = 185.0
-offset_top = -301.0
-offset_right = 274.0
-offset_bottom = 281.0
-color = Color(0, 0, 0, 1)

@@ -28,56 +28,7 @@ var dialogueTable1 = {
 	], "frame": [3] },
 	#nu schimba 6, e pt scrisul de dupa deblocarea usii
 	6: { "text": [
-		"Wait, I'm starting to remember",
-		"I get it now. This is not a tutorial",
-		"Not anymore"
-	], "frame": [8, 8, 0] },
-	10: { "text": [
-		"Haven't I been here before already?",
-		"What's happening?"
-	], "frame": [0] },
-	12: { "text": [
-		"Pretty sure you've said that already..."
-	], "frame": [0] },
-	11: { "text": [
-		"I remember doing this puzzle already. But it seems more complicated now",
-		"I wonder what's up with this."
-	], "frame": [4,0] },
-	13: { "text": [
-		"I am quite sure one of them had armour last time",
-		"I should kill them this time just to make sure"
-	], "frame": [0,7] },
-	14: { "text": [
-		"It feels like I used to know something, but i forgot what"
-	], "frame": [6] },
-	15: { "text": [
-		"That's right, the Dash!",
-		"How could I forget that?",
-		"If only the portal back would work, I could get the key"
-	], "frame": [1, 6, 0] },
-	16: { "text": [
-		"I feel like I need some sort of ability to get there"
-	], "frame": [0] },
-	17: { "text": [
-		"you're acting weird..."
-	], "frame": [4] },
-	18: { "text": [
-		"I am having a deja-vu"
-	], "frame": [0] },
-	19: { "text": [
-		"That statue... I think that's new... It feels new"
-	], "frame": [0] },
-	20: { "text": [
-		"Nothing written on this one"
-	], "frame": [0] },
-	21: { "text": [
-		"All this happened already, I am certain of it",
-		"This is where it all ends",
-		"Or where all begins",
-		"I don't know how to feel about what's about to happen..."
-	], "frame": [0,0,0,6] },
-	22: { "text": [
-		"I am sure I knew this already"
+		"Weird, at least the portal is now open.."
 	], "frame": [0] },
 	100: { "text": [
 		"Where am I?...",
@@ -122,39 +73,7 @@ var dialogueTable2 = {
 	], "frame": [4] },
 	#nu schimba 6, e pt scrisul de dupa deblocarea usii
 	6: { "text": [
-		"Wait, I'm starting to remember",
-		"I get it now. This is not a tutorial",
-		"Not anymore"
-	], "frame": [8, 8, 0] },
-	17: { "text": [
-		"But I didn't say anything this time!",
-		"Something surely isn't right with you"
-	], "frame": [3] },
-	12: { "text": [
-		"Just get it over with"
-	], "frame": [4] },
-	11: { "text": [
-		"Why does the tutorial keep repeating? I've done this already"
-	], "frame": [0] },
-	13: { "text": [
-		"If I go past this level, I can't get back to take the key unless the portal will open",
-		"Also, where is that Narrator? he used to talk more."
-	], "frame": [0] },
-	14: { "text": [
-		"This is where I onlock tha Dash, I remember now",
-		"Let's hope the portal works and takes me back to the key"
-	], "frame": [7] },
-	15: { "text": [
-		"I'm not sure of what's happening"
-	], "frame": [0] },
-	19: { "text": [
-		"Maybe the secret code from the statue fits somewhere in the first levels!"
-	], "frame": [1] },
-	22: { "text": [
-		"I miss the moments when you shut up"
-	], "frame": [4] },
-	21: { "text": [
-		"Let's try again"
+		"Weird, at least the portal is now open.."
 	], "frame": [0] }
 }
 
@@ -180,25 +99,8 @@ var dialogueTable3 = {
 	
 	#nu schimba 6, e pt scrisul de dupa deblocarea usii
 	6: { "text": [
-		"Wait, I'm starting to remember",
-		"I get it now. This is not a tutorial",
-		"Not anymore"
-	], "frame": [8, 8, 0] },
-	17: { "text": [
-		"Hmm..."
-	], "frame": [0] },
-	12: { "text": [
-		"Yeah Yeah..."
-	], "frame": [0] },
-	11: { "text": [
-		"Let's try the code from the statue"
-	], "frame": [0] },
-	13: { "text": [
-		"after I unlock the dash, I should get back here to take the key"
-	], "frame": [0] },
-	14: { "text": [
-		"FInaly, I can get back after I get the Dash"
-	], "frame": [4] }
+		"Weird, at least the portal is now open.."
+	], "frame": [0] }
 }
 
 var dialogueTableRandom = [
@@ -292,7 +194,6 @@ func StartDialogueById(lineID):
 					candidates.append(dict)
 			dialogueTable = candidates[randi() % candidates.size()]
 	if lineID not in dialogueTable:
-		player.moveable = true
 		return
 	visible = true
 	var cnt = dialogueTable[lineID]["text"].size()

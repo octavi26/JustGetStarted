@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://7fhuhk1l8tkr" path="res://Scripts/Narrator_Text_Box.gd" id="1_uu6rn"]
 [ext_resource type="Texture2D" uid="uid://w0mrdxhcytmq" path="res://Assets/Text_Box_Narrator.png" id="2_m1x12"]
 [ext_resource type="AudioStream" uid="uid://8t5lhhbu1x6e" path="res://Assets/Sounds/text.wav" id="3_7foxb"]
-[ext_resource type="PackedScene" uid="uid://ci8n486n2btgs" path="res://Scenes/Enter_Button.tscn" id="3_o3lwd"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ydv6m"]
 font_size = 36
@@ -32,6 +31,3 @@ vertical_alignment = 1
 [node name="Text" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_7foxb")
 bus = &"SFX"
-[node name="Node2D" parent="." instance=ExtResource("3_o3lwd")]
-position = Vector2(1200, 200)
-scale = Vector2(4, 4)
