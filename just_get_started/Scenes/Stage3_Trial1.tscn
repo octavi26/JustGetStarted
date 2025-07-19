@@ -1,7 +1,7 @@
 [gd_scene load_steps=37 format=3 uid="uid://cnhlopvg7k234"]
 
 [ext_resource type="Texture2D" uid="uid://7vlf6sgtbgkv" path="res://Assets/TileSets/TX Tileset Grass.png" id="2_22xgf"]
-[ext_resource type="Script" path="res://Scripts/Void_Controll.gd" id="2_qvwh8"]
+[ext_resource type="Script" uid="uid://bfmpx5vmh5dl8" path="res://Scripts/Void_Controll.gd" id="2_qvwh8"]
 [ext_resource type="Texture2D" uid="uid://bdm6ufy13rfk3" path="res://Assets/TileSets/Void_Tile_Set.png" id="3_6ur23"]
 [ext_resource type="PackedScene" uid="uid://bd7gb8bd4pxgw" path="res://Scenes/Player.tscn" id="3_o1oht"]
 [ext_resource type="PackedScene" uid="uid://dj68bjweojhfy" path="res://Scenes/Narrator_Text_Box.tscn" id="4_naa7r"]
@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://g8tr2et668f8" path="res://Assets/TileSets/TX Tileset Wall.png" id="12_amyq8"]
 [ext_resource type="Texture2D" uid="uid://t83sa31l1ttx" path="res://Assets/TileSets/TX Shadow Plant.png" id="13_t8ifj"]
 [ext_resource type="PackedScene" uid="uid://b8deqcao3lufg" path="res://Scenes/Teleporter.tscn" id="16_f4fir"]
-[ext_resource type="Shader" path="res://Shaders/Stage3_Shader.gdshader" id="17_rqavp"]
+[ext_resource type="Shader" uid="uid://dn77wwkak2tr7" path="res://Shaders/Stage3_Shader.gdshader" id="17_rqavp"]
 [ext_resource type="PackedScene" uid="uid://df6pie5n7tpbk" path="res://Scenes/Object_Collision_Image_Activation.tscn" id="18_7f3pw"]
 [ext_resource type="PackedScene" uid="uid://e5e771leohkg" path="res://Scenes/Mouth.tscn" id="19_iek6y"]
 [ext_resource type="Texture2D" uid="uid://cd35ovxquk4ho" path="res://Assets/Overlays/JGS_Tomb.png" id="19_ixqly"]

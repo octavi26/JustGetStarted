@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dd5i76isxitbg"]
+[gd_scene load_steps=7 format=3 uid="uid://dd5i76isxitbg"]
 
 [ext_resource type="Texture2D" uid="uid://dl1fjay6hyf60" path="res://Assets/TileSets/TX Props.png" id="1_e30ma"]
-[ext_resource type="Script" path="res://Scripts/Puzzle.gd" id="1_uqb5c"]
+[ext_resource type="Script" uid="uid://0o3o6houk4b7" path="res://Scripts/Puzzle.gd" id="1_uqb5c"]
 [ext_resource type="PackedScene" uid="uid://bmhahwnwxgakd" path="res://Scenes/Puzzle_Collision.tscn" id="3_6oo0k"]
+[ext_resource type="AudioStream" uid="uid://c0ravfrkdx6jk" path="res://Assets/Sounds/puzzle.mp3" id="4_taxwj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3653f"]
 texture = ExtResource("1_e30ma")
@@ -195,3 +196,7 @@ position = Vector2(81, 28)
 
 [node name="5" parent="Collisons" instance=ExtResource("3_6oo0k")]
 position = Vector2(145, 28)
+
+[node name="Interact" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_taxwj")
+bus = &"SFX"

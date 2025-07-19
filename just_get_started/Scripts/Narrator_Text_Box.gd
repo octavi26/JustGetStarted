@@ -6,6 +6,7 @@ var waitingInput = false
 var receivedInput = false
 var skipText = false
 
+
 var dialogueLines = {
 	0: [ 
 		"Welcome here, traveler! DO NOT be afraid.",
@@ -88,14 +89,16 @@ func _input(event):
 
 # Function to display text one character at a time
 func TypeText(text: String, speed: float = 0.025) -> void:
+	skipText = false
 	label.text = ""
+	$Text.play()
 	for i in text.length():
 		label.text += text[i]
 		if skipText:
 			label.text = text
 			break
 		await get_tree().create_timer(speed).timeout
-		
+	$Text.stop()
 
 func StartDialogueById(lineID):
 	visible = true
@@ -106,7 +109,6 @@ func StartDialogueById(lineID):
 		while not receivedInput:
 			await get_tree().process_frame
 		waitingInput = false
-		skipText = false
 	visible = false
 	Global.narratorTextBoxes.append(lineID)
 	player.moveable = true

@@ -5,6 +5,7 @@ var inside: bool = false
 
 func _physics_process(delta: float) -> void:
 	if inside and Input.is_action_just_pressed("Interact"):
+		$"../../Interact".play()
 		active = !active
 
 func _on_body_entered(body: Node2D) -> void:

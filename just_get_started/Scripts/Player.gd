@@ -14,12 +14,32 @@ var canDash = false
 var dashDirections: Array[Vector2] = []
 var dashZone = false
 
+var step_sounds = [
+	preload("res://Assets/Sounds/step1.ogg"),
+	preload("res://Assets/Sounds/step2.ogg"),
+	preload("res://Assets/Sounds/step3.ogg"),
+	preload("res://Assets/Sounds/step4.ogg")
+]
+#alegem una din astea 2
+var step_sounds1 = [
+	preload("res://Assets/Sounds/step_lth1.ogg"),
+	preload("res://Assets/Sounds/step_lth2.ogg"),
+	preload("res://Assets/Sounds/step_lth33.ogg"),
+	preload("res://Assets/Sounds/step_lth4.ogg")
+]
+
 var attackDirection := Vector2()
 
 var isAttacking = false
 var justAttacked = false
 var alternativeAttack = false
 var firstFrameAttack = false
+
+func _ready() -> void:
+	var current_scene = get_tree().current_scene
+	if current_scene.scene_file_path == "res://Scenes/Stage3_Trial1.tscn":
+		Music.get_node("Music").stream = preload("res://Assets/Music/Stage3.ogg")
+		Music.get_node("Music").play()
 
 func _physics_process(delta: float) -> void:
 	if moveable:
@@ -97,13 +117,24 @@ func _physics_process(delta: float) -> void:
 	
 	AnimationHandler()
 
+func PlayStep():
+	if $Steps.playing:
+		return
+	var random_step = step_sounds[randi() % step_sounds.size()]
+	$Steps.stream = random_step
+	if $Timer.time_left <= 0:
+		$Steps.pitch_scale = randf_range(0.8, 1.2)
+		$Steps.play()
+		$Timer.start(0.4)
+
+
 func Move():
 	if direction:
 		velocity = direction * SPEED
+		PlayStep()
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.y = move_toward(velocity.y, 0, SPEED)
-
 	move_and_slide()
 	
 func Orientation():	
@@ -157,6 +188,7 @@ func AnimationHandler():
 	$AnimatedSprite2D.play(action + " " + dir)
 		
 func Attack():
+	$Attack.play()
 	if attackDirection == Vector2(0, 1):
 		$AttackCollision/Area2DDown/CollisionShape2D.disabled = false
 		$AttackCollision/Area2DLeft/CollisionShape2D.disabled = true

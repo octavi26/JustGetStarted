@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cwabb6dxjl6gh"]
 
-[ext_resource type="Script" path="res://Scripts/Credits.gd" id="1_7ge4p"]
+[ext_resource type="Script" uid="uid://cb52a8y87y1sy" path="res://Scripts/Credits.gd" id="1_7ge4p"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_vdk1s"]
 line_spacing = 52.0
@@ -30,12 +30,12 @@ text = "Game Engine: GODOT
 Creators: Danciu Cosmin & Radu Octavian
 Art Design: Radu Octavian & itch.io
 Sound Design: Danciu Cosmin
-Level Design: Dancoi Cosmin & Radu Octavian
+Level Design: Danciu Cosmin & Radu Octavian
 Mechanics: Danciu Cosmin & Radu Octavian
 Playtesters: TBD
 Time Worked: 200.000 hours or so
 GameJam Theme: \"Just Get Started\"
-Special Thanks to the familyand to the loved ones"
+Special Thanks to the family and to the loved ones"
 label_settings = SubResource("LabelSettings_vdk1s")
 horizontal_alignment = 1
 vertical_alignment = 1

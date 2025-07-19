@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://iu1egbss2ly2"]
+
+[ext_resource type="AudioStream" uid="uid://bjhnjbupcev1s" path="res://Assets/Music/little town - orchestral.ogg" id="1_fghhr"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_fghhr")
+autoplay = true
+bus = &"Music"
