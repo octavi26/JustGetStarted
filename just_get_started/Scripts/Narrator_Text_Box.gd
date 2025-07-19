@@ -45,9 +45,7 @@ var dialogueLines = {
 		"Climb the stairs, the next lesson awaits you there."
 	],
 	8: [
-		"So.....",
-		"You know how to walk, do puzzles or fight.",
-		"What is missing?",
+		"So... You know how to walk, do puzzles or fight. What is missing?",
 		"THE DASH!",
 		"Press space to dash to the other side."
 	],
@@ -75,7 +73,12 @@ var dialogueLines = {
 		"MAYBE find the key to unlock it?"
 	],
 	14: [
-		"Statuia spune ceva."
+		"No you haven't! Nothing's happening!",
+		"This is the TUTORIAL after all!",
+		"Use W,A,S,D to move."
+	],
+	15: [
+		"Hint: try the sign!"
 	]
 }
 

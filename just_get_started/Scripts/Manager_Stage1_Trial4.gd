@@ -17,9 +17,9 @@ func _ready() -> void:
 		teleportor1.spawn = true
 		teleportor2.spawn = false
 	Global.playerPos = 4
-	if Global.stage1Trial4Door:
-		doorLocked.queue_free()
-		doorUnlocked.visible = true
+	#if Global.stage1Trial4Door:
+	doorLocked.queue_free()
+	doorUnlocked.visible = true
 	if Global.stage1Trial2FinishPuzzle:
 		Global.stage1Trial4Back = true
 		teleportor1.active = true
@@ -28,6 +28,9 @@ func _physics_process(delta: float) -> void:
 	if puzzle.Code:
 		if !Global.stage1Trial4Finish:
 			CameraShake()
+			$"../WORLD/Grass2".queue_free()
+			$"../ColorRect".material.set_shader_parameter("tint_strength", 0.5)
+			teleportor1.active = false
 		Global.stage1Trial4Finish = true
 
 	if Global.stage1Trial4Finish:
