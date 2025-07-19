@@ -79,6 +79,44 @@ var dialogueTable1 = {
 	22: { "text": [
 		"I am sure I knew this already"
 	], "frame": [0] },
+	30: { "text": [
+		"What is this place?"
+	], "frame": [0] },
+	31: { "text": [
+		"I think we left the tutorial a long time ago buddy",
+		"And I think you know that too"
+	], "frame": [0] },
+	32: { "text": [
+		"Smells like death in here. It's the smell of time passing"
+	], "frame": [0] },
+	33: { "text": [
+		"All these graves... Maybe people who've tried escaping this place too",
+		"Wait, how many people have been trapped here?"
+	], "frame": [0, 6] },
+	34: { "text": [
+		"No... It can't be"
+	], "frame": [8] },
+	35: { "text": [
+		"Everyting seems broken now"
+	], "frame": [0] },
+	36: { "text": [
+		"I don't think there is any puzzle left to solve to be honest"
+	], "frame": [0] },
+	37: { "text": [
+		"Wasn't I suppose to fight the dummies first?",
+		"This place is falling apart"
+	], "frame": [3,0] },
+	38: { "text": [
+		"These tentacles, good thing I know how to dash",
+		"But why do I keep forgeting?",
+		"It's like somene is messing with my head",
+		"My memmories..."
+	], "frame": [0,6,0,0] },
+	39: { "text": [
+		"This ends here, it has to",
+		"Or will it get me back to the graves?",
+		"This was never a tutorial..."
+	], "frame": [0] },
 	100: { "text": [
 		"Where am I?...",
 		"Wait",
@@ -155,7 +193,29 @@ var dialogueTable2 = {
 	], "frame": [4] },
 	21: { "text": [
 		"Let's try again"
-	], "frame": [0] }
+	], "frame": [0] },
+	30: { "text": [
+		"The graveyard again"
+	], "frame": [0] },
+	31: { "text": [
+		"I have to get back to the end"
+	], "frame": [0] },
+	32: { "text": [
+		"Smells like death in here. It's the smell of time passing"
+	], "frame": [0] },
+	33: { "text": [
+		"All these tombs... Maybe I can find an open one"
+	], "frame": [0] },
+	34: { "text": [
+		"No... It can't be"
+	], "frame": [8] },
+	36: { "text": [
+		"Still no puzzle"
+	], "frame": [0] },
+	99: { "text": [
+		"It's... Me...",
+		"But the mirror seems cracked"
+	], "frame": [8, 8] }
 }
 
 var dialogueTable3 = {
@@ -269,7 +329,7 @@ func _input(event):
 func TypeText(text: String, speed: float = 0.025) -> void:
 	skipText = false
 	label.text = ""
-	$Text.play()
+	$Text.play(2.4)
 	for i in text.length():
 		label.text += text[i]
 		if skipText:

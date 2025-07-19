@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cwabb6dxjl6gh"]
 
-[ext_resource type="Script" uid="uid://cb52a8y87y1sy" path="res://Scripts/Credits.gd" id="1_7ge4p"]
+[ext_resource type="Script" path="res://Scripts/Credits.gd" id="1_7ge4p"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_vdk1s"]
 line_spacing = 52.0

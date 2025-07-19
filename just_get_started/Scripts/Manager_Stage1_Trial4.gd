@@ -17,9 +17,9 @@ func _ready() -> void:
 		teleportor1.spawn = true
 		teleportor2.spawn = false
 	Global.playerPos = 4
-	#if Global.stage1Trial4Door:
-	doorLocked.queue_free()
-	doorUnlocked.visible = true
+	if Global.stage1Trial4Door:
+		doorLocked.queue_free()
+		doorUnlocked.visible = true
 	if Global.stage1Trial2FinishPuzzle:
 		Global.stage1Trial4Back = true
 		teleportor1.active = true

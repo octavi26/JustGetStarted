@@ -23,6 +23,7 @@ editor_draw_limits = true
 script = ExtResource("1_c2os1")
 
 [node name="Narrator" parent="." instance=ExtResource("2_6tduc")]
+visible = false
 position = Vector2(0, 84)
 scale = Vector2(0.2, 0.2)
 script = ExtResource("3_avfsm")
@@ -157,7 +158,7 @@ one_shot = true
 autostart = true
 
 [node name="ColorRect2" type="ColorRect" parent="."]
-z_index = 200
+z_index = 202
 offset_left = 185.0
 offset_top = -301.0
 offset_right = 274.0

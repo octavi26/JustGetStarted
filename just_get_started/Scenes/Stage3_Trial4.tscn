@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://dhm5aesh33opr"]
+[gd_scene load_steps=39 format=3 uid="uid://dhm5aesh33opr"]
 
 [ext_resource type="Script" path="res://Scripts/Manager_Stage0_Trial4.gd" id="1_qjyy5"]
 [ext_resource type="Texture2D" uid="uid://7vlf6sgtbgkv" path="res://Assets/TileSets/TX Tileset Grass.png" id="2_2ba8i"]
@@ -22,6 +22,8 @@
 [ext_resource type="PackedScene" uid="uid://e5e771leohkg" path="res://Scenes/Mouth.tscn" id="20_6umji"]
 [ext_resource type="PackedScene" uid="uid://dbwdv4dvnyh5j" path="res://Scenes/Eye.tscn" id="21_04b53"]
 [ext_resource type="PackedScene" uid="uid://1nckhgw8ijma" path="res://Scenes/Tentacle.tscn" id="22_pp73j"]
+[ext_resource type="PackedScene" uid="uid://ks5skbsb7ao0" path="res://Scenes/Text_Box_Activation.tscn" id="23_mm4yc"]
+[ext_resource type="Script" path="res://Scripts/Text_Box_Activation_Player.gd" id="24_b0d4v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cvtje"]
 texture = ExtResource("3_gfm4t")
@@ -1250,3 +1252,15 @@ position = Vector2(49, -62)
 
 [node name="Node2D12" parent="Extras" instance=ExtResource("22_pp73j")]
 position = Vector2(79, -43)
+
+[node name="AreaPlayer1" parent="." instance=ExtResource("23_mm4yc")]
+position = Vector2(-123, 16)
+scale = Vector2(1, 1.52)
+script = ExtResource("24_b0d4v")
+lineID = 37
+
+[node name="AreaPlayer2" parent="." instance=ExtResource("23_mm4yc")]
+position = Vector2(18, -101)
+scale = Vector2(1, 1.52)
+script = ExtResource("24_b0d4v")
+lineID = 38

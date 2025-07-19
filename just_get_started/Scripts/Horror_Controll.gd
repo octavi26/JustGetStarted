@@ -16,3 +16,4 @@ func Hit(id):
 	if is_instance_valid($Horror2):
 		$Horror2.queue_free()
 	$HitFlash.play("HitFlash")
+	$"../Camera2D".start_shake(3, 3)

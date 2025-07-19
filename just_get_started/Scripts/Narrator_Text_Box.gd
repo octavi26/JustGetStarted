@@ -10,8 +10,7 @@ var skipText = false
 var dialogueLines = {
 	0: [ 
 		"Welcome here, traveler! DO NOT be afraid.",
-		"You can move around by using the following keys: W, A, S, D.",
-		"Find the teleporter to advance."
+		"You can move around by using the following keys: W, A, S, D."
 	],
 	1: [
 		"This is a teleporter.",
@@ -79,6 +78,12 @@ var dialogueLines = {
 	],
 	15: [
 		"Hint: try the sign!"
+	],
+	30: [
+		"This is the Tutorial! You can move with W,A,S,D!"
+	],
+	35: [
+		"Now it's time to solve some puzzles!"
 	]
 }
 
@@ -94,7 +99,7 @@ func _input(event):
 func TypeText(text: String, speed: float = 0.025) -> void:
 	skipText = false
 	label.text = ""
-	$Text.play()
+	$Text.play(2.4)
 	for i in text.length():
 		label.text += text[i]
 		if skipText:

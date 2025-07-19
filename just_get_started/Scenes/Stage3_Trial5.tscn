@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://dx7am08f3uc8s"]
+[gd_scene load_steps=43 format=3 uid="uid://dx7am08f3uc8s"]
 
 [ext_resource type="Script" path="res://Scripts/Void_Controll.gd" id="1_02pw0"]
 [ext_resource type="Script" path="res://Scripts/Manager_Stage3_Trial5.gd" id="1_hg3vi"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dj68bjweojhfy" path="res://Scenes/Narrator_Text_Box.tscn" id="5_04d0q"]
 [ext_resource type="PackedScene" uid="uid://duuhv3ariy5q4" path="res://Scenes/Player_Text_Box.tscn" id="6_cvyih"]
 [ext_resource type="PackedScene" uid="uid://bunskihyq44kr" path="res://Scenes/Object_Collision_Image.tscn" id="6_om6uu"]
+[ext_resource type="Script" path="res://Scripts/Camera_Shake.gd" id="6_w0nqp"]
 [ext_resource type="PackedScene" uid="uid://byc5rsjf6xcx3" path="res://Scenes/Side_Notes.tscn" id="7_nbnbg"]
 [ext_resource type="Script" path="res://Scripts/Player_Reflexion.gd" id="8_52bik"]
 [ext_resource type="Shader" path="res://Shaders/Stage3_Shader.gdshader" id="8_g25hf"]
@@ -25,6 +26,8 @@
 [ext_resource type="PackedScene" uid="uid://e5e771leohkg" path="res://Scenes/Mouth.tscn" id="23_o6qg7"]
 [ext_resource type="PackedScene" uid="uid://dbwdv4dvnyh5j" path="res://Scenes/Eye.tscn" id="24_pdht0"]
 [ext_resource type="PackedScene" uid="uid://1nckhgw8ijma" path="res://Scenes/Tentacle.tscn" id="25_py61e"]
+[ext_resource type="PackedScene" uid="uid://ks5skbsb7ao0" path="res://Scenes/Text_Box_Activation.tscn" id="26_u6emr"]
+[ext_resource type="Script" path="res://Scripts/Text_Box_Activation_Player.gd" id="27_sutnr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nk252"]
 texture = ExtResource("2_8yu4s")
@@ -357,7 +360,7 @@ texture_region_size = Vector2i(32, 32)
 [sub_resource type="TileSet" id="TileSet_0atu1"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
-physics_layer_0/collision_mask = 2
+physics_layer_0/collision_mask = 3
 sources/0 = SubResource("TileSetAtlasSource_ncm4x")
 sources/1 = SubResource("TileSetAtlasSource_x535t")
 
@@ -1138,6 +1141,7 @@ position = Vector2(1, 0)
 zoom = Vector2(3.5, 3.5)
 limit_smoothed = true
 editor_draw_limits = true
+script = ExtResource("6_w0nqp")
 
 [node name="Object_Image" parent="WORLD/Player/Camera2D" instance=ExtResource("6_om6uu")]
 unique_name_in_owner = true
@@ -1196,6 +1200,7 @@ layer_4/y_sort_enabled = true
 [node name="Mirror" parent="." instance=ExtResource("16_u5aro")]
 z_index = 10
 position = Vector2(16, -151.67)
+collision_mask = 3
 level = "res://Scenes/Stage3_Trial7.tscn"
 
 [node name="Teleportor2" parent="." node_paths=PackedStringArray("player") instance=ExtResource("16_pc7jb")]
@@ -1271,6 +1276,18 @@ position = Vector2(-254, -124)
 
 [node name="Node2D12" parent="Extras" instance=ExtResource("25_py61e")]
 position = Vector2(381, -10)
+
+[node name="AreaPlayer1" parent="." instance=ExtResource("26_u6emr")]
+position = Vector2(15, -70)
+scale = Vector2(3.68, 0.96)
+script = ExtResource("27_sutnr")
+lineID = 99
+
+[node name="AreaPlayer2" parent="." instance=ExtResource("26_u6emr")]
+position = Vector2(233, 0)
+scale = Vector2(3.68, 1.36)
+script = ExtResource("27_sutnr")
+lineID = 39
 
 [connection signal="body_entered" from="Object" to="Object" method="_on_body_entered"]
 [connection signal="body_exited" from="Object" to="Object" method="_on_body_exited"]

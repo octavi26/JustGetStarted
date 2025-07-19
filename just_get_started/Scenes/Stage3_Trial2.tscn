@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://rmmdio3466ln"]
+[gd_scene load_steps=38 format=3 uid="uid://rmmdio3466ln"]
 
 [ext_resource type="Script" path="res://Scripts/Void_Controll.gd" id="2_xqiix"]
 [ext_resource type="Texture2D" uid="uid://bdm6ufy13rfk3" path="res://Assets/TileSets/Void_Tile_Set.png" id="3_tt1vf"]
@@ -21,6 +21,8 @@
 [ext_resource type="PackedScene" uid="uid://e5e771leohkg" path="res://Scenes/Mouth.tscn" id="18_c8g73"]
 [ext_resource type="PackedScene" uid="uid://dbwdv4dvnyh5j" path="res://Scenes/Eye.tscn" id="19_uyibe"]
 [ext_resource type="PackedScene" uid="uid://1nckhgw8ijma" path="res://Scenes/Tentacle.tscn" id="20_m10cs"]
+[ext_resource type="PackedScene" uid="uid://ks5skbsb7ao0" path="res://Scenes/Text_Box_Activation.tscn" id="22_762kc"]
+[ext_resource type="Script" path="res://Scripts/Text_Box_Activation_Player.gd" id="23_xkbhd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8mffm"]
 texture = ExtResource("3_tt1vf")
@@ -352,7 +354,7 @@ texture_region_size = Vector2i(32, 32)
 
 [sub_resource type="TileSet" id="TileSet_h3qfs"]
 tile_size = Vector2i(32, 32)
-physics_layer_0/collision_layer = 3
+physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 3
 sources/0 = SubResource("TileSetAtlasSource_atc76")
 sources/1 = SubResource("TileSetAtlasSource_1ltks")
@@ -1162,6 +1164,7 @@ layer_1/tile_data = PackedInt32Array(-65537, 131073, 1, -65538, 1, 0, -65539, 1,
 [node name="Player" parent="WORLD" instance=ExtResource("5_4oerj")]
 unique_name_in_owner = true
 z_index = 13
+position = Vector2(-462, 256)
 scale = Vector2(1, 1)
 SPEED = 200.0
 
@@ -1282,3 +1285,19 @@ offset_left = -990.0
 offset_top = -837.0
 offset_right = 1012.0
 offset_bottom = 534.0
+
+[node name="AreaPlayer1" parent="." instance=ExtResource("22_762kc")]
+position = Vector2(-289, 132)
+scale = Vector2(4.076, 1.69472)
+script = ExtResource("23_xkbhd")
+lineID = 35
+
+[node name="AreaPlayer2" parent="." instance=ExtResource("22_762kc")]
+position = Vector2(-32, -91)
+scale = Vector2(4.076, 1.69472)
+script = ExtResource("23_xkbhd")
+lineID = 36
+
+[node name="Area2D" parent="." instance=ExtResource("22_762kc")]
+position = Vector2(-129, -95)
+lineID = 35

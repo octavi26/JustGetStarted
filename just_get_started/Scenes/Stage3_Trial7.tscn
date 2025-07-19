@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bu7ft6y36mshg"]
+[gd_scene load_steps=25 format=3 uid="uid://bu7ft6y36mshg"]
 
 [ext_resource type="Script" path="res://Scripts/Manager_Stage3_Trial7.gd" id="1_drsif"]
 [ext_resource type="Shader" path="res://Shaders/Stage3_Shader.gdshader" id="1_j8ipb"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://byc5rsjf6xcx3" path="res://Scenes/Side_Notes.tscn" id="7_ux640"]
 [ext_resource type="PackedScene" uid="uid://bd7gb8bd4pxgw" path="res://Scenes/Player.tscn" id="8_8oujn"]
 [ext_resource type="PackedScene" uid="uid://ks5skbsb7ao0" path="res://Scenes/Text_Box_Activation.tscn" id="9_rl5gd"]
+[ext_resource type="Script" path="res://Scripts/Camera_Shake.gd" id="9_tih1f"]
 [ext_resource type="Script" path="res://Scripts/Text_Box_Activation_Player.gd" id="10_v3nm0"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7l5iy"]
@@ -630,6 +631,7 @@ position = Vector2(1, -10.94)
 zoom = Vector2(3, 3)
 limit_smoothed = true
 editor_draw_limits = true
+script = ExtResource("9_tih1f")
 
 [node name="Narrator" parent="Camera2D" instance=ExtResource("5_yvbrc")]
 unique_name_in_owner = true
