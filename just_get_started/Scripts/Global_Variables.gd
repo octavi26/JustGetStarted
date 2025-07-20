@@ -7,6 +7,8 @@ var playerVisitCount = 0
 var playerTextBoxes = []
 var narratorTextBoxes = []
 var dashUnlocked = false
+var wasInStage1 = false
+var wasInStage3 = false
 
 #var stage0Trial3Back = true
 var stage0Trial1Finish = true

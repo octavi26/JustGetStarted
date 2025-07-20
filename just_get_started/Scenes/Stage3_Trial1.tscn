@@ -1,5 +1,6 @@
-[gd_scene load_steps=40 format=3 uid="uid://cnhlopvg7k234"]
+[gd_scene load_steps=41 format=3 uid="uid://cnhlopvg7k234"]
 
+[ext_resource type="Script" uid="uid://vq48i2pnlbub" path="res://Scripts/Manager_Stage3_Trial1.gd" id="1_uy3tp"]
 [ext_resource type="Texture2D" uid="uid://7vlf6sgtbgkv" path="res://Assets/TileSets/TX Tileset Grass.png" id="2_22xgf"]
 [ext_resource type="Script" uid="uid://bfmpx5vmh5dl8" path="res://Scripts/Void_Controll.gd" id="2_qvwh8"]
 [ext_resource type="Texture2D" uid="uid://bdm6ufy13rfk3" path="res://Assets/TileSets/Void_Tile_Set.png" id="3_6ur23"]
@@ -1093,6 +1094,9 @@ sources/6 = SubResource("TileSetAtlasSource_bxb1w")
 
 [node name="Node2D2" type="Node2D"]
 position = Vector2(-24, -1)
+
+[node name="Manager" type="Node" parent="."]
+script = ExtResource("1_uy3tp")
 
 [node name="WORLD" type="Node2D" parent="."]
 y_sort_enabled = true

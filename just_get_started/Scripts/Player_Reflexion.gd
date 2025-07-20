@@ -81,7 +81,7 @@ func _physics_process(delta: float) -> void:
 		
 	justAttacked = false
 	firstFrameAttack = false
-	if attackDirection:
+	if attackDirection and player.moveable:
 		firstFrameAttack = true
 		$AnimatedSprite2D.play("Idle Up")
 		Attack()

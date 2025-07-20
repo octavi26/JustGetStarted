@@ -16,9 +16,9 @@ func _ready() -> void:
 		teleportor2.spawn = false
 	Global.playerPos = 5
 	if !Global.stage1Trial5Dummies:
-		dummy1.visible = false
-		dummy2.visible = false
-		dummy3.visible = false
+		dummy1.KillDummy()
+		dummy2.KillDummy()
+		dummy3.KillDummy()
 	if Global.stage1Trial2Puzzle:
 		Global.stage1Trial4Back = true
 		teleportor1.active = true

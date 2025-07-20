@@ -19,8 +19,8 @@ func _ready() -> void:
 		teleportor2.spawn = false
 	Global.playerPos = 3
 	if !Global.stage1Trial3Dummies:
-		dummy1.visible = false
-		dummy2.visible = false
+		dummy1.KillDummy()
+		dummy2.KillDummy()
 	if Global.stage1Trial3Key:
 		key.queue_free()
 	if Global.dashUnlocked:

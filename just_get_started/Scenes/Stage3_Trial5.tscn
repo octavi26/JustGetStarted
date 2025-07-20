@@ -1208,7 +1208,7 @@ level = "res://Scenes/Stage3_Trial7.tscn"
 
 [node name="Teleportor2" parent="." node_paths=PackedStringArray("player") instance=ExtResource("16_pc7jb")]
 position = Vector2(250, 10)
-level = "res://Scenes/Stage3_Trial6.tscn"
+level = "uid://berwy06cbis6n"
 player = NodePath("../WORLD/Player")
 
 [node name="Teleportor1" parent="." node_paths=PackedStringArray("player") instance=ExtResource("16_pc7jb")]

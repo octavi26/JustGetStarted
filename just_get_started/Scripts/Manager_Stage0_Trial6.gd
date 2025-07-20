@@ -7,8 +7,6 @@ func _ready() -> void:
 	Global.narratorTextBoxes.clear()
 	Global.playerTextBoxes.clear()
 	Global.dashUnlocked = false
-	Global.stage1Trial3Dummies = true
-	Global.stage1Trial5Dummies = true
 
 func _physics_process(delta: float) -> void:
 	if $Timer.is_stopped():

@@ -1,9 +1,9 @@
 [gd_scene load_steps=26 format=3 uid="uid://3fnrfu1w1our"]
 
-[ext_resource type="Script" path="res://Scripts/Dummy.gd" id="1_817qa"]
+[ext_resource type="Script" uid="uid://d26r0kvxx12p" path="res://Scripts/Dummy.gd" id="1_817qa"]
 [ext_resource type="Texture2D" uid="uid://bjvmkdqw0rdx8" path="res://Assets/Dummy/TrainingDummy.png" id="1_kmhes"]
 [ext_resource type="Texture2D" uid="uid://c1m2j4qm3xxco" path="res://Assets/Dummy/TrainingDummy_Armor.png" id="3_k8cpj"]
-[ext_resource type="AudioStream" uid="uid://bxo08ubdwuvsh" path="res://Assets/Sounds/sword.wav" id="4_xfva3"]
+[ext_resource type="AudioStream" uid="uid://be36oon7tsfuj" path="res://Assets/Sounds/dummy.wav" id="4_kh1t2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3lyk3"]
 atlas = ExtResource("1_kmhes")
@@ -185,7 +185,7 @@ autoplay = "Idle"
 position = Vector2(0, -16)
 shape = SubResource("RectangleShape2D_xnese")
 
-[node name="Attack" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_xfva3")
-volume_db = -15.0
+[node name="Dummy" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_kh1t2")
+volume_db = -2.0
 bus = &"SFX"

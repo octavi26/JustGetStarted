@@ -1,4 +1,7 @@
 extends Area2D
 
+@onready var player = $"../.."
+
 func _on_body_entered(body: Node2D) -> void:
-	body.Hit(2)
+	if player.moveable:
+		body.Hit(2)

@@ -15,6 +15,9 @@ func _ready() -> void:
 		teleportor1.spawn = true
 		teleportor2.spawn = false
 	Global.playerPos = 2
+	if Global.stage1Trial2Finish:
+		Global.narratorTextBoxes.append(15)
+		$"../Object".monitorable = false
 	
 func _physics_process(delta: float) -> void:
 	

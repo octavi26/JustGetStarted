@@ -42,7 +42,7 @@ func _ready() -> void:
 		Music.play()
 
 func _physics_process(delta: float) -> void:
-	if $ButtonAnimation.visible and Input.is_action_just_pressed("Interact"):
+	if $ButtonAnimation.visible and Input.is_action_just_pressed("Interact") and moveable:
 		$Click.play()
 	if !moveable and Input.is_action_just_pressed("ui_accept"):
 		$Click.play()

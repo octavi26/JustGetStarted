@@ -1,6 +1,6 @@
 [gd_scene load_steps=27 format=3 uid="uid://cqqarym3vvbkh"]
 
-[ext_resource type="Script" path="res://Scripts/Manager_Stage0_Trial3.gd" id="1_cktmc"]
+[ext_resource type="Script" uid="uid://drxppa06xqw6p" path="res://Scripts/Manager_Stage0_Trial3.gd" id="1_cktmc"]
 [ext_resource type="PackedScene" uid="uid://bd7gb8bd4pxgw" path="res://Scenes/Player.tscn" id="1_v2je7"]
 [ext_resource type="Texture2D" uid="uid://7vlf6sgtbgkv" path="res://Assets/TileSets/TX Tileset Grass.png" id="2_pvopl"]
 [ext_resource type="Texture2D" uid="uid://domqhxfcd3xmq" path="res://Assets/TileSets/TX Struct.png" id="3_djyi3"]

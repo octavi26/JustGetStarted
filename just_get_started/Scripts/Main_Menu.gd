@@ -5,7 +5,10 @@ var selected = 0
 var scene = 0
 
 func _ready() -> void:
-	MenuCreditsMusic.play(2)
+	if !MenuCreditsMusic.playing:
+		MenuCreditsMusic.play(2)
+	else:
+		MenuCreditsMusic.stream_paused = false
 
 func _physics_process(delta: float) -> void:
 	if scene == 0:

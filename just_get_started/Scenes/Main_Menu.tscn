@@ -1,7 +1,7 @@
 [gd_scene load_steps=30 format=3 uid="uid://u6wggf3k421l"]
 
 [ext_resource type="Texture2D" uid="uid://h2t4q8df48cn" path="res://Assets/Humble Gift - Paper UI System/Humble Gift - Paper UI System v1.1/Sprites/Book Desk/3.png" id="1_rrptc"]
-[ext_resource type="Script" path="res://Scripts/Main_Menu.gd" id="1_stqic"]
+[ext_resource type="Script" uid="uid://6rodalfpjdhg" path="res://Scripts/Main_Menu.gd" id="1_stqic"]
 [ext_resource type="Texture2D" uid="uid://c64xe1vjckc6a" path="res://Assets/Humble Gift - Paper UI System/Humble Gift - Paper UI System v1.1/Sprites/Paper UI Pack/Folding & Cutout/7 Dialogue Box/1.png" id="2_sj58n"]
 [ext_resource type="Texture2D" uid="uid://by5sdoqnm3gh1" path="res://Assets/Humble Gift - Paper UI System/Humble Gift - Paper UI System v1.1/Sprites/Paper UI Pack/Folding & Cutout/10 Calander/1.png" id="2_wegmd"]
 [ext_resource type="Texture2D" uid="uid://dw0u60xaemoq" path="res://Assets/Humble Gift - Paper UI System/Humble Gift - Paper UI System v1.1/Sprites/Paper UI Pack/Folding & Cutout/6 Player HUD/1.png" id="3_ukiwb"]
