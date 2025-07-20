@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dj68bjweojhfy"]
 
-[ext_resource type="Script" path="res://Scripts/Narrator_Text_Box.gd" id="1_uu6rn"]
+[ext_resource type="Script" uid="uid://7fhuhk1l8tkr" path="res://Scripts/Narrator_Text_Box.gd" id="1_uu6rn"]
 [ext_resource type="Texture2D" uid="uid://w0mrdxhcytmq" path="res://Assets/Text_Box_Narrator.png" id="2_m1x12"]
 [ext_resource type="AudioStream" uid="uid://8t5lhhbu1x6e" path="res://Assets/Sounds/text.wav" id="3_7foxb"]
 [ext_resource type="PackedScene" uid="uid://ci8n486n2btgs" path="res://Scenes/Enter_Button.tscn" id="3_o3lwd"]
@@ -21,9 +21,9 @@ texture = ExtResource("2_m1x12")
 
 [node name="Label" type="Label" parent="."]
 offset_left = -456.0
-offset_top = -185.0
+offset_top = -183.0
 offset_right = 468.0
-offset_bottom = 187.0
+offset_bottom = 189.0
 text = "afaw fa faw fawf   as ffffwfwfwf  fwffffwfwfwfwf  fwfwfwfwfwfwf  fwhhhhhhh"
 label_settings = SubResource("LabelSettings_ydv6m")
 horizontal_alignment = 1
