@@ -4,7 +4,7 @@ extends Node
 
 func _ready() -> void:
 	CameraShake.stop()
-	Music.play()
+	Music.stream_paused = false
 	Global.wasInStage1 = true
 	if Global.playerPos == 2:
 		teleportor2.spawn = true

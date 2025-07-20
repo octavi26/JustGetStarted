@@ -17,7 +17,7 @@ func _ready() -> void:
 	Global.playerPos = 2
 	if Global.stage1Trial2Finish:
 		Global.narratorTextBoxes.append(15)
-		$"../Object".monitorable = false
+		$"../Object".monitoring = false
 	
 func _physics_process(delta: float) -> void:
 	

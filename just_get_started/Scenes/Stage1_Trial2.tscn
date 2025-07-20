@@ -1871,6 +1871,7 @@ layer_0/tile_data = PackedInt32Array(-720915, 131072, 1, -655379, 327680, 3, -58
 [node name="Player" parent="WORLD" instance=ExtResource("3_dufil")]
 unique_name_in_owner = true
 z_index = 13
+position = Vector2(-286, 242)
 scale = Vector2(1, 1)
 SPEED = 200.0
 
@@ -1979,6 +1980,7 @@ player = NodePath("../WORLD/Player")
 [node name="Teleportor1" parent="." node_paths=PackedStringArray("player") instance=ExtResource("15_a5gdv")]
 position = Vector2(-304, 243)
 spawn = true
+active = false
 level = "uid://0o028gbv4n2l"
 player = NodePath("../WORLD/Player")
 

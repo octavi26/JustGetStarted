@@ -2,7 +2,7 @@ extends Node
 
 var playerPos = 1
 #am schimbat visitcount doar pt teste
-var playerVisitCount = 0
+var playerVisitCount = 111000
 #prevent text boxes from showing again when revisiting scenes
 var playerTextBoxes = []
 var narratorTextBoxes = []

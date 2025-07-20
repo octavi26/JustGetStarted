@@ -36,13 +36,13 @@ var dialogueTable1 = {
 		"Haven't I been here before?",
 		"What's happening?"
 	], "frame": [0] },
-	12: { "text": [
-		"Pretty sure you've said that already..."
-	], "frame": [0] },
 	11: { "text": [
 		"I remember solving this puzzle already, but it seems more complicated now.",
 		"I wonder what's going on."
 	], "frame": [4, 0] },
+	12: { "text": [
+		"Pretty sure you've said that already..."
+	], "frame": [0] },
 	13: { "text": [
 		"I'm quite sure one of them had armor last time.",
 		"I should eliminate them this time, just to be sure."
@@ -165,16 +165,12 @@ var dialogueTable2 = {
 		"I get it now. This isn't a tutorial.",
 		"Not anymore."
 	], "frame": [8, 8, 0] },
-	17: { "text": [
-		"But I didn’t say anything this time!",
-		"Something definitely isn't right with you."
-	], "frame": [3] },
-	12: { "text": [
-		"Just get it over with."
-	], "frame": [4] },
 	11: { "text": [
 		"Why does the tutorial keep repeating? I've done this already."
 	], "frame": [0] },
+	12: { "text": [
+		"Just get it over with."
+	], "frame": [4] },
 	13: { "text": [
 		"If I go past this level, I can't get back to take the key unless the portal opens.",
 		"Also, where is that narrator? He used to talk more."
@@ -186,15 +182,22 @@ var dialogueTable2 = {
 	15: { "text": [
 		"I'm not sure what's going on."
 	], "frame": [0] },
+	17: { "text": [
+		"But I didn’t say anything this time!",
+		"Something definitely isn't right with you."
+	], "frame": [3] },
 	19: { "text": [
 		"Maybe the secret code from the statue fits somewhere in the earlier levels!"
 	], "frame": [1] },
-	22: { "text": [
-		"I miss the moments when you were quiet."
-	], "frame": [4] },
+	20: { "text": [
+		"There's nothing written on this one."
+	], "frame": [0] },
 	21: { "text": [
 		"Let's try again."
 	], "frame": [0] },
+	22: { "text": [
+		"I miss the moments when you were quiet."
+	], "frame": [4] },
 	30: { "text": [
 		"The graveyard... again."
 	], "frame": [0] },
@@ -213,12 +216,14 @@ var dialogueTable2 = {
 	36: { "text": [
 		"Still no puzzle..."
 	], "frame": [0] },
+	18: { "text": [
+		"I'm having another déjà vu."
+	], "frame": [0] },
 	99: { "text": [
 		"It's... me...",
 		"But the mirror looks cracked."
 	], "frame": [8, 8] }
 }
-
 
 var dialogueTable3 = {
 	0: { "text": [
@@ -259,7 +264,19 @@ var dialogueTable3 = {
 	], "frame": [0] },
 	14: { "text": [
 		"Finally! Now I can return after getting the Dash."
-	], "frame": [4] }
+	], "frame": [4] },
+	18: { "text": [
+		"I'm having another déjà vu."
+	], "frame": [0] },
+	20: { "text": [
+		"There's nothing written on this one."
+	], "frame": [0] },
+	21: { "text": [
+		"Let's try again."
+	], "frame": [0] },
+	19: { "text": [
+		"Maybe the secret code from the statue fits somewhere in the earlier levels!"
+	], "frame": [1] }
 }
 
 
@@ -346,7 +363,7 @@ func StartDialogueById(lineID):
 	if Global.playerVisitCount > 0:
 		if Global.playerVisitCount == 1:
 			dialogueTable = dialogueTable2
-		elif Global.playerVisitCount == 2:
+		elif Global.playerVisitCount >= 2:
 			dialogueTable = dialogueTable3
 		else:
 			return
