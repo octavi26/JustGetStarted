@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://duuhv3ariy5q4" path="res://Scenes/Player_Text_Box.tscn" id="6_o5abp"]
 [ext_resource type="Texture2D" uid="uid://dl1fjay6hyf60" path="res://Assets/TileSets/TX Props.png" id="7_qn31p"]
 [ext_resource type="Texture2D" uid="uid://dxbq6nq0p1gy2" path="res://Assets/TileSets/TX Shadow.png" id="8_3pxgc"]
+[ext_resource type="PackedScene" uid="uid://dxne12dgq4l13" path="res://Scenes/Menu.tscn" id="8_hicpw"]
 [ext_resource type="Texture2D" uid="uid://7ghl8bdb3rdm" path="res://Assets/TileSets/TX Plant.png" id="9_i46vw"]
 [ext_resource type="Texture2D" uid="uid://domqhxfcd3xmq" path="res://Assets/TileSets/TX Struct.png" id="10_bt6ws"]
 [ext_resource type="Texture2D" uid="uid://c54hxqc5lhb0s" path="res://Assets/TileSets/TX Tileset Stone Ground.png" id="11_px0ld"]
@@ -1650,6 +1651,8 @@ unique_name_in_owner = true
 visible = false
 position = Vector2(-1, 71)
 scale = Vector2(0.2, 0.2)
+
+[node name="Menu" parent="WORLD/Player/Camera2D" instance=ExtResource("8_hicpw")]
 
 [node name="Stone_Structure" type="TileMap" parent="WORLD"]
 z_index = 13

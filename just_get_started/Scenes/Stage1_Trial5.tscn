@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://dyrdkdf74mfob"]
+[gd_scene load_steps=48 format=3 uid="uid://dyrdkdf74mfob"]
 
 [ext_resource type="Script" path="res://Scripts/Manager_Stage1_Trial5.gd" id="1_el5s1"]
 [ext_resource type="Texture2D" uid="uid://7vlf6sgtbgkv" path="res://Assets/TileSets/TX Tileset Grass.png" id="2_5hx3x"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://byc5rsjf6xcx3" path="res://Scenes/Side_Notes.tscn" id="8_syttf"]
 [ext_resource type="Texture2D" uid="uid://dxbq6nq0p1gy2" path="res://Assets/TileSets/TX Shadow.png" id="8_x6fhj"]
 [ext_resource type="Texture2D" uid="uid://7ghl8bdb3rdm" path="res://Assets/TileSets/TX Plant.png" id="9_tclds"]
+[ext_resource type="PackedScene" uid="uid://dxne12dgq4l13" path="res://Scenes/Menu.tscn" id="10_dythy"]
 [ext_resource type="Texture2D" uid="uid://domqhxfcd3xmq" path="res://Assets/TileSets/TX Struct.png" id="10_hkqj1"]
 [ext_resource type="Texture2D" uid="uid://c54hxqc5lhb0s" path="res://Assets/TileSets/TX Tileset Stone Ground.png" id="11_d3bla"]
 [ext_resource type="Texture2D" uid="uid://g8tr2et668f8" path="res://Assets/TileSets/TX Tileset Wall.png" id="12_v2xpl"]
@@ -1865,6 +1866,8 @@ visible = false
 position = Vector2(145, -113)
 scale = Vector2(0.3, 0.3)
 
+[node name="Menu" parent="WORLD/Player/Camera2D" instance=ExtResource("10_dythy")]
+
 [node name="Stone_Structure" type="TileMap" parent="WORLD"]
 z_index = 13
 y_sort_enabled = true
@@ -1920,7 +1923,7 @@ player = NodePath("../WORLD/Player")
 [node name="Teleportor2" parent="." node_paths=PackedStringArray("player") instance=ExtResource("15_75r7f")]
 position = Vector2(311, -127)
 active = false
-level = "uid://nhav6lmxhmdh"
+level = "res://Scenes/Stage1_Trial6.tscn"
 player = NodePath("../WORLD/Player")
 
 [node name="Puzzle" parent="." instance=ExtResource("17_k7a23")]

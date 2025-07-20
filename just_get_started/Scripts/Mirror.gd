@@ -25,4 +25,4 @@ func Hit(id):
 		$Hit.play()
 		hits += 1
 	CameraShake.play(8)
-	$"../WORLD/Player/Camera2D".start_shake(3, 3)
+	$"../WORLD/Player/Camera2D".start_shake(3, 1)

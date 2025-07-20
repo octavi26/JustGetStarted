@@ -105,7 +105,8 @@ func TypeText(text: String, speed: float = 0.025) -> void:
 		if skipText:
 			label.text = text
 			break
-		await get_tree().create_timer(speed).timeout
+		if is_instance_valid(get_tree()):
+			await get_tree().create_timer(speed).timeout
 	$Text.stop()
 
 func StartDialogueById(lineID):

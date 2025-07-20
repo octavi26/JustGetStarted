@@ -22,6 +22,9 @@ func _ready() -> void:
 	
 
 func _physics_process(delta: float) -> void:
+	if active:
+		Activate(1.0)
+		
 	if inside and active and $SpawnProtectionTimer.is_stopped():
 		go_to_level()
 		
@@ -78,20 +81,21 @@ func Spawn():
 		
 
 func Activate(active: float):
-	$ActivateLights.play()
-	var tween = create_tween()
-	tween.tween_property($Lights, "modulate:a", active, 0.5)
+	if abs($Lights.modulate.a - active) >= 0.01:
+		$ActivateLights.play()
+		var tween = create_tween()
+		tween.tween_property($Lights, "modulate:a", active, 0.5)
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	player = body
 	if active:
 		body.get_node("ButtonAnimation").visible = true
-		Activate(1.0)
+		#Activate(1.0)
 	inside = true
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	body.get_node("ButtonAnimation").visible = false
-	if active:
-		Activate(0.0)
+	#if active:
+		#Activate(0.0)
 	inside = false
 	spawn = false

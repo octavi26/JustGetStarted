@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://dx7am08f3uc8s"]
+[gd_scene load_steps=44 format=3 uid="uid://dx7am08f3uc8s"]
 
 [ext_resource type="Script" uid="uid://bfmpx5vmh5dl8" path="res://Scripts/Void_Controll.gd" id="1_02pw0"]
 [ext_resource type="Script" uid="uid://bsev0xfqkh1nc" path="res://Scripts/Manager_Stage3_Trial5.gd" id="1_hg3vi"]
@@ -14,6 +14,7 @@
 [ext_resource type="Shader" uid="uid://dn77wwkak2tr7" path="res://Shaders/Stage3_Shader.gdshader" id="8_g25hf"]
 [ext_resource type="Texture2D" uid="uid://dl1fjay6hyf60" path="res://Assets/TileSets/TX Props.png" id="9_vd8bo"]
 [ext_resource type="Texture2D" uid="uid://dxbq6nq0p1gy2" path="res://Assets/TileSets/TX Shadow.png" id="10_rigv2"]
+[ext_resource type="PackedScene" uid="uid://dxne12dgq4l13" path="res://Scenes/Menu.tscn" id="11_4d7gt"]
 [ext_resource type="Texture2D" uid="uid://7ghl8bdb3rdm" path="res://Assets/TileSets/TX Plant.png" id="11_iukqf"]
 [ext_resource type="Texture2D" uid="uid://domqhxfcd3xmq" path="res://Assets/TileSets/TX Struct.png" id="12_3tvub"]
 [ext_resource type="Texture2D" uid="uid://c54hxqc5lhb0s" path="res://Assets/TileSets/TX Tileset Stone Ground.png" id="13_67ohj"]
@@ -1165,6 +1166,8 @@ visible = false
 position = Vector2(145, -113)
 scale = Vector2(0.3, 0.3)
 
+[node name="Menu" parent="WORLD/Player/Camera2D" instance=ExtResource("11_4d7gt")]
+
 [node name="Reflexion" parent="WORLD" node_paths=PackedStringArray("player") instance=ExtResource("4_qkx20")]
 unique_name_in_owner = true
 z_index = 9
@@ -1205,7 +1208,7 @@ level = "res://Scenes/Stage3_Trial7.tscn"
 
 [node name="Teleportor2" parent="." node_paths=PackedStringArray("player") instance=ExtResource("16_pc7jb")]
 position = Vector2(250, 10)
-level = "res://Scenes/Stage2_Trial6.tscn"
+level = "res://Scenes/Stage3_Trial6.tscn"
 player = NodePath("../WORLD/Player")
 
 [node name="Teleportor1" parent="." node_paths=PackedStringArray("player") instance=ExtResource("16_pc7jb")]
