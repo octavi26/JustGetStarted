@@ -29,6 +29,7 @@ func _on_body_exited(body: Node2D) -> void:
 	
 func OpenDoor():
 	doorLocked.queue_free()
+	$"../DoorSound".play()
 	doorUnlocked.visible = true
 	queue_free()
 	Global.stage1Trial4Door = true

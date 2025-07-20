@@ -23,11 +23,12 @@ func _physics_process(delta: float) -> void:
 		else:
 			Code = [false, false, true]
 		if Code == puzzle.Code:
-			CameraShake()
+			Camera_Shake()
 			Global.narratorTextBoxes.erase(14)
 			Global.stage2Trial1Puzzle = true
 	
-func CameraShake():
+func Camera_Shake():
+	CameraShake.play(8)
 	camera.start_shake(0.5, 4.5)
 	await get_tree().create_timer(0.8).timeout
 	player.moveable = false

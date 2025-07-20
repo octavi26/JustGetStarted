@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://bovwi7hl80lym"]
 
-[ext_resource type="Script" path="res://Scripts/Manager_Stage0_Trial6.gd" id="1_kq33u"]
-[ext_resource type="Script" path="res://Scripts/Camera_Shake.gd" id="2_aytnb"]
+[ext_resource type="Script" uid="uid://bymdc587n1q56" path="res://Scripts/Manager_Stage0_Trial6.gd" id="1_kq33u"]
+[ext_resource type="Script" uid="uid://dy7c1xpr6o01p" path="res://Scripts/Camera_Shake.gd" id="2_aytnb"]
 [ext_resource type="PackedScene" uid="uid://dj68bjweojhfy" path="res://Scenes/Narrator_Text_Box.tscn" id="3_35a6h"]
-[ext_resource type="Script" path="res://Scripts/Trial6_Narrator.gd" id="4_6tnt8"]
-[ext_resource type="Script" path="res://Scripts/Trial6_Narrator2.gd" id="5_4m372"]
-[ext_resource type="Script" path="res://Scripts/Trial6_Narrator3.gd" id="6_li6x6"]
+[ext_resource type="Script" uid="uid://dtsmdhfullq7o" path="res://Scripts/Trial6_Narrator.gd" id="4_6tnt8"]
+[ext_resource type="Script" uid="uid://bha00qiy066n8" path="res://Scripts/Trial6_Narrator2.gd" id="5_4m372"]
+[ext_resource type="Script" uid="uid://b3l6b2tqnyu7k" path="res://Scripts/Trial6_Narrator3.gd" id="6_li6x6"]
 
 [node name="Node2D2" type="Node2D"]
 script = ExtResource("1_kq33u")
@@ -164,3 +164,5 @@ offset_top = -301.0
 offset_right = 274.0
 offset_bottom = 281.0
 color = Color(0, 0, 0, 1)
+
+[connection signal="tree_exited" from="." to="." method="_on_tree_exited"]

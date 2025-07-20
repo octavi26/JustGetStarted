@@ -27,6 +27,7 @@ func _physics_process(delta: float) -> void:
 	
 	if Code == puzzle.Code:
 		if Global.stage1Trial5Puzzle == false:
+			CameraShake.play(8)
 			camera.start_shake(0.5, 4.5)
 		Global.stage1Trial5Puzzle = true
 	

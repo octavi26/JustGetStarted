@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://b8deqcao3lufg"]
+[gd_scene load_steps=11 format=3 uid="uid://b8deqcao3lufg"]
 
-[ext_resource type="Script" path="res://Scripts/Teleportor.gd" id="1_pord8"]
+[ext_resource type="Script" uid="uid://bs1cuoj33tb4f" path="res://Scripts/Teleportor.gd" id="1_pord8"]
 [ext_resource type="Texture2D" uid="uid://dl1fjay6hyf60" path="res://Assets/TileSets/TX Props.png" id="2_x7otx"]
 [ext_resource type="Texture2D" uid="uid://xrj7wyebcjr5" path="res://Assets/Sprites/UI/Teleport_Ray.png" id="2_xio6j"]
 [ext_resource type="Texture2D" uid="uid://dxbq6nq0p1gy2" path="res://Assets/TileSets/TX Shadow.png" id="3_uh1ts"]
+[ext_resource type="AudioStream" uid="uid://cwhsv0oijtcgw" path="res://Assets/Sounds/teleporter lights.mp3" id="5_rfbas"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wypd7"]
 
@@ -322,6 +323,11 @@ autostart = true
 [node name="SpawnTimer" type="Timer" parent="."]
 one_shot = true
 autostart = true
+
+[node name="ActivateLights" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_rfbas")
+volume_db = -5.0
+bus = &"SFX"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -14,6 +14,7 @@ func _physics_process(delta: float) -> void:
 		TypeText(text2)
 	if $Timer2.is_stopped() and !timer2:
 		timer2 = true
+		CameraShake.play(8)
 		$"../Camera2D".start_shake(5, 15)
 	if $Timer3.is_stopped() and !timer3:
 		timer3 = true

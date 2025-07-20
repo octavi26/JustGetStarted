@@ -2,9 +2,7 @@
 
 [ext_resource type="AudioStream" uid="uid://bjhnjbupcev1s" path="res://Assets/Music/little town - orchestral.ogg" id="1_fghhr"]
 
-[node name="Node2D" type="Node2D"]
-
-[node name="Music" type="AudioStreamPlayer2D" parent="."]
+[node name="Music" type="AudioStreamPlayer"]
 stream = ExtResource("1_fghhr")
 volume_db = 1.0
 autoplay = true

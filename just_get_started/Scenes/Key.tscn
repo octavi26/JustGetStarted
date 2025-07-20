@@ -1,7 +1,8 @@
-[gd_scene load_steps=29 format=3 uid="uid://cyu47afst43hd"]
+[gd_scene load_steps=30 format=3 uid="uid://cyu47afst43hd"]
 
 [ext_resource type="Texture2D" uid="uid://bi1w1jodo3gkv" path="res://Assets/Sprites/UI/key_32x32_24f.png" id="1_og2wv"]
 [ext_resource type="Script" uid="uid://cimox2ctwj3ds" path="res://Scripts/Key_Collision.gd" id="2_i3td7"]
+[ext_resource type="AudioStream" uid="uid://ceyajidkika14" path="res://Assets/Sounds/key.wav" id="3_vmsh4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i3td7"]
 atlas = ExtResource("1_og2wv")
@@ -195,5 +196,9 @@ script = ExtResource("2_i3td7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_bolt1")
+
+[node name="Key" type="AudioStreamPlayer" parent="Area2D"]
+stream = ExtResource("3_vmsh4")
+bus = &"SFX"
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

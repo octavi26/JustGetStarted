@@ -1,15 +1,15 @@
 [gd_scene load_steps=38 format=3 uid="uid://rmmdio3466ln"]
 
-[ext_resource type="Script" path="res://Scripts/Void_Controll.gd" id="2_xqiix"]
+[ext_resource type="Script" uid="uid://bfmpx5vmh5dl8" path="res://Scripts/Void_Controll.gd" id="2_xqiix"]
 [ext_resource type="Texture2D" uid="uid://bdm6ufy13rfk3" path="res://Assets/TileSets/Void_Tile_Set.png" id="3_tt1vf"]
 [ext_resource type="Texture2D" uid="uid://7vlf6sgtbgkv" path="res://Assets/TileSets/TX Tileset Grass.png" id="4_0omym"]
-[ext_resource type="Script" path="res://Scripts/Camera_Shake.gd" id="4_r6rke"]
+[ext_resource type="Script" uid="uid://dy7c1xpr6o01p" path="res://Scripts/Camera_Shake.gd" id="4_r6rke"]
 [ext_resource type="PackedScene" uid="uid://bd7gb8bd4pxgw" path="res://Scenes/Player.tscn" id="5_4oerj"]
 [ext_resource type="PackedScene" uid="uid://bunskihyq44kr" path="res://Scenes/Object_Collision_Image.tscn" id="5_t6ux8"]
 [ext_resource type="PackedScene" uid="uid://dj68bjweojhfy" path="res://Scenes/Narrator_Text_Box.tscn" id="6_l7mfd"]
 [ext_resource type="PackedScene" uid="uid://duuhv3ariy5q4" path="res://Scenes/Player_Text_Box.tscn" id="7_dwftp"]
 [ext_resource type="PackedScene" uid="uid://byc5rsjf6xcx3" path="res://Scenes/Side_Notes.tscn" id="8_ck26l"]
-[ext_resource type="Shader" path="res://Shaders/Stage3_Shader.gdshader" id="9_iid3j"]
+[ext_resource type="Shader" uid="uid://dn77wwkak2tr7" path="res://Shaders/Stage3_Shader.gdshader" id="9_iid3j"]
 [ext_resource type="Texture2D" uid="uid://dl1fjay6hyf60" path="res://Assets/TileSets/TX Props.png" id="10_iq6le"]
 [ext_resource type="Texture2D" uid="uid://dxbq6nq0p1gy2" path="res://Assets/TileSets/TX Shadow.png" id="11_jyjie"]
 [ext_resource type="Texture2D" uid="uid://7ghl8bdb3rdm" path="res://Assets/TileSets/TX Plant.png" id="12_kb17q"]
@@ -22,7 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://dbwdv4dvnyh5j" path="res://Scenes/Eye.tscn" id="19_uyibe"]
 [ext_resource type="PackedScene" uid="uid://1nckhgw8ijma" path="res://Scenes/Tentacle.tscn" id="20_m10cs"]
 [ext_resource type="PackedScene" uid="uid://ks5skbsb7ao0" path="res://Scenes/Text_Box_Activation.tscn" id="22_762kc"]
-[ext_resource type="Script" path="res://Scripts/Text_Box_Activation_Player.gd" id="23_xkbhd"]
+[ext_resource type="Script" uid="uid://tt76ctq22j56" path="res://Scripts/Text_Box_Activation_Player.gd" id="23_xkbhd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8mffm"]
 texture = ExtResource("3_tt1vf")

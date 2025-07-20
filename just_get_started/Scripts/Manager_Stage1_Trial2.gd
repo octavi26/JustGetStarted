@@ -20,11 +20,13 @@ func _physics_process(delta: float) -> void:
 	
 	if codeFinish == puzzle.Code:
 		if !Global.stage1Trial2FinishPuzzle:
+			CameraShake.play(8)
 			camera.start_shake(0.5, 4.5)
 		Global.stage1Trial2FinishPuzzle = true
 		
 	if Code == puzzle.Code:
 		if !Global.stage1Trial2Finish:
+			CameraShake.play(8)
 			camera.start_shake(0.5, 4.5)
 		Global.stage1Trial2Finish = true
 		

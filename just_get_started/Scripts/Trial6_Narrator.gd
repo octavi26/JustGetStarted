@@ -33,24 +33,28 @@ func _physics_process(delta: float) -> void:
 		TypeText(text2)
 	if $Timer5.is_stopped() and !timer5:
 		timer5 = true
+		CameraShake.play(8)
 		$"../Camera2D".start_shake(.5, 3)
 	if $Timer6.is_stopped() and !timer6:
 		timer6 = true
 		TypeText(text2)
 	if $Timer7.is_stopped() and !timer7:
 		timer7 = true
+		CameraShake.play(8)
 		$"../Camera2D".start_shake(.5, 5)
 	if $Timer8.is_stopped() and !timer8:
 		timer8 = true
 		TypeText(text2)
 	if $Timer9.is_stopped() and !timer9:
 		timer9 = true
+		CameraShake.play(8)
 		$"../Camera2D".start_shake(.75, 7)
 	if $Timer10.is_stopped() and !timer10:
 		timer10 = true
 		TypeText(text2)
 	if $Timer11.is_stopped() and !timer11:
 		timer11 = true
+		CameraShake.play(8)
 		$"../Camera2D".start_shake(5, 15)
 	if $Timer12.is_stopped() and !timer12:
 		timer12 = true

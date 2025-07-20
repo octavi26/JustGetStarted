@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dd3xjv8tg43pr"]
+
+[ext_resource type="AudioStream" uid="uid://cw8f00kkatiqj" path="res://Assets/Sounds/camera shake.mp3" id="1_b0ri1"]
+
+[node name="CameraShake" type="AudioStreamPlayer"]
+stream = ExtResource("1_b0ri1")
+bus = &"SFX"

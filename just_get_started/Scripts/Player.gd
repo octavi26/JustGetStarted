@@ -20,12 +20,12 @@ var step_sounds = [
 	preload("res://Assets/Sounds/step3.ogg"),
 	preload("res://Assets/Sounds/step4.ogg")
 ]
-#alegem una din astea 2
-var step_sounds1 = [
-	preload("res://Assets/Sounds/step_lth1.ogg"),
-	preload("res://Assets/Sounds/step_lth2.ogg"),
-	preload("res://Assets/Sounds/step_lth33.ogg"),
-	preload("res://Assets/Sounds/step_lth4.ogg")
+var sword_sounds = [
+	preload("res://Assets/Sounds/sword1.wav"),
+	preload("res://Assets/Sounds/sword2.wav"),
+	preload("res://Assets/Sounds/sword3.wav"),
+	preload("res://Assets/Sounds/sword4.wav"),
+	preload("res://Assets/Sounds/sword5.wav")
 ]
 
 var attackDirection := Vector2()
@@ -38,8 +38,8 @@ var firstFrameAttack = false
 func _ready() -> void:
 	var current_scene = get_tree().current_scene
 	if current_scene.scene_file_path == "res://Scenes/Stage3_Trial1.tscn":
-		Music.get_node("Music").stream = preload("res://Assets/Music/Stage3.ogg")
-		Music.get_node("Music").play()
+		Music.stream = preload("res://Assets/Music/Stage3.ogg")
+		Music.play()
 
 func _physics_process(delta: float) -> void:
 	if moveable:
@@ -91,7 +91,7 @@ func _physics_process(delta: float) -> void:
 		
 	justAttacked = false
 	firstFrameAttack = false
-	if attackDirection:
+	if attackDirection and moveable:
 		firstFrameAttack = true
 		$AnimatedSprite2D.play("Idle Up")
 		Attack()
@@ -184,10 +184,11 @@ func AnimationHandler():
 	if usedOrientation.y < 0:
 		dir = "Up"
 		
-	print(action + " " + dir)
 	$AnimatedSprite2D.play(action + " " + dir)
 		
 func Attack():
+	var random_attack = sword_sounds[randi() % sword_sounds.size()]
+	$Attack.stream = random_attack
 	$Attack.play()
 	if attackDirection == Vector2(0, 1):
 		$AttackCollision/Area2DDown/CollisionShape2D.disabled = false
@@ -211,6 +212,7 @@ func Attack():
 		$AttackCollision/Area2DUp/CollisionShape2D.disabled = true
 	
 func Dash():
+	$Dash.play(0.2)
 	isDashing = true
 	canDash = false
 	var newTransform = $".".position + direction * 100

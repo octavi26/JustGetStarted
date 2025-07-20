@@ -1,7 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://k75tw7vn66kd"]
+[gd_scene load_steps=14 format=3 uid="uid://k75tw7vn66kd"]
 
-[ext_resource type="Script" path="res://Scripts/Mirror.gd" id="1_fk60r"]
+[ext_resource type="Script" uid="uid://phu2au8ak2gh" path="res://Scripts/Mirror.gd" id="1_fk60r"]
 [ext_resource type="Texture2D" uid="uid://cvatpdg1l4n3j" path="res://Assets/Mirror.png" id="1_tx23o"]
+[ext_resource type="AudioStream" uid="uid://chw0iivtiwowj" path="res://Assets/Sounds/glass hit.wav" id="3_ox6id"]
+[ext_resource type="AudioStream" uid="uid://bm0ckn7h2tgwg" path="res://Assets/Sounds/glass shatter.wav" id="4_bowxg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h3kw4"]
 atlas = ExtResource("1_tx23o")
@@ -86,3 +88,11 @@ offset_left = -365.0
 offset_top = -293.0
 offset_right = 445.0
 offset_bottom = 317.0
+
+[node name="Hit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ox6id")
+bus = &"SFX"
+
+[node name="Shatter" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_bowxg")
+bus = &"SFX"

@@ -17,6 +17,7 @@ func _process(delta):
 			randf_range(-shake_strength, shake_strength)
 		)
 	else:
+		CameraShake.stop()
 		offset = original_offset
 
 func start_shake(duration := 0.3, strength := 5.0):

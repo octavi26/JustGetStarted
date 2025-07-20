@@ -78,6 +78,7 @@ func Spawn():
 		
 
 func Activate(active: float):
+	$ActivateLights.play()
 	var tween = create_tween()
 	tween.tween_property($Lights, "modulate:a", active, 0.5)
 

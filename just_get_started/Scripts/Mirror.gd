@@ -10,6 +10,7 @@ func _physics_process(delta: float) -> void:
 	$AnimatedSprite2D.frame = hits
 	
 	if hits > 7 and $ColorRect.modulate.a == 0:
+		$Shatter.play()
 		$Timer.start()
 		var tween = create_tween()
 		tween.tween_property($ColorRect, "modulate:a", 1.0, 1)
@@ -20,5 +21,8 @@ func _physics_process(delta: float) -> void:
 		
 	
 func Hit(id):
-	if active: hits += 1
+	if active: 
+		$Hit.play()
+		hits += 1
+	CameraShake.play(8)
 	$"../WORLD/Player/Camera2D".start_shake(3, 3)
