@@ -11,7 +11,7 @@ func _ready() -> void:
 	Global.stage1Trial5Dummies = true
 
 func _physics_process(delta: float) -> void:
-	if $Timer.is_stopped() or Input.is_action_just_pressed("ui_accept"):
+	if $Timer.is_stopped():
 		get_tree().change_scene_to_file(level)
 
 

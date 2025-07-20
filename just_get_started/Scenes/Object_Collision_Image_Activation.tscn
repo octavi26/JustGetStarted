@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://df6pie5n7tpbk"]
 
-[ext_resource type="Script" uid="uid://cf4k3kgpxdjgd" path="res://Scripts/Object_Collision_Image_Activation.gd" id="1_w4v2i"]
+[ext_resource type="Script" path="res://Scripts/Object_Collision_Image_Activation.gd" id="1_w4v2i"]
 [ext_resource type="AudioStream" uid="uid://b65xrxvbhl8ex" path="res://Assets/Sounds/interaction.mp3" id="2_1wl2k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ogu0"]

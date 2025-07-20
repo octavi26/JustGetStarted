@@ -5,6 +5,7 @@ extends CharacterBody2D
 @onready var hitCounter = 0
 
 func Hit(id):
+	$Attack.play()
 	$AnimatedSprite2D.play("Idle")
 	$AnimatedSprite2D.play("Hit")
 	

@@ -7,7 +7,7 @@ var inside = false
 
 func _physics_process(delta: float) -> void:
 	if inside and Input.is_action_just_pressed("Interact"):
-		$Interaction.play()
+		#$Interaction.play()
 		player.moveable = false
 		monitoring = false
 		image.ShowImage(image_shown, self)

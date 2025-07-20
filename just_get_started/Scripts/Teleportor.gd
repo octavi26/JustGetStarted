@@ -24,6 +24,8 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if active:
 		Activate(1.0)
+	else:
+		Activate(0.0)
 		
 	if inside and active and $SpawnProtectionTimer.is_stopped():
 		go_to_level()
@@ -45,13 +47,14 @@ func go_to_level():
 		if player.position == position + $Position.position:
 			if !readyToEnd:
 				$PhaseTimer.start()
+				$TeleportSound.play()
 			readyToEnd = true
 			var tween = create_tween()
 			tween.tween_property($LightPillar, "scale:x", 1, .25)
 			
 		#print($PhaseTimer.time_left)
 		if readyToEnd and $PhaseTimer.is_stopped():
-			$TeleportSound.play()
+			#$TeleportSound.play()
 			var camera := player.get_node("Camera2D")  # Adjust path if needed
 			player.remove_child(camera)
 			$Position.add_child(camera)

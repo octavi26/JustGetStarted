@@ -42,6 +42,10 @@ func _ready() -> void:
 		Music.play()
 
 func _physics_process(delta: float) -> void:
+	if $ButtonAnimation.visible and Input.is_action_just_pressed("Interact"):
+		$Click.play()
+	if !moveable and Input.is_action_just_pressed("ui_accept"):
+		$Click.play()
 	if moveable:
 		direction = Vector2(Input.get_axis("Left", "Right"), Input.get_axis("Up", "Down")).normalized()
 	else:
