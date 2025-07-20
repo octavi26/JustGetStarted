@@ -24,6 +24,9 @@ func _physics_process(delta: float) -> void:
 
 func TypeText(text: String, speed: float = 0.025) -> void:
 	$Label.text = ""
+	$Text.play(2.4)
 	for i in text.length():
 		$Label.text += text[i]
-		await get_tree().create_timer(speed).timeout
+		if is_instance_valid(get_tree()):
+			await get_tree().create_timer(speed).timeout
+	$Text.stop()

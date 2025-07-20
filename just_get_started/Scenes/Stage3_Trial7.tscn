@@ -1,11 +1,11 @@
 [gd_scene load_steps=26 format=3 uid="uid://bu7ft6y36mshg"]
 
-[ext_resource type="Script" uid="uid://du7bymgebn6p" path="res://Scripts/Manager_Stage3_Trial7.gd" id="1_drsif"]
-[ext_resource type="Shader" uid="uid://dn77wwkak2tr7" path="res://Shaders/Stage3_Shader.gdshader" id="1_j8ipb"]
-[ext_resource type="Script" uid="uid://btbfb3c5a0wdn" path="res://Scripts/Void_Controll_Still.gd" id="2_1jaha"]
+[ext_resource type="Script" path="res://Scripts/Manager_Stage3_Trial7.gd" id="1_drsif"]
+[ext_resource type="Shader" path="res://Shaders/Stage3_Shader.gdshader" id="1_j8ipb"]
+[ext_resource type="Script" path="res://Scripts/Void_Controll_Still.gd" id="2_1jaha"]
 [ext_resource type="Texture2D" uid="uid://bdm6ufy13rfk3" path="res://Assets/TileSets/Void_Tile_Set.png" id="3_8b6me"]
 [ext_resource type="Texture2D" uid="uid://vi374bv8fxb" path="res://Assets/CRAWLING DEPTHS/Tileset.png" id="4_fg61e"]
-[ext_resource type="Script" uid="uid://cbyl4x4ewhckw" path="res://Scripts/Horror_Controll.gd" id="5_2krje"]
+[ext_resource type="Script" path="res://Scripts/Horror_Controll.gd" id="5_2krje"]
 [ext_resource type="PackedScene" uid="uid://dj68bjweojhfy" path="res://Scenes/Narrator_Text_Box.tscn" id="5_yvbrc"]
 [ext_resource type="Shader" uid="uid://b1la8b3en80h8" path="res://Shaders/Damage.tres" id="6_4kadi"]
 [ext_resource type="PackedScene" uid="uid://duuhv3ariy5q4" path="res://Scenes/Player_Text_Box.tscn" id="6_52tlf"]
@@ -13,8 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://bd7gb8bd4pxgw" path="res://Scenes/Player.tscn" id="8_8oujn"]
 [ext_resource type="AudioStream" uid="uid://b1fox0lroxigx" path="res://Assets/Sounds/boss spawn.wav" id="8_tyygd"]
 [ext_resource type="PackedScene" uid="uid://ks5skbsb7ao0" path="res://Scenes/Text_Box_Activation.tscn" id="9_rl5gd"]
-[ext_resource type="Script" uid="uid://dy7c1xpr6o01p" path="res://Scripts/Camera_Shake.gd" id="9_tih1f"]
-[ext_resource type="Script" uid="uid://tt76ctq22j56" path="res://Scripts/Text_Box_Activation_Player.gd" id="10_v3nm0"]
+[ext_resource type="Script" path="res://Scripts/Camera_Shake.gd" id="9_tih1f"]
+[ext_resource type="Script" path="res://Scripts/Text_Box_Activation_Player.gd" id="10_v3nm0"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7l5iy"]
 shader = ExtResource("1_j8ipb")
@@ -52,24 +52,32 @@ sources/1 = SubResource("TileSetAtlasSource_qe0d7")
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5o43c"]
 texture = ExtResource("4_fg61e")
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:0/0 = 0
 4:0/0 = 0
 5:0/0 = 0
 6:0/0 = 0
 7:0/0 = 0
 0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:1/0 = 0
 2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:1/0 = 0
 4:1/0 = 0
 5:1/0 = 0
 6:1/0 = 0
 7:1/0 = 0
 0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:2/0 = 0
 4:2/0 = 0
 5:2/0 = 0
@@ -495,6 +503,7 @@ texture = ExtResource("4_fg61e")
 
 [sub_resource type="TileSet" id="TileSet_v27hx"]
 physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 3
 sources/1 = SubResource("TileSetAtlasSource_5o43c")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mmvej"]
@@ -538,8 +547,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ai0q8"]
 _data = {
-&"HitFlash": SubResource("Animation_qsoi7"),
-&"RESET": SubResource("Animation_4cy2f")
+"HitFlash": SubResource("Animation_qsoi7"),
+"RESET": SubResource("Animation_4cy2f")
 }
 
 [node name="Node2D" type="Node2D"]
@@ -616,7 +625,7 @@ shape = SubResource("RectangleShape2D_o34o4")
 
 [node name="HitFlash" type="AnimationPlayer" parent="HorrorControll"]
 libraries = {
-&"": SubResource("AnimationLibrary_ai0q8")
+"": SubResource("AnimationLibrary_ai0q8")
 }
 
 [node name="BossSpawn" type="AudioStreamPlayer" parent="HorrorControll"]

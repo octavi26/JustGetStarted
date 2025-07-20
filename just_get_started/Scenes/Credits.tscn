@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cwabb6dxjl6gh"]
 
-[ext_resource type="Script" uid="uid://cb52a8y87y1sy" path="res://Scripts/Credits.gd" id="1_7ge4p"]
-[ext_resource type="Script" uid="uid://bahl1swteg0io" path="res://Scripts/Manager_Credits.gd" id="1_xbebw"]
+[ext_resource type="Script" path="res://Scripts/Credits.gd" id="1_7ge4p"]
+[ext_resource type="Script" path="res://Scripts/Manager_Credits.gd" id="1_xbebw"]
 [ext_resource type="AudioStream" uid="uid://drvj2wbw2alcn" path="res://Assets/Sounds/click.wav" id="3_7xmno"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_vdk1s"]
@@ -25,10 +25,10 @@ position = Vector2(0, 1252)
 script = ExtResource("1_7ge4p")
 
 [node name="Label" type="Label" parent="Node2D"]
-offset_left = -675.0
+offset_left = -863.0
 offset_top = -584.0
-offset_right = 676.0
-offset_bottom = 1720.0
+offset_right = 866.0
+offset_bottom = 4448.0
 text = "You have defeated the God.
 Now, after decades of silence, you return to the city,
 vanished for years, forgotten by time,
@@ -48,7 +48,28 @@ Level Design: Danciu Cosmin & Radu Octavian
 Mechanics: Danciu Cosmin & Radu Octavian
 Playtesters: TBD
 Time Worked: 200,000 hours (or so)
-Game Jam Theme: \"Just Get Started\""
+Game Jam Theme: \"Just Get Started\"
+-
+Licences
+Dark Ambience Loop by Iwan Gabovitch 
+http://opengameart.org/users/qubodup
+glass25.flac by Craxic 
+-- https://freesound.org/s/204699/ -- License: Attribution 3.0
+Glass Shatter 2 by qubodup 
+-- https://freesound.org/s/219845/ -- License: Attribution 4.0
+Earthquake rumble - Zapsplat
+https://www.zapsplat.com/music/earthquake-
+rumble-with-rocks-dirt-and-stones-movement-landslide/
+Portal, Teleport, Spawn, Warp, Magic - Zapsplat
+https://www.zapsplat.com/music/portal-teleport-spawn-warp-magic/
+Object, Item, Interaction, Menu, UI, Action - Zapsplat
+https://www.zapsplat.com/music/object-item-
+interaction-menu-ui-action/
+https://opengameart.org/content/horror-cinema-5
+made by Cadere Sounds
+https://opengameart.org/content/heroic-demise-updated-version
+made by Matthew Pablo
+https://opengameart.org/content/falling-body made by remaxim"
 label_settings = SubResource("LabelSettings_vdk1s")
 horizontal_alignment = 1
 vertical_alignment = 1
