@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dj68bjweojhfy" path="res://Scenes/Narrator_Text_Box.tscn" id="6_l7mfd"]
 [ext_resource type="PackedScene" uid="uid://duuhv3ariy5q4" path="res://Scenes/Player_Text_Box.tscn" id="7_dwftp"]
 [ext_resource type="PackedScene" uid="uid://byc5rsjf6xcx3" path="res://Scenes/Side_Notes.tscn" id="8_ck26l"]
-[ext_resource type="Shader" path="res://Shaders/Stage3_Shader.gdshader" id="9_iid3j"]
+[ext_resource type="Shader" uid="uid://dn77wwkak2tr7" path="res://Shaders/Stage3_Shader.gdshader" id="9_iid3j"]
 [ext_resource type="PackedScene" uid="uid://dxne12dgq4l13" path="res://Scenes/Menu.tscn" id="10_4spth"]
 [ext_resource type="Texture2D" uid="uid://dl1fjay6hyf60" path="res://Assets/TileSets/TX Props.png" id="10_iq6le"]
 [ext_resource type="Texture2D" uid="uid://dxbq6nq0p1gy2" path="res://Assets/TileSets/TX Shadow.png" id="11_jyjie"]

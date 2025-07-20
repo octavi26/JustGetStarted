@@ -4,7 +4,6 @@ extends Node2D
 
 func _ready() -> void:
 	Music.stream_paused = true
-	Global.playerVisitCount += 1
 	Global.narratorTextBoxes.clear()
 	Global.playerTextBoxes.clear()
 	Global.dashUnlocked = false

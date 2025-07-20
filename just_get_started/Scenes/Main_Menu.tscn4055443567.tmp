@@ -1,0 +1,300 @@
+[gd_scene load_steps=30 format=3 uid="uid://u6wggf3k421l"]
+
+[ext_resource type="Texture2D" uid="uid://h2t4q8df48cn" path="res://Assets/Humble Gift - Paper UI System/Humble Gift - Paper UI System v1.1/Sprites/Book Desk/3.png" id="1_rrptc"]
+[ext_resource type="Script" uid="uid://6rodalfpjdhg" path="res://Scripts/Main_Menu.gd" id="1_stqic"]
+[ext_resource type="Texture2D" uid="uid://c64xe1vjckc6a" path="res://Assets/Humble Gift - Paper UI System/Humble Gift - Paper UI System v1.1/Sprites/Paper UI Pack/Folding & Cutout/7 Dialogue Box/1.png" id="2_sj58n"]
+[ext_resource type="Texture2D" uid="uid://by5sdoqnm3gh1" path="res://Assets/Humble Gift - Paper UI System/Humble Gift - Paper UI System v1.1/Sprites/Paper UI Pack/Folding & Cutout/10 Calander/1.png" id="2_wegmd"]
+[ext_resource type="Texture2D" uid="uid://dw0u60xaemoq" path="res://Assets/Humble Gift - Paper UI System/Humble Gift - Paper UI System v1.1/Sprites/Paper UI Pack/Folding & Cutout/6 Player HUD/1.png" id="3_ukiwb"]
+[ext_resource type="Texture2D" uid="uid://c1xsldtyw2e6f" path="res://Assets/UI/JGS_Logo.png" id="4_3yug6"]
+[ext_resource type="Texture2D" uid="uid://dkgs7vamub7c2" path="res://Assets/Humble Gift - Paper UI System/Humble Gift - Paper UI System v1.1/Sprites/Paper UI Pack/Folding & Cutout/5 Mini Map/1.png" id="4_hj2iu"]
+[ext_resource type="Texture2D" uid="uid://ch4ohh4ygkteb" path="res://Assets/Overlays/Keyboard Letters and Symbols.png" id="6_wrhqo"]
+[ext_resource type="Texture2D" uid="uid://500hcn6p4j6h" path="res://Assets/Overlays/Keyboard Extras.png" id="7_38g8k"]
+[ext_resource type="Texture2D" uid="uid://b2jl3tgdjva2s" path="res://Assets/Humble Gift - Paper UI System/Humble Gift - Paper UI System v1.1/Sprites/Content/4 Buttons/0.png" id="7_rybnf"]
+[ext_resource type="Texture2D" uid="uid://b0cp8cxswvgkd" path="res://Assets/Humble Gift - Paper UI System/Humble Gift - Paper UI System v1.1/Sprites/Content/4 Buttons/1.png" id="8_3lhlt"]
+[ext_resource type="Texture2D" uid="uid://hm4d0spch2rk" path="res://Assets/UI/JGS_Contract.png" id="11_ptwgu"]
+[ext_resource type="AudioStream" uid="uid://drvj2wbw2alcn" path="res://Assets/Sounds/click.wav" id="13_0ul3f"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_v3p4h"]
+font_color = Color(0.219501, 0.219501, 0.219501, 1)
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5t6uw"]
+atlas = ExtResource("7_rybnf")
+region = Rect2(0, 0, 80, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5tvwb"]
+atlas = ExtResource("8_3lhlt")
+region = Rect2(0, 0, 80, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jnpnt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5t6uw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5tvwb")
+}],
+"loop": false,
+"name": &"Press",
+"speed": 2.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5e1ua"]
+font_color = Color(0.0509804, 0.564706, 0.407843, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fgcd2"]
+atlas = ExtResource("6_wrhqo")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w3hf1"]
+atlas = ExtResource("6_wrhqo")
+region = Rect2(0, 112, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ddof3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fgcd2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w3hf1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fgcd2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fgcd2")
+}],
+"loop": true,
+"name": &"Press",
+"speed": 2.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s8jxy"]
+atlas = ExtResource("6_wrhqo")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o5nxl"]
+atlas = ExtResource("6_wrhqo")
+region = Rect2(16, 112, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jlii2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s8jxy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s8jxy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s8jxy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o5nxl")
+}],
+"loop": true,
+"name": &"Press",
+"speed": 2.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_e6f0w"]
+line_spacing = -10.0
+font_size = 26
+font_color = Color(0.255659, 0.255659, 0.255659, 1)
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iavcf"]
+atlas = ExtResource("7_38g8k")
+region = Rect2(96, 16, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ip4p8"]
+atlas = ExtResource("7_38g8k")
+region = Rect2(96, 80, 32, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vfgof"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iavcf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ip4p8")
+}],
+"loop": true,
+"name": &"Press",
+"speed": 2.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tgjvv"]
+font_color = Color(0.75, 0.09025, 0.0675, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_stqic")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="."]
+scale = Vector2(2.615, 1.985)
+texture = ExtResource("1_rrptc")
+
+[node name="GameBy" type="Sprite2D" parent="."]
+position = Vector2(544, -428)
+rotation = 0.000298098
+scale = Vector2(1.322, -1.4943)
+texture = ExtResource("2_sj58n")
+
+[node name="Label" type="Label" parent="GameBy"]
+offset_left = 33.2679
+offset_top = 44.8458
+offset_right = 284.268
+offset_bottom = 119.846
+scale = Vector2(1.39004, -1.09113)
+text = "Game by
+Radu Octavian &
+Danciu Cosmin"
+label_settings = SubResource("LabelSettings_v3p4h")
+
+[node name="Main" type="Sprite2D" parent="."]
+position = Vector2(-19, -55)
+scale = Vector2(1.92, 1.92)
+texture = ExtResource("2_wegmd")
+
+[node name="Button" type="AnimatedSprite2D" parent="Main"]
+position = Vector2(9.89583, -17.1875)
+scale = Vector2(2.91749, 2.91749)
+sprite_frames = SubResource("SpriteFrames_jnpnt")
+animation = &"Press"
+
+[node name="Label" type="Label" parent="Main/Button"]
+offset_left = -12.1394
+offset_top = -9.10458
+offset_right = 27.8606
+offset_bottom = 13.8954
+scale = Vector2(0.643829, 0.643829)
+text = "Play"
+label_settings = SubResource("LabelSettings_5e1ua")
+
+[node name="Button2" type="AnimatedSprite2D" parent="Main"]
+position = Vector2(9.89583, 77.0833)
+scale = Vector2(2.91749, 2.91749)
+sprite_frames = SubResource("SpriteFrames_jnpnt")
+animation = &"Press"
+
+[node name="Label" type="Label" parent="Main/Button2"]
+offset_left = -17.3166
+offset_top = -9.10458
+offset_right = 37.6834
+offset_bottom = 13.8954
+scale = Vector2(0.643829, 0.643829)
+text = "Credits"
+label_settings = SubResource("LabelSettings_5e1ua")
+horizontal_alignment = 1
+
+[node name="JgsLogo" type="Sprite2D" parent="Main"]
+modulate = Color(1, 1, 1, 0.717647)
+position = Vector2(9.89583, -144.271)
+scale = Vector2(0.119176, 0.119176)
+texture = ExtResource("4_3yug6")
+
+[node name="Blank" type="Sprite2D" parent="."]
+position = Vector2(-1334, -304)
+rotation = 0.541985
+scale = Vector2(1.92, 1.92)
+texture = ExtResource("2_wegmd")
+
+[node name="Controls" type="Sprite2D" parent="."]
+position = Vector2(-592, 251)
+rotation = 0.24575
+scale = Vector2(3.26238, 3.26238)
+texture = ExtResource("3_ukiwb")
+
+[node name="Node2D" type="Node2D" parent="Controls"]
+position = Vector2(-73.0148, -12.6563)
+rotation = -0.0177713
+scale = Vector2(1.37884, 1.37884)
+
+[node name="KeyUp" type="AnimatedSprite2D" parent="Controls/Node2D"]
+sprite_frames = SubResource("SpriteFrames_ddof3")
+animation = &"Press"
+autoplay = "Press"
+frame_progress = 0.682359
+
+[node name="KeyDown" type="AnimatedSprite2D" parent="Controls/Node2D"]
+position = Vector2(0, 15.6)
+sprite_frames = SubResource("SpriteFrames_jlii2")
+animation = &"Press"
+autoplay = "Press"
+frame_progress = 0.905192
+
+[node name="Label" type="Label" parent="Controls/Node2D"]
+offset_left = 8.16667
+offset_top = -8.16667
+offset_right = 209.167
+offset_bottom = 129.833
+scale = Vector2(0.471039, 0.471039)
+text = "Press to
+change"
+label_settings = SubResource("LabelSettings_e6f0w")
+
+[node name="KeyDown2" type="AnimatedSprite2D" parent="Controls/Node2D"]
+position = Vector2(80.265, 21.0007)
+sprite_frames = SubResource("SpriteFrames_vfgof")
+animation = &"Press"
+autoplay = "Press"
+frame_progress = 0.387043
+
+[node name="Label2" type="Label" parent="Controls/Node2D"]
+offset_left = 65.265
+offset_top = -14.3674
+offset_right = 266.265
+offset_bottom = 123.633
+scale = Vector2(0.471039, 0.471039)
+text = "Press to
+select"
+label_settings = SubResource("LabelSettings_e6f0w")
+
+[node name="Contract" type="Sprite2D" parent="."]
+position = Vector2(803, 391)
+rotation = -0.136136
+scale = Vector2(4.97321, 4.97321)
+texture = ExtResource("4_hj2iu")
+
+[node name="Button" type="AnimatedSprite2D" parent="Contract"]
+position = Vector2(4.55485, 45.274)
+rotation = 0.00292202
+scale = Vector2(0.780611, 0.780611)
+sprite_frames = SubResource("SpriteFrames_jnpnt")
+animation = &"Press"
+
+[node name="Label" type="Label" parent="Contract/Button"]
+offset_left = -12.1394
+offset_top = -9.10458
+offset_right = 27.8606
+offset_bottom = 13.8954
+scale = Vector2(0.643829, 0.643829)
+text = "Sign"
+label_settings = SubResource("LabelSettings_tgjvv")
+
+[node name="JgsContract" type="Sprite2D" parent="Contract"]
+scale = Vector2(0.044237, 0.044237)
+texture = ExtResource("11_ptwgu")
+
+[node name="BlackScreen" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = -1202.0
+offset_top = -719.0
+offset_right = 1242.0
+offset_bottom = 759.0
+color = Color(0, 0, 0, 1)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_0ul3f")
+bus = &"SFX"

@@ -1,7 +1,7 @@
-[gd_scene load_steps=29 format=3 uid="uid://u6wggf3k421l"]
+[gd_scene load_steps=30 format=3 uid="uid://u6wggf3k421l"]
 
 [ext_resource type="Texture2D" uid="uid://h2t4q8df48cn" path="res://Assets/Humble Gift - Paper UI System/Humble Gift - Paper UI System v1.1/Sprites/Book Desk/3.png" id="1_rrptc"]
-[ext_resource type="Script" path="res://Scripts/Main_Menu.gd" id="1_stqic"]
+[ext_resource type="Script" uid="uid://6rodalfpjdhg" path="res://Scripts/Main_Menu.gd" id="1_stqic"]
 [ext_resource type="Texture2D" uid="uid://c64xe1vjckc6a" path="res://Assets/Humble Gift - Paper UI System/Humble Gift - Paper UI System v1.1/Sprites/Paper UI Pack/Folding & Cutout/7 Dialogue Box/1.png" id="2_sj58n"]
 [ext_resource type="Texture2D" uid="uid://by5sdoqnm3gh1" path="res://Assets/Humble Gift - Paper UI System/Humble Gift - Paper UI System v1.1/Sprites/Paper UI Pack/Folding & Cutout/10 Calander/1.png" id="2_wegmd"]
 [ext_resource type="Texture2D" uid="uid://dw0u60xaemoq" path="res://Assets/Humble Gift - Paper UI System/Humble Gift - Paper UI System v1.1/Sprites/Paper UI Pack/Folding & Cutout/6 Player HUD/1.png" id="3_ukiwb"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://b2jl3tgdjva2s" path="res://Assets/Humble Gift - Paper UI System/Humble Gift - Paper UI System v1.1/Sprites/Content/4 Buttons/0.png" id="7_rybnf"]
 [ext_resource type="Texture2D" uid="uid://b0cp8cxswvgkd" path="res://Assets/Humble Gift - Paper UI System/Humble Gift - Paper UI System v1.1/Sprites/Content/4 Buttons/1.png" id="8_3lhlt"]
 [ext_resource type="Texture2D" uid="uid://hm4d0spch2rk" path="res://Assets/UI/JGS_Contract.png" id="11_ptwgu"]
+[ext_resource type="AudioStream" uid="uid://drvj2wbw2alcn" path="res://Assets/Sounds/click.wav" id="13_0ul3f"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_v3p4h"]
 font_color = Color(0.219501, 0.219501, 0.219501, 1)
@@ -293,3 +294,7 @@ color = Color(0, 0, 0, 1)
 [node name="Timer" type="Timer" parent="."]
 wait_time = 4.0
 one_shot = true
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_0ul3f")
+bus = &"SFX"

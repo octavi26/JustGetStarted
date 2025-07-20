@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtklbwy2tv106"]
+
+[ext_resource type="AudioStream" uid="uid://cvie2b3jvb8bt" path="res://Assets/Music/Heroic Demise (New).mp3" id="1_1oqfx"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_1oqfx")
+bus = &"Music"

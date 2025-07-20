@@ -4,21 +4,27 @@ extends Node2D
 var selected = 0
 var scene = 0
 
+func _ready() -> void:
+	MenuCreditsMusic.play(2)
+
 func _physics_process(delta: float) -> void:
 	if scene == 0:
+		print(selected)
 		if Input.is_action_just_pressed("ui_down"):
+			$Click.play()
 			selected += 1
 		if Input.is_action_just_pressed("ui_up"):
 			selected -= 1
+			$Click.play()
 			
-		if selected >= 0:
-			selected = selected % 2
+		selected = abs(selected) % 2
 			
 		if selected > -1:
 			$Main/Button.frame = !selected
 			$Main/Button2.frame = selected
 		
-		if Input.is_action_just_pressed("ui_accept"):	
+		if Input.is_action_just_pressed("ui_accept"):
+			$Click.play()
 			if selected == 0:
 				scene = 1
 				var tween1 = create_tween()
@@ -47,6 +53,7 @@ func _physics_process(delta: float) -> void:
 				get_tree().change_scene_to_file("res://Scenes/Credits.tscn")
 	else:
 		if Input.is_action_just_pressed("ui_accept"):
+			$Click.play()
 			$Contract/Button.frame = 1
 			$Timer.start()
 			var tween = create_tween()

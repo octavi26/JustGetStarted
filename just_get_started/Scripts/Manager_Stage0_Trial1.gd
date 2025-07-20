@@ -8,3 +8,5 @@ func _ready() -> void:
 	if Global.playerPos == 0:
 		teleportor2.spawn = false
 	Global.playerPos = 1
+	MenuCreditsMusic.stream_paused = true
+	Music.play()

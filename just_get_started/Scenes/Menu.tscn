@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://dxne12dgq4l13"]
+[gd_scene load_steps=10 format=3 uid="uid://dxne12dgq4l13"]
 
-[ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_dvj4i"]
+[ext_resource type="Script" uid="uid://i3qb1wyuc6k0" path="res://Scripts/Menu.gd" id="1_dvj4i"]
 [ext_resource type="Texture2D" uid="uid://cps5vms3lyim8" path="res://Assets/Humble Gift - Paper UI System/Humble Gift - Paper UI System v1.1/Sprites/Paper UI Pack/Folding & Cutout/8 Shop/1.png" id="1_hngt4"]
 [ext_resource type="Texture2D" uid="uid://b2jl3tgdjva2s" path="res://Assets/Humble Gift - Paper UI System/Humble Gift - Paper UI System v1.1/Sprites/Content/4 Buttons/0.png" id="3_x8jqa"]
 [ext_resource type="Texture2D" uid="uid://b0cp8cxswvgkd" path="res://Assets/Humble Gift - Paper UI System/Humble Gift - Paper UI System v1.1/Sprites/Content/4 Buttons/1.png" id="4_em5gg"]
+[ext_resource type="AudioStream" uid="uid://drvj2wbw2alcn" path="res://Assets/Sounds/click.wav" id="5_ma218"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5t6uw"]
 atlas = ExtResource("3_x8jqa")
@@ -92,3 +93,7 @@ color = Color(0, 0, 0, 0.443137)
 
 [node name="1" type="Sprite2D" parent="."]
 texture = ExtResource("1_hngt4")
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_ma218")
+bus = &"SFX"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://cr7dji1ccsx7n"]
+[gd_scene load_steps=42 format=3 uid="uid://cr7dji1ccsx7n"]
 
 [ext_resource type="Script" uid="uid://dj3aapu872cbm" path="res://Scripts/Manager_Stage1_Trial4.gd" id="1_8kkjc"]
 [ext_resource type="Texture2D" uid="uid://mt361ippga0x" path="res://Assets/TileSets/GrassVoid.png" id="2_fo58j"]

@@ -51,7 +51,7 @@ func go_to_level():
 			
 		#print($PhaseTimer.time_left)
 		if readyToEnd and $PhaseTimer.is_stopped():
-			
+			$TeleportSound.play()
 			var camera := player.get_node("Camera2D")  # Adjust path if needed
 			player.remove_child(camera)
 			$Position.add_child(camera)
@@ -63,6 +63,7 @@ func go_to_level():
 		
 func Spawn():
 	if !start and $SpawnTimer.is_stopped():
+		$TeleportSound.play()
 		var tween = create_tween()
 		tween.tween_property($LightPillar, "scale:x", 1, .25)
 		start = true
@@ -82,7 +83,6 @@ func Spawn():
 
 func Activate(active: float):
 	if abs($Lights.modulate.a - active) >= 0.01:
-		$ActivateLights.play()
 		var tween = create_tween()
 		tween.tween_property($Lights, "modulate:a", active, 0.5)
 
