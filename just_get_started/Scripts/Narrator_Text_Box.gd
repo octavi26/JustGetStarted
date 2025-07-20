@@ -9,83 +9,84 @@ var skipText = false
 
 var dialogueLines = {
 	0: [ 
-		"Welcome here, traveler! DO NOT be afraid.",
-		"You can move around by using the following keys: W, A, S, D."
+		"Welcome, traveler! DO NOT be afraid.",
+		"You can move around using the following keys: W, A, S, D."
 	],
 	1: [
 		"This is a teleporter.",
-		"You can use it to teleport to other levels.",
+		"You can use it to travel between levels.",
 		"See you at the next stop!"
 	],
 	2: [ 
-		"This is a tutorial if you didn't know already.",
-		"I teach you things, but you should already know how to solve puzzles.",
-		"Hint: look around for hints."
+		"This is a tutorial, in case you didn’t know already.",
+		"I’ll teach you things, but you should already know how to solve puzzles.",
+		"Hint: look around for clues."
 	],
 	3: [
-		"I can also hear you.",
-		"Shut up and do your part of the job.",
- 		"You can light up one pillar at a time by pressing E.",
-		"The teleporter will activate after you solve the puzzle."
+		"I can hear you too, you know.",
+		"Stop talking and do your part.",
+		"You can light up one pillar at a time by pressing E.",
+		"The teleporter will activate once the puzzle is solved."
 	],
 	4: [
-		"You know how to solve puzzles, but do you know how to fight?",
-		"Don't worry, we'll teach you that."
+		"You know how to solve puzzles... but do you know how to fight?",
+		"Don’t worry — we’ll teach you."
 	],
 	5: [
-		"Use your arrow keys to attack.",
+		"Use the arrow keys to attack.",
 		"Hit at least one dummy to activate the teleporter."
 	],
 	6: [
-		"The nature is beautiful, isn't it?",
-		"At least try to look around, we spent some time decorating this."
+		"Nature is beautiful, isn’t it?",
+		"At least look around — we spent time decorating this."
 	],
 	7: [
-		"Climb the stairs, the next lesson awaits you there."
+		"Climb the stairs. The next lesson awaits you up there."
 	],
 	8: [
-		"So... You know how to walk, do puzzles or fight. What is missing?",
+		"So... You know how to walk, solve puzzles, and fight. What's missing?",
 		"THE DASH!",
-		"Press space to dash to the other side."
+		"Press Space to dash to the other side."
 	],
 	9: [
-		"Note: You can't use the dash everywhere.",
-		"You only have specified areas where you can do that."
+		"Note: You can't dash just anywhere.",
+		"You can only dash in certain designated areas."
 	],
 	10: [ 
 		"Welcome to another destination!",
-		"The first challenges were pretty simple, weren't they?",
-		"Things will get more complicated now."
+		"The first challenges were pretty simple, weren’t they?",
+		"Things will get trickier from here on."
 	],
 	11: [
-		"Now you need to use all the things you've learned.",
-		"Can you do that?",
-		"Hint: activate all pillars."
+		"Now you’ll need to use everything you’ve learned so far.",
+		"Think you can handle it?",
+		"Hint: activate all the pillars."
 	],
 	12: [
-		"Now the fighting part.",
-		"The normal dummies have 3HP, the armoured ones 4HP.",
-		"Kill all of them. NOW!"
+		"Now it’s time for the combat section.",
+		"Normal dummies have 3 HP. Armored ones have 4 HP.",
+		"Eliminate them. NOW!"
 	],
 	13: [
 		"This door is locked.",
-		"MAYBE find the key to unlock it?"
+		"MAYBE you should find a key?"
 	],
 	14: [
-		"No you haven't! Nothing's happening!",
-		"This is the TUTORIAL after all!",
-		"Use W,A,S,D to move."
+		"No you haven’t! Nothing’s happening yet!",
+		"This is still the TUTORIAL, remember?",
+		"Use W, A, S, D to move."
 	],
 	15: [
-		"Hint: try the sign!"
+		"Hint: Try checking the sign!"
 	],
 	30: [
-		"This is the Tutorial! You can move with W,A,S,D!"
+		"This is the Tutorial! Use W, A, S, D to move!"
 	],
 	35: [
 		"Now it's time to solve some puzzles!"
 	]
 }
+
 
 func _input(event):
 	if event is InputEventKey and event.pressed and not event.echo and \

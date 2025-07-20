@@ -18,24 +18,34 @@ color = Color(0, 0, 0, 1)
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Node2D" type="Node2D" parent="."]
-position = Vector2(0, -1252)
+position = Vector2(0, 1252)
 script = ExtResource("1_7ge4p")
 
 [node name="Label" type="Label" parent="Node2D"]
-offset_left = -632.0
+offset_left = -675.0
 offset_top = -584.0
-offset_right = 611.0
-offset_bottom = 604.0
-text = "Game Engine: GODOT
+offset_right = 676.0
+offset_bottom = 1720.0
+text = "You have defeated the God.
+Now, after decades of silence, you return to the city,
+vanished for years, forgotten by time,
+to claim your long-promised gold.
+You thought the adventure was about getting started,
+about pushing past the tutorial.
+But in truth...
+you left the beginning behind long ago.
+-
+Special thanks to our families and loved ones
+-
 Creators: Danciu Cosmin & Radu Octavian
+Game Engine: GODOT
 Art Design: Radu Octavian & itch.io
 Sound Design: Danciu Cosmin
 Level Design: Danciu Cosmin & Radu Octavian
 Mechanics: Danciu Cosmin & Radu Octavian
 Playtesters: TBD
-Time Worked: 200.000 hours or so
-GameJam Theme: \"Just Get Started\"
-Special Thanks to the family and to the loved ones"
+Time Worked: 200,000 hours (or so)
+Game Jam Theme: \"Just Get Started\""
 label_settings = SubResource("LabelSettings_vdk1s")
 horizontal_alignment = 1
 vertical_alignment = 1
