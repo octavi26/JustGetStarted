@@ -1,8 +1,8 @@
 [gd_scene load_steps=32 format=3 uid="uid://bjfngk4didbp0"]
 
-[ext_resource type="Script" uid="uid://q6yted82n83w" path="res://Scripts/Manager_Stage0_Trial4.gd" id="1_lo0au"]
+[ext_resource type="Script" path="res://Scripts/Manager_Stage0_Trial4.gd" id="1_lo0au"]
 [ext_resource type="PackedScene" uid="uid://bd7gb8bd4pxgw" path="res://Scenes/Player.tscn" id="2_w7eiq"]
-[ext_resource type="Script" uid="uid://d1sqwwxagiokn" path="res://Scripts/Player_Text_Box.gd" id="3_8xw7y"]
+[ext_resource type="Script" path="res://Scripts/Player_Text_Box.gd" id="3_8xw7y"]
 [ext_resource type="PackedScene" uid="uid://dj68bjweojhfy" path="res://Scenes/Narrator_Text_Box.tscn" id="4_2ooyw"]
 [ext_resource type="PackedScene" uid="uid://duuhv3ariy5q4" path="res://Scenes/Player_Text_Box.tscn" id="5_sg8qn"]
 [ext_resource type="Texture2D" uid="uid://7vlf6sgtbgkv" path="res://Assets/TileSets/TX Tileset Grass.png" id="6_4an21"]
@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://b8deqcao3lufg" path="res://Scenes/Teleporter.tscn" id="12_yiplw"]
 [ext_resource type="Texture2D" uid="uid://t83sa31l1ttx" path="res://Assets/TileSets/TX Shadow Plant.png" id="13_h2n5o"]
 [ext_resource type="PackedScene" uid="uid://ks5skbsb7ao0" path="res://Scenes/Text_Box_Activation.tscn" id="15_fyuaw"]
-[ext_resource type="Script" uid="uid://tt76ctq22j56" path="res://Scripts/Text_Box_Activation_Player.gd" id="16_j7uqr"]
+[ext_resource type="Script" path="res://Scripts/Text_Box_Activation_Player.gd" id="16_j7uqr"]
 [ext_resource type="PackedScene" uid="uid://c2hkogttmj7md" path="res://Scenes/Dash_Area.tscn" id="17_j7uqr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bg0b0"]
@@ -1013,7 +1013,7 @@ sources/1 = SubResource("TileSetAtlasSource_ccgqk")
 sources/2 = SubResource("TileSetAtlasSource_an6ts")
 sources/6 = SubResource("TileSetAtlasSource_qn2pn")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f44ex"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ukm5q"]
 texture = ExtResource("9_aec4b")
 texture_region_size = Vector2i(32, 32)
 1:1/0 = 0
@@ -1084,7 +1084,7 @@ texture_region_size = Vector2i(32, 32)
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 2
-sources/1 = SubResource("TileSetAtlasSource_f44ex")
+sources/1 = SubResource("TileSetAtlasSource_ukm5q")
 
 [node name="Node2D" type="Node2D"]
 
@@ -1241,14 +1241,14 @@ scale = Vector2(3, 0.5)
 lineID = 9
 
 [node name="DashArea1" parent="." instance=ExtResource("17_j7uqr")]
-position = Vector2(8, 8)
-scale = Vector2(1.5, 14)
+position = Vector2(18, 8)
+scale = Vector2(0.98, 14)
 collision_mask = 2
 dash = 2
 UnlocksDash = true
 
 [node name="DashArea2" parent="." instance=ExtResource("17_j7uqr")]
-position = Vector2(120, 12)
-scale = Vector2(1.5, 14)
+position = Vector2(111, 12)
+scale = Vector2(0.860001, 14)
 collision_mask = 2
 dash = 1

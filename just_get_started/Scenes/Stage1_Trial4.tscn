@@ -1,9 +1,9 @@
 [gd_scene load_steps=44 format=3 uid="uid://cr7dji1ccsx7n"]
 
-[ext_resource type="Script" uid="uid://dj3aapu872cbm" path="res://Scripts/Manager_Stage1_Trial4.gd" id="1_8kkjc"]
+[ext_resource type="Script" path="res://Scripts/Manager_Stage1_Trial4.gd" id="1_8kkjc"]
 [ext_resource type="Texture2D" uid="uid://mt361ippga0x" path="res://Assets/TileSets/GrassVoid.png" id="2_fo58j"]
 [ext_resource type="PackedScene" uid="uid://bd7gb8bd4pxgw" path="res://Scenes/Player.tscn" id="3_vx6ep"]
-[ext_resource type="Script" uid="uid://dy7c1xpr6o01p" path="res://Scripts/Camera_Shake.gd" id="4_nol47"]
+[ext_resource type="Script" path="res://Scripts/Camera_Shake.gd" id="4_nol47"]
 [ext_resource type="PackedScene" uid="uid://byc5rsjf6xcx3" path="res://Scenes/Side_Notes.tscn" id="5_c7tqe"]
 [ext_resource type="PackedScene" uid="uid://dj68bjweojhfy" path="res://Scenes/Narrator_Text_Box.tscn" id="5_dwe6e"]
 [ext_resource type="PackedScene" uid="uid://duuhv3ariy5q4" path="res://Scenes/Player_Text_Box.tscn" id="6_o5abp"]
@@ -17,14 +17,14 @@
 [ext_resource type="Texture2D" uid="uid://t83sa31l1ttx" path="res://Assets/TileSets/TX Shadow Plant.png" id="13_hryv5"]
 [ext_resource type="PackedScene" uid="uid://b8deqcao3lufg" path="res://Scenes/Teleporter.tscn" id="14_hfr0w"]
 [ext_resource type="PackedScene" uid="uid://ks5skbsb7ao0" path="res://Scenes/Text_Box_Activation.tscn" id="15_pjsfb"]
-[ext_resource type="Script" uid="uid://tt76ctq22j56" path="res://Scripts/Text_Box_Activation_Player.gd" id="16_3bymi"]
+[ext_resource type="Script" path="res://Scripts/Text_Box_Activation_Player.gd" id="16_3bymi"]
 [ext_resource type="PackedScene" uid="uid://c2hkogttmj7md" path="res://Scenes/Dash_Area.tscn" id="17_ka4y3"]
 [ext_resource type="PackedScene" uid="uid://cd1oic6rhbhmt" path="res://Scenes/Puzzle4.tscn" id="18_nol47"]
 [ext_resource type="PackedScene" uid="uid://c586bn01pcprl" path="res://Scenes/Door_Interaction.tscn" id="18_vx6ep"]
 [ext_resource type="PackedScene" uid="uid://dbwdv4dvnyh5j" path="res://Scenes/Eye.tscn" id="21_ey412"]
 [ext_resource type="PackedScene" uid="uid://e5e771leohkg" path="res://Scenes/Mouth.tscn" id="22_2c1bj"]
 [ext_resource type="PackedScene" uid="uid://1nckhgw8ijma" path="res://Scenes/Tentacle.tscn" id="23_f4aqb"]
-[ext_resource type="Shader" uid="uid://dn77wwkak2tr7" path="res://Shaders/Stage3_Shader.gdshader" id="24_ycfbs"]
+[ext_resource type="Shader" path="res://Shaders/Stage3_Shader.gdshader" id="24_ycfbs"]
 [ext_resource type="AudioStream" uid="uid://dv8q6lcc88i27" path="res://Assets/Sounds/door.ogg" id="25_i46vw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xr3wb"]
@@ -1793,15 +1793,15 @@ script = ExtResource("16_3bymi")
 lineID = 14
 
 [node name="DashArea1" parent="." instance=ExtResource("17_ka4y3")]
-position = Vector2(11, 7)
-scale = Vector2(1.5, 14)
+position = Vector2(15, 7)
+scale = Vector2(0.82, 14)
 collision_mask = 2
 dash = 2
 UnlocksDash = true
 
 [node name="DashArea2" parent="." instance=ExtResource("17_ka4y3")]
-position = Vector2(120, 9)
-scale = Vector2(1.5, 14)
+position = Vector2(110, 9)
+scale = Vector2(0.74, 14)
 collision_mask = 2
 dash = 1
 

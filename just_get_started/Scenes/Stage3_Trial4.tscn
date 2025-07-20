@@ -1,11 +1,11 @@
 [gd_scene load_steps=40 format=3 uid="uid://dhm5aesh33opr"]
 
-[ext_resource type="Script" uid="uid://q6yted82n83w" path="res://Scripts/Manager_Stage0_Trial4.gd" id="1_qjyy5"]
+[ext_resource type="Script" path="res://Scripts/Manager_Stage0_Trial4.gd" id="1_qjyy5"]
 [ext_resource type="Texture2D" uid="uid://7vlf6sgtbgkv" path="res://Assets/TileSets/TX Tileset Grass.png" id="2_2ba8i"]
-[ext_resource type="Script" uid="uid://bfmpx5vmh5dl8" path="res://Scripts/Void_Controll.gd" id="2_dx8c3"]
+[ext_resource type="Script" path="res://Scripts/Void_Controll.gd" id="2_dx8c3"]
 [ext_resource type="Texture2D" uid="uid://bdm6ufy13rfk3" path="res://Assets/TileSets/Void_Tile_Set.png" id="3_gfm4t"]
 [ext_resource type="PackedScene" uid="uid://bd7gb8bd4pxgw" path="res://Scenes/Player.tscn" id="3_x3738"]
-[ext_resource type="Script" uid="uid://d1sqwwxagiokn" path="res://Scripts/Player_Text_Box.gd" id="4_pwyyu"]
+[ext_resource type="Script" path="res://Scripts/Player_Text_Box.gd" id="4_pwyyu"]
 [ext_resource type="PackedScene" uid="uid://dj68bjweojhfy" path="res://Scenes/Narrator_Text_Box.tscn" id="5_4i0sf"]
 [ext_resource type="PackedScene" uid="uid://duuhv3ariy5q4" path="res://Scenes/Player_Text_Box.tscn" id="6_hw23n"]
 [ext_resource type="PackedScene" uid="uid://byc5rsjf6xcx3" path="res://Scenes/Side_Notes.tscn" id="7_o1f6u"]
@@ -19,12 +19,12 @@
 [ext_resource type="Texture2D" uid="uid://t83sa31l1ttx" path="res://Assets/TileSets/TX Shadow Plant.png" id="14_dswiw"]
 [ext_resource type="PackedScene" uid="uid://b8deqcao3lufg" path="res://Scenes/Teleporter.tscn" id="15_eid0e"]
 [ext_resource type="PackedScene" uid="uid://c2hkogttmj7md" path="res://Scenes/Dash_Area.tscn" id="18_nntit"]
-[ext_resource type="Shader" uid="uid://dn77wwkak2tr7" path="res://Shaders/Stage3_Shader.gdshader" id="19_vfvo0"]
+[ext_resource type="Shader" path="res://Shaders/Stage3_Shader.gdshader" id="19_vfvo0"]
 [ext_resource type="PackedScene" uid="uid://e5e771leohkg" path="res://Scenes/Mouth.tscn" id="20_6umji"]
 [ext_resource type="PackedScene" uid="uid://dbwdv4dvnyh5j" path="res://Scenes/Eye.tscn" id="21_04b53"]
 [ext_resource type="PackedScene" uid="uid://1nckhgw8ijma" path="res://Scenes/Tentacle.tscn" id="22_pp73j"]
 [ext_resource type="PackedScene" uid="uid://ks5skbsb7ao0" path="res://Scenes/Text_Box_Activation.tscn" id="23_mm4yc"]
-[ext_resource type="Script" uid="uid://tt76ctq22j56" path="res://Scripts/Text_Box_Activation_Player.gd" id="24_b0d4v"]
+[ext_resource type="Script" path="res://Scripts/Text_Box_Activation_Player.gd" id="24_b0d4v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cvtje"]
 texture = ExtResource("3_gfm4t")
@@ -1187,15 +1187,15 @@ level = "uid://cqqarym3vvbkh"
 player = NodePath("../WORLD/Player")
 
 [node name="DashArea1" parent="." instance=ExtResource("18_nntit")]
-position = Vector2(8, 8)
-scale = Vector2(1.5, 14)
+position = Vector2(17, -116)
+scale = Vector2(0.699969, 3.32)
 collision_mask = 2
 dash = 2
 UnlocksDash = true
 
 [node name="DashArea2" parent="." instance=ExtResource("18_nntit")]
-position = Vector2(120, -125)
-scale = Vector2(1.5, 4.28)
+position = Vector2(112, -129)
+scale = Vector2(0.78, 4.28)
 collision_mask = 2
 dash = 1
 UnlocksDash = true
@@ -1207,6 +1207,7 @@ offset_left = -990.0
 offset_top = -837.0
 offset_right = 1012.0
 offset_bottom = 534.0
+scale = Vector2(0.986652, 0.939204)
 
 [node name="Extras" type="Node2D" parent="."]
 
