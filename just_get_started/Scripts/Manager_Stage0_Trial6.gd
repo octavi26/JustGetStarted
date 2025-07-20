@@ -3,7 +3,7 @@ extends Node2D
 @export_file var level = "res://Scenes/Test_Scene.tscn"
 
 func _ready() -> void:
-	Global.playerVisitCount += 1
+	Global.playerVisitCount = 0
 	Global.narratorTextBoxes.clear()
 	Global.playerTextBoxes.clear()
 	Global.dashUnlocked = false

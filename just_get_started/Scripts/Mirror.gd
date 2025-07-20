@@ -21,4 +21,4 @@ func _physics_process(delta: float) -> void:
 	
 func Hit(id):
 	if active: hits += 1
-	$"../WORLD/Player/Camera2D".start_shake(3, 3)
+	$"../WORLD/Player/Camera2D".start_shake(3, 1)
