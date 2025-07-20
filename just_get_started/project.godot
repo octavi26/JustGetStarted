@@ -26,7 +26,8 @@ MenuCreditsMusic="*res://Scenes/Menu_Credits_Music.tscn"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/mode=2
+window/stretch/mode="viewport"
+window/stretch/aspect="ignore"
 
 [input]
 
