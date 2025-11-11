@@ -1,5 +1,10 @@
 # The Contract
 
+<p align="center>
+<img width="315" height="250" alt="TheContract" src="https://github.com/user-attachments/assets/ed7a8f3e-3d47-41c4-baf2-692c0560f4a2" />
+</p>
+
+
 Made for **Shovel Game Jam 2025** *(in only 9 days)*  
 🏆 Placed **60th out of 1157 entries (Top 5%)**
 
